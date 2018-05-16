@@ -1,0 +1,13 @@
+@nLint message generated warning file.
+
+*** Working Directory [/home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl] ***
+
+systolic.v(11): Warning 25009: the fan-out number of signal "srstn" is 3072 whereas the limitation is 10. (Design Style)
+systolic.v(12): Warning 25009: the fan-out number of signal "alu_start" is 3073 whereas the limitation is 10. (Design Style)
+systolic.v(13): Warning 25009: the fan-out number of signal "cycle_num" is 6144 whereas the limitation is 10. (Design Style)
+systolic.v(47): Warning 25009: the fan-out number of signal "mul_result[0]" is 12288 whereas the limitation is 10. (Design Style)
+systolic.v(47): Warning 25009: the fan-out number of signal "mul_result[15:1]" is 2048 whereas the limitation is 10. (Design Style)
+systolic.v(49): Warning 25009: the fan-out number of signal "upper_bound" is 528 whereas the limitation is 10. (Design Style)
+systolic.v(50): Warning 25009: the fan-out number of signal "lower_bound" is 496 whereas the limitation is 10. (Design Style)
+
+Total 7 Warning(s)

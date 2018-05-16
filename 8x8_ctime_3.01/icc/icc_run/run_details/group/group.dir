@@ -1,0 +1,13 @@
+Version 3
+1
+00 0 /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/run_details/group
+
+4
+lpedb -1 deviceTable
+ 00 deviceTable.lpedb 1
+con -1 inst_indx
+ 00 inst_indx.con 1
+con -1 inst_data
+ 00 inst_data.con 1
+reg -1 regions
+ 00 regions.reg 1

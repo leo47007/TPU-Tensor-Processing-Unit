@@ -1,0 +1,108 @@
+/*check line via spacing*/
+if (cut_lineTblNextThreshold > cut_lineTblThreshold && cut_lineTblMinSpacing > 0) {
+    EXTERNAL CUT_LAYER {
+        SPACING = [cut_lineTblThreshold, cut_lineTblNextThreshold-TOLERANCE]
+        SET_CORNERS_TO_SPACING = FALSE
+        PARALLEL_POINT_PROJECTION = FALSE
+        BOX_CORNER = FALSE
+    } TEMP = edge_vio
+    SELECT CUT_LAYER INTERACT edge_vio { } TEMP = cut_candidate
+    SIZE cut_candidate { OVERSIZE = 2 * DBU } TEMP = enlarge_cut
+    BOOLEAN enlarge_cut NOT cut_candidate { } TEMP = ring_cut
+    SELECT_EDGE ring_cut INTERACT cut_candidate { } TEMP = edge_cut
+    EXTERNAL edge_cut edge_vio {
+        SPACING = [cut_width, cut_width]
+        SET_CORNERS_TO_SPACING = FALSE
+        PARALLEL_POINT_PROJECTION = FALSE
+        BOX_CORNER = FALSE
+        OUTPUT_EDGES = TRUE
+    } TEMP = edge_vio2
+    SELECT_EDGE cut_candidate TOUCHING edge_vio2 { } TEMP = edge_vio3
+    EXTERNAL edge_vio3 CUT_LAYER {
+        SPACING < cut_lineTblMinSpacing
+        SET_CORNERS_TO_SPACING = FALSE
+        PARALLEL_POINT_PROJECTION = FALSE
+        BOX_CORNER = FALSE
+    } TEMP = cut_vio 
+    EXTERNAL CUT_LAYER {
+        SPACING < cut_lineTblMinSpacing
+        SET_CORNERS_TO_SPACING = FALSE
+        PARALLEL_POINT_PROJECTION = FALSE
+        BOX_CORNER = FALSE
+        NODAL = TRUE
+    } TEMP = cut_filter
+    SELECT cut_vio INSIDE cut_filter {
+        COMMENT = "$layer_name LinContSpc: minimum spacing between line contacts ( cut_lineTblThreshold um, cut_lineTblNextThreshold um) = cut_lineTblMinSpacing um"
+    } (OUTPUT_LAYER)
+}
+/*check matrix via spacing*/
+if (cut_matrixTblNextThreshold > cut_matrixTblThreshold && cut_matrixTblMinSpacing > 0) {
+    EXTERNAL CUT_LAYER {
+        SPACING = [cut_matrixTblThreshold, cut_matrixTblNextThreshold-TOLERANCE]
+        SET_CORNERS_TO_SPACING = FALSE
+        PARALLEL_POINT_PROJECTION = FALSE
+        BOX_CORNER = FALSE
+        OUTPUT_EDGES = TRUE
+    } TEMP = edges
+    SELECT_VECTOR edges { ANGLE_RANGE = [0, 0] } TEMP = h_edges
+    SELECT_VECTOR edges { ANGLE_RANGE = [90, 90] } TEMP = v_edges
+    SELECT CUT_LAYER INTERACT v_edges { } TEMP = v_cut_candidate
+    SELECT_EDGE v_cut_candidate TOUCHING v_edges { } TEMP = v_edges_ext
+    SELECT_EDGE v_cut_candidate INTERACT v_edges_ext {
+        POINT_TOUCH = TRUE
+    } TEMP = v_forb
+    BOOLEAN v_forb NOT v_edges_ext { } TEMP = v_forb_edge
+    SIZE v_forb_edge {
+        VSIZE_OUTSIDE = cut_matrixTblMinSpacing
+    } TEMP = v_cut_forb
+    SELECT CUT_LAYER INTERACT h_edges { } TEMP = h_cut_candidate
+    SELECT_EDGE h_cut_candidate TOUCHING h_edges { } TEMP = h_edges_ext
+    SELECT_EDGE h_cut_candidate INTERACT h_edges_ext {
+        POINT_TOUCH = TRUE
+    } TEMP = h_forb
+    BOOLEAN h_forb NOT h_edges_ext { } TEMP = h_forb_edge
+    SIZE h_forb_edge {
+        VSIZE_OUTSIDE = cut_matrixTblMinSpacing
+    } TEMP = h_cut_forb
+    EXTERNAL v_edges {
+        SPACING = [cut_matrixTblThreshold, cut_matrixTblNextThreshold-TOLERANCE]
+        SET_CORNERS_TO_SPACING = FALSE
+        PARALLEL_POINT_PROJECTION = FALSE
+        BOX_CORNER = FALSE
+    } TEMP = v_shape
+    VECTORIZE v_shape {
+        DIRECTED = TRUE
+    } TEMP = v_enc_edges
+    BOOLEAN v_enc_edges OR v_edges { } TEMP = mid_v_edges
+    SIZE mid_v_edges {
+        VSIZE_OUTSIDE = cut_matrixTblMinSpacing
+    } TEMP = mid_v_forb_ext
+    BOOLEAN mid_v_forb_ext OR v_shape { } TEMP = mid_v_forb
+    EXTERNAL h_edges {
+        SPACING = [cut_matrixTblThreshold, cut_matrixTblNextThreshold-TOLERANCE]
+        SET_CORNERS_TO_SPACING = FALSE
+        PARALLEL_POINT_PROJECTION = FALSE
+        BOX_CORNER = FALSE
+    } TEMP = h_shape
+    VECTORIZE h_shape {
+        DIRECTED = TRUE
+    } TEMP = h_enc_edges
+    BOOLEAN h_enc_edges OR h_edges { } TEMP = mid_h_edges
+    SIZE mid_h_edges {
+        VSIZE_OUTSIDE = cut_matrixTblMinSpacing
+    } TEMP = mid_h_forb_ext
+    BOOLEAN mid_h_forb_ext OR h_shape { } TEMP = mid_h_forb
+    BOOLEAN mid_v_forb OR mid_h_forb { } TEMP = mid_forb
+    BOOLEAN (v_cut_forb OR h_cut_forb) OR mid_forb { } TEMP = forb_region
+    BOOLEAN CUT_LAYER AND forb_region {
+        COMMENT = "$layer_name MatContSpc: minimum spacing between matrix contacts ( cut_matrixTblThreshold um, cut_matrixTblNextThreshold um) = cut_matrixTblMinSpacing um"
+    } (OUTPUT_LAYER)
+}
+/* reset variables */
+SET cut_width = 0;
+SET cut_lineTblThreshold = 0;
+SET cut_lineTblNextThreshold = 0;
+SET cut_lineTblMinSpacing = 0;
+SET cut_matrixTblThreshold = 0;
+SET cut_matrixTblNextThreshold = 0;
+SET cut_matrixTblMinSpacing = 0;

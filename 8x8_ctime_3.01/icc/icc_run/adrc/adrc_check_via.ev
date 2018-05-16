@@ -1,0 +1,554 @@
+/* check size */
+if (cut_size > 0) {
+    INTERNAL CUT_LAYER {  
+        COMMENT = "$layer_name Size      : contact size = cut_size um" 
+	DIMENSION = [cut_size , cut_size]
+    } (OUTPUT_LAYER)
+}
+if (cut_minSpacing > 0) {
+   if (ignoreContactCodeSpacing) {
+      COPY CUT_LAYER { } TEMP=DEFAULT_CUT
+   } else {
+      SIZE METAL_LAYER1 { UNDER_OVER = cut_fatContactThreshold1 } TEMP = m_fat1
+      SIZE METAL_LAYER2 { UNDER_OVER = cut_fatContactThreshold2 } TEMP = m_fat2
+      BOOLEAN m_fat1 OR m_fat2 {} TEMP=m_fat
+      SELECT CUT_LAYER OUTSIDE m_fat { } TEMP=DEFAULT_CUT
+   }
+}
+ 
+/*check basic spacing*/
+if (cut_sameNetMinSpacing > 0 && cut_sameNetMinSpacing < cut_minSpacing) {
+  CONNECT { DEFAULT_CUT BY CUT_LAYER }
+  if (cut_cornerMinSpacing > 0) {
+    if (cornerSpacingMode == 1) {
+        /* Work around: CONVEX_TO_CONVEX [POINT_PROJECTION] has a bug */
+        EXTERNAL DEFAULT_CUT {
+             SPACING <= 0
+             CONVEX_TO_CONVEX [POINT_PROJECTION] < cut_cornerMinSpacing
+             FLAG_DISCONNECTED = FALSE
+             NON_PARALLEL = TRUE
+             POINT_TOUCH = TRUE
+             BOX_CORNER = FALSE
+        } TEMP = sameNet_corner_err1
+        EXTERNAL DEFAULT_CUT {
+             SPACING <= 0
+             CONVEX_TO_CONVEX < cut_cornerMinSpacing
+             FLAG_DISCONNECTED = FALSE
+             NON_PARALLEL = TRUE
+             POINT_TOUCH = TRUE
+             BOX_CORNER = TRUE
+        } TEMP = sameNet_corner_err2 
+        BOOLEAN sameNet_corner_err1 OR sameNet_corner_err2 {
+             COMMENT = "$layer_name SameNetSpc: corner to corner spacing = cut_cornerMinSpacing um "
+        } (OUTPUT_LAYER) 
+        EXTERNAL DEFAULT_CUT {
+             COMMENT = "$layer_name SameNetSpc: same-net minimum spacing = cut_sameNetMinSpacing um "
+             SPACING < cut_sameNetMinSpacing
+             FLAG_DISCONNECTED = FALSE
+             SET_CORNERS_TO_SPACING = FALSE
+             PARALLEL_POINT_PROJECTION = FALSE
+             NON_PARALLEL = TRUE
+             TOUCH = FALSE
+             POINT_TOUCH = FALSE
+        } (OUTPUT_LAYER)
+    } else {
+        EXTERNAL DEFAULT_CUT {
+            COMMENT = "$layer_name SameNetSpc: same-net minimum spacing = cut_sameNetMinSpacing um (corner to corner spacing = cut_cornerMinSpacing um) "
+            SPACING < cut_sameNetMinSpacing
+            CONVEX_TO_CONVEX < cut_cornerMinSpacing
+            FLAG_DISCONNECTED = FALSE
+            NON_PARALLEL = TRUE
+            POINT_TOUCH = TRUE
+        } (OUTPUT_LAYER)
+    }
+  } else {
+    EXTERNAL DEFAULT_CUT {
+        COMMENT = "$layer_name SameNetSpc: same-net minimum spacing = cut_sameNetMinSpacing um"
+        SPACING < cut_sameNetMinSpacing
+	BOX_CORNER = CHECK_MANHATTAN_SPACING
+        FLAG_DISCONNECTED = FALSE
+	NON_PARALLEL = TRUE
+	POINT_TOUCH = TRUE
+    } (OUTPUT_LAYER)
+  }
+  if (cut_cornerMinSpacing > 0) {
+    if (cornerSpacingMode == 1) {
+        /* Work around: CONVEX_TO_CONVEX [POINT_PROJECTION] has a bug */
+        EXTERNAL DEFAULT_CUT {
+          SPACING <= 0
+          CONVEX_TO_CONVEX [POINT_PROJECTION] < cut_cornerMinSpacing
+          NON_PARALLEL = TRUE
+          POINT_TOUCH = TRUE
+          BOX_CORNER = FALSE
+          NODAL = TRUE
+        } TEMP = diffNet_corner_err1 
+        EXTERNAL DEFAULT_CUT {
+          SPACING <= 0
+          CONVEX_TO_CONVEX < cut_cornerMinSpacing
+          NON_PARALLEL = TRUE
+          POINT_TOUCH = TRUE
+          BOX_CORNER = TRUE
+          NODAL = TRUE
+        } TEMP = diffNet_corner_err2 
+        BOOLEAN diffNet_corner_err1 OR diffNet_corner_err2 {
+          COMMENT = "$layer_name Spacing   : corner to corner spacing = cut_cornerMinSpacing um "
+        } (OUTPUT_LAYER)
+        EXTERNAL DEFAULT_CUT {
+          COMMENT = "$layer_name Spacing   : minimum spacing = cut_minSpacing um"
+          SPACING < cut_minSpacing
+          SET_CORNERS_TO_SPACING = FALSE
+          PARALLEL_POINT_PROJECTION = FALSE
+          NON_PARALLEL = TRUE
+          TOUCH = FALSE
+          POINT_TOUCH = FALSE
+          NODAL = TRUE
+        } (OUTPUT_LAYER)
+    } else {
+        EXTERNAL DEFAULT_CUT {
+          COMMENT = "$layer_name Spacing   : minimum spacing = cut_minSpacing um (corner to corner spacing = cut_cornerMinSpacing um) "
+          SPACING < cut_minSpacing
+          CONVEX_TO_CONVEX < cut_cornerMinSpacing
+          NON_PARALLEL = TRUE
+          POINT_TOUCH = TRUE
+          NODAL = TRUE
+        } (OUTPUT_LAYER)
+    }
+  } else {
+    EXTERNAL DEFAULT_CUT {
+      COMMENT = "$layer_name Spacing   : minimum spacing = cut_minSpacing um"
+      SPACING < cut_minSpacing
+      BOX_CORNER = CHECK_MANHATTAN_SPACING
+      NON_PARALLEL = TRUE
+      POINT_TOUCH = TRUE
+      NODAL = TRUE
+    } (OUTPUT_LAYER) 
+  }
+} else {
+   if (cut_minSpacing > 0) {
+     if (cut_cornerMinSpacing > 0) {
+        if (cornerSpacingMode == 1) {
+           /* Work around: CONVEX_TO_CONVEX [POINT_PROJECTION] has a bug */
+           EXTERNAL DEFAULT_CUT {
+             SPACING <= 0
+             CONVEX_TO_CONVEX [POINT_PROJECTION] < cut_cornerMinSpacing
+             NON_PARALLEL = TRUE
+             POINT_TOUCH = TRUE
+             BOX_CORNER = FALSE 
+           } TEMP = corner_err1 
+           EXTERNAL DEFAULT_CUT {
+             SPACING <= 0
+             CONVEX_TO_CONVEX < cut_cornerMinSpacing
+             NON_PARALLEL = TRUE
+             POINT_TOUCH = TRUE
+             BOX_CORNER = TRUE
+           } TEMP = corner_err2 
+           BOOLEAN corner_err1 OR corner_err2 {
+             COMMENT = "$layer_name Spacing   : corner to corner spacing = cut_cornerMinSpacing um "
+           } (OUTPUT_LAYER)
+           EXTERNAL DEFAULT_CUT {
+             COMMENT = "$layer_name Spacing   : minimum spacing = cut_minSpacing um"
+             SPACING < cut_minSpacing
+             SET_CORNERS_TO_SPACING = FALSE
+             PARALLEL_POINT_PROJECTION = FALSE
+             NON_PARALLEL = TRUE
+             TOUCH = FALSE
+             POINT_TOUCH = FALSE
+           } (OUTPUT_LAYER)
+        } else {
+           EXTERNAL DEFAULT_CUT {
+             COMMENT = "$layer_name Spacing   : minimum spacing = cut_minSpacing um (corner to corner spacing = cut_cornerMinSpacing um) "
+             SPACING < cut_minSpacing
+             CONVEX_TO_CONVEX < cut_cornerMinSpacing
+             NON_PARALLEL = TRUE
+             POINT_TOUCH = TRUE
+           } (OUTPUT_LAYER)
+        }
+    } else {
+       EXTERNAL DEFAULT_CUT {
+          COMMENT = "$layer_name Spacing   : minimum spacing = cut_minSpacing um"
+          SPACING < cut_minSpacing
+	  BOX_CORNER = CHECK_MANHATTAN_SPACING
+	  NON_PARALLEL = TRUE
+	  POINT_TOUCH = TRUE
+       } (OUTPUT_LAYER)
+    }
+  }
+}
+ 
+/*check blockage spacing*/
+if (ignoreBlockage == 0) {
+   if (!layer_empty (CUT_BLOCKAGE_LAYER)) {
+      if (cutBlkg_minSpacing > 0) {
+	  EXTERNAL CUT_BLOCKAGE_LAYER CUT_LAYER {
+              COMMENT = "$layer_name Spacing   : contact & blockage minimum spacing = cutBlkg_minSpacing um"
+	      SPACING < cutBlkg_minSpacing
+	      BOX_CORNER = CHECK_MANHATTAN_SPACING
+	      NON_PARALLEL = TRUE
+	      POINT_TOUCH = TRUE
+          } (OUTPUT_LAYER)
+      }
+   }
+}
+/*check blockage overlap*/ 
+/*check shorts between top_level routing and fram_blockages*/
+if (cutBlkg_minSpacing > 0 || checkCrossHierShort > 0) {
+   if (readCellView > 0) {
+       COPY empty {} TEMP = real_blockage
+       COPY CUT_LAYER {} TEMP = top_cut
+   } else {
+       COPY CUT_FRAM_LAYER {} TEMP = real_blockage
+       COPY CUT_TOP_LAYER {} TEMP = top_cut
+   }
+   if (ignoreBlockage == 0) {
+      BOOLEAN CUT_BLOCKAGE_LAYER OR real_blockage {} TEMP=all_blockage
+   } else {
+      COPY real_blockage {} TEMP=all_blockage
+   }
+   
+   BOOLEAN all_blockage AND top_cut {} TEMP = overlap_shape1
+   EXTERNAL all_blockage top_cut {
+      SPACING <= 0
+      TOUCH = TRUE
+   } TEMP = overlap_shape2
+   if (checkCrossHierShort > 0) {
+      BOOLEAN overlap_shape1 OR overlap_shape2 {
+          COMMENT = "$layer_name Short Cross Hierarchy"
+      } (OUTPUT_LAYER)
+   } else {
+      BOOLEAN overlap_shape1 OR overlap_shape2 {
+          COMMENT = "$layer_name Overlap   : cut & blockage overlap"
+      } (OUTPUT_LAYER)
+   }
+}
+/*check adjacent via number*/
+if (cut_adjacentCutRange > 0 && cut_maxNumAdjacentCut > 0) {
+    if (router_ignoreSameNetAdjacentViaDRC) {
+       EXTERNAL CUT_LAYER {  
+	   SPACING < cut_adjacentCutRange
+	   SET_CORNERS_TO_SPACING = FALSE
+	   PARALLEL_POINT_PROJECTION = FALSE
+	   NON_PARALLEL = TRUE
+	   BOX_CORNER = FALSE
+	   SHADOW = FALSE
+           NODAL = TRUE
+       } TEMP=edge_spacing
+       EXTERNAL CUT_LAYER {
+	   SPACING < 0
+	   CONVEX_TO_EDGE < cut_adjacentCutRange
+	   CONVEX_TO_CONVEX < cut_adjacentCutRange
+	   BOX_CORNER = FALSE
+	   SHADOW = FALSE
+           NODAL = TRUE
+       } TEMP=corner_spacing
+    } else {
+       EXTERNAL CUT_LAYER {  
+	   SPACING < cut_adjacentCutRange
+	   SET_CORNERS_TO_SPACING = FALSE
+	   PARALLEL_POINT_PROJECTION = FALSE
+	   NON_PARALLEL = TRUE
+	   BOX_CORNER = FALSE
+	   SHADOW = FALSE
+       } TEMP=edge_spacing
+ 
+       EXTERNAL CUT_LAYER {
+	   SPACING < 0
+	   CONVEX_TO_EDGE < cut_adjacentCutRange
+	   CONVEX_TO_CONVEX < cut_adjacentCutRange
+	   BOX_CORNER = FALSE
+	   SHADOW = FALSE
+       } TEMP=corner_spacing
+    }
+    SIZE edge_spacing { UNDERSIZE = DBU } TEMP = edge_spacing1
+    SIZE edge_spacing1 { OVERSIZE = DBU } TEMP = edge_spacing2
+    BOOLEAN (edge_spacing NOT edge_spacing2) OR edge_spacing1 { } TEMP=edge_spacing
+ 
+    SIZE corner_spacing { UNDERSIZE = DBU } TEMP = corner_spacing1
+    SIZE corner_spacing1 { OVERSIZE = DBU } TEMP = corner_spacing2
+    BOOLEAN (corner_spacing NOT corner_spacing2) OR corner_spacing1 { } TEMP=corner_spacing
+  
+    BOOLEAN edge_spacing OR corner_spacing { } TEMP = spacing
+ 
+    SIZE CUT_LAYER { OVERSIZE = 5*DBU } TEMP = cut
+ 
+    SELECT cut INTERACT spacing {
+        POINT_TOUCH = TRUE
+        RANGE = [cut_maxNumAdjacentCut + 1, MAXIMUM_NUMBER]
+    } TEMP = enclosed_cut
+ 
+    SELECT CUT_LAYER INSIDE enclosed_cut {
+        COMMENT = "$layer_name AdjContNum: maximum number of the adjacent contacts ( cut_adjacentCutRange um) = cut_maxNumAdjacentCut "
+    } (OUTPUT_LAYER)
+}
+ 
+/*check enclosed via spacing*/
+if (cut_enclosedCutNeighborRange > 0 && cut_enclosedCutNumNeighbor > 0) {
+    if (cut_enclosedCutDiagViaExcluded) {
+       EXTERNAL CUT_LAYER {
+          SPACING < cut_enclosedCutNeighborRange
+          SET_CORNERS_TO_SPACING = FALSE
+          PARALLEL_POINT_PROJECTION = FALSE
+          NON_PARALLEL = TRUE
+          BOX_CORNER = FALSE
+          SHADOW = FALSE
+       } TEMP = edge_spacing
+       SELECT CUT_LAYER TOUCHING edge_spacing {
+          RANGE = [cut_enclosedCutNumNeighbor, MAXIMUM_NUMBER]
+       } TEMP = enclosed_cut
+    } else {
+       /* Work around: for SIZE_RECT FLAG_INTERACTION_COUNT parser bug */
+       @define enclosed_function(num) \
+         SIZE_RECT CUT_LAYER { \
+            RANGE1=[0, 10] \
+            RANGE2=[0, 10] \
+            RANGE1_EDGESIZE=(cut_enclosedCutNeighborRange/2.0-TOLERANCE) \
+            RANGE2_EDGESIZE=(cut_enclosedCutNeighborRange/2.0-TOLERANCE) \
+            FLAG_INTERACTION_COUNT > num \
+            CORNER_METHOD = RADIAL \
+         } TEMP=enclosed_cut
+       if (cut_enclosedCutNumNeighbor==1) {
+          enclosed_function(0)
+       } else if (cut_enclosedCutNumNeighbor==2) {
+          enclosed_function(1)
+       } else if (cut_enclosedCutNumNeighbor==3) {
+          enclosed_function(2)
+       } else if (cut_enclosedCutNumNeighbor==4) {
+          enclosed_function(3)
+       } else if (cut_enclosedCutNumNeighbor==5) {
+          enclosed_function(4)
+       } else if (cut_enclosedCutNumNeighbor==6) {
+          enclosed_function(5)
+       } else if (cut_enclosedCutNumNeighbor==7) {
+          enclosed_function(6)
+       } else if (cut_enclosedCutNumNeighbor==8) {
+          enclosed_function(7)
+       } else if (cut_enclosedCutNumNeighbor==9) {
+          enclosed_function(8)
+       } else if (cut_enclosedCutNumNeighbor>9) {
+          enclosed_function(9)
+       }
+    }
+    if (router_ignoreSameNetAdjacentViaDRC) {
+      /* Good approximation for same net via filter */
+      CENTER_TO_CENTER CUT_LAYER {
+        NODAL=TRUE
+        SPACING < cut_enclosedCutNeighborRange + 1.41421*cut_size + TOLERANCE
+        OUTPUT_VECTOR = TRUE
+      } TEMP = c2c_spacing
+      SIZE CUT_LAYER { UNDERSIZE = (cut_size/2.0-TOLERANCE) } TEMP=cut_center
+      BOOLEAN c2c_spacing NOT cut_center { } TEMP=c2c_spacing
+      SIZE cut_center { OVERSIZE = DBU } TEMP=cut_center
+      BOOLEAN c2c_spacing AND CUT_LAYER  { } TEMP=c2c_filter
+      SELECT cut_center INTERACT c2c_filter {
+        POINT_TOUCH=TRUE
+        RANGE = [cut_enclosedCutNumNeighbor, MAXIMUM_NUMBER]
+      } TEMP = target_cut
+   
+      SELECT enclosed_cut ENCLOSING target_cut { } TEMP = enclosed_cut
+    }
+  
+    if (cut_enclosedCutMinSpacing > 0) {
+        EXTERNAL enclosed_cut {
+        COMMENT = "$layer_name EncContSpc: minimum spacing between enclosed contacts ( cut_enclosedCutNeighborRange um / cut_enclosedCutNumNeighbor ) = cut_enclosedCutMinSpacing "
+            SPACING < cut_enclosedCutMinSpacing
+            SET_CORNERS_TO_SPACING = CHECK_CORNER_SPACING
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = TRUE
+        } (OUTPUT_LAYER)
+    }
+ 
+    if (cut_enclosedCutToNeighborMinSpacing > 0) {
+       if (router_ignoreSameNetAdjacentViaDRC) {
+          CONNECT { enclosed_cut BY CUT_LAYER }
+          EXTERNAL enclosed_cut CUT_LAYER {
+              COMMENT = "$layer_name EncContSpc: minimum spacing between enclosed and neighboring contacts ( cut_enclosedCutNeighborRange um / cut_enclosedCutNumNeighbor ) = cut_enclosedCutToNeighborMinSpacing "
+              SPACING < cut_enclosedCutToNeighborMinSpacing
+              SET_CORNERS_TO_SPACING = CHECK_CORNER_SPACING
+	      BOX_CORNER = CHECK_MANHATTAN_SPACING
+	      NON_PARALLEL = TRUE
+	      POINT_TOUCH = TRUE
+              NODAL = TRUE
+          } (OUTPUT_LAYER)
+       } else {
+          EXTERNAL enclosed_cut CUT_LAYER {
+              COMMENT = "$layer_name EncContSpc: minimum spacing between enclosed and neighboring contacts ( cut_enclosedCutNeighborRange um / cut_enclosedCutNumNeighbor ) = cut_enclosedCutToNeighborMinSpacing "
+              SPACING < cut_enclosedCutToNeighborMinSpacing
+              SET_CORNERS_TO_SPACING = CHECK_CORNER_SPACING
+	      BOX_CORNER = CHECK_MANHATTAN_SPACING
+	      NON_PARALLEL = TRUE
+	      POINT_TOUCH = TRUE
+          } (OUTPUT_LAYER)
+       }
+    }
+}
+ 
+/*check max stack level, upward only*/
+if (cut_maxStackLevel > 0 && cut_stackLevelSpacing > 0) {
+    if (cut_maxStackLevel == 1) {
+      BOOLEAN CUT_LAYER AND CUT_LAYER1 { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 2) {
+      BOOLEAN (CUT_LAYER AND CUT_LAYER1) AND CUT_LAYER2 { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 3) {
+      BOOLEAN (CUT_LAYER AND CUT_LAYER1) AND (CUT_LAYER2 AND CUT_LAYER3)
+        { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 4) {
+      BOOLEAN ((CUT_LAYER AND CUT_LAYER1) AND (CUT_LAYER2 AND CUT_LAYER3))
+        AND CUT_LAYER4 { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 5) {
+      BOOLEAN ((CUT_LAYER AND CUT_LAYER1) AND (CUT_LAYER2 AND CUT_LAYER3))
+        AND (CUT_LAYER4 AND CUT_LAYER5) { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 6) {
+      BOOLEAN ((CUT_LAYER AND CUT_LAYER1) AND (CUT_LAYER2 AND CUT_LAYER3))
+        AND ((CUT_LAYER4 AND CUT_LAYER5) AND CUT_LAYER6) { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel >= 7) { 
+      BOOLEAN ((CUT_LAYER AND CUT_LAYER1) AND (CUT_LAYER2 AND CUT_LAYER3))
+        AND ((CUT_LAYER4 AND CUT_LAYER5) AND (CUT_LAYER6 AND CUT_LAYER7))
+       { } TEMP = neighbors
+    }
+ 
+    if (!layer_empty(neighbors)) {
+      SELECT CUT_LAYER0 INTERACT neighbors {
+        LINE_TOUCH = FALSE POINT_TOUCH = FALSE 
+      } TEMP = neighbors
+      EXTERNAL neighbors {
+	spacing <= cut_stackLevelSpacing
+      } TEMP = via_arr_ext
+      if (!layer_empty (via_arr_ext)) {
+	SELECT neighbors OUTSIDE via_arr_ext {
+         COMMENT = "$layer_name StackLevel: maximum stack level = cut_maxStackLevel "
+          LINE_TOUCH = FALSE
+          POINT_TOUCH = FALSE	    
+        } (OUTPUT_LAYER)
+      }
+      else {
+        BOOLEAN CUT_LAYER AND neighbors {
+            COMMENT = "$layer_name StackLevel: maximum stack level = cut_maxStackLevel "
+        } (OUTPUT_LAYER)
+      }
+    }
+  }
+  else if (cut_maxStackLevel > 0) {
+    if (cut_maxStackLevel == 1) {
+      COPY CUT_LAYER1 { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 2) {
+      BOOLEAN CUT_LAYER1 AND CUT_LAYER2 { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 3) {
+      BOOLEAN CUT_LAYER1 AND (CUT_LAYER2 AND CUT_LAYER3)
+        { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 4) {
+      BOOLEAN (CUT_LAYER1 AND CUT_LAYER2) AND (CUT_LAYER3 AND CUT_LAYER4)
+        { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 5) {
+      BOOLEAN ((CUT_LAYER1 AND CUT_LAYER2) AND (CUT_LAYER3 AND CUT_LAYER4))
+        AND CUT_LAYER5 { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel == 6) {
+      BOOLEAN ((CUT_LAYER6 AND CUT_LAYER1) AND (CUT_LAYER2 AND CUT_LAYER3))
+        AND (CUT_LAYER4 AND CUT_LAYER5) { } TEMP = neighbors
+    }
+    else if (cut_maxStackLevel >= 7) { 
+      BOOLEAN ((CUT_LAYER7 AND CUT_LAYER1) AND (CUT_LAYER2 AND CUT_LAYER3))
+        AND ((CUT_LAYER4 AND CUT_LAYER5) AND CUT_LAYER6) { } TEMP = neighbors
+    }
+ 
+    if (!layer_empty (neighbors)) {
+        BOOLEAN CUT_LAYER AND neighbors {
+            COMMENT = "$layer_name StackLevel: maximum stack level = cut_maxStackLevel "
+        } (OUTPUT_LAYER)
+    }
+}
+ 
+/*Check fat contact*/
+if (cut_fatContactMinSpacing > 0 && cut_fatTblDimension == 0) {
+    if (cut_fatContactThreshold1 > 0) {
+    	SIZE METAL_LAYER1   { UNDER_OVER = cut_fatContactThreshold1 / 2.0 - TOLERANCE } TEMP = m_fat
+    	BOOLEAN m_fat AND METAL_LAYER1 { } TEMP = m_fat
+ 
+    	SELECT CUT_LAYER INSIDE  m_fat { } TEMP = v_fat
+ 
+    	EXTERNAL v_fat CUT_LAYER {
+            COMMENT = "$layer_name FatContSpc: fat contact ( cut_fatContactThreshold1 um, lower layer) minimum spacing = cut_fatContactMinSpacing um"
+            SPACING < cut_fatContactMinSpacing
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = TRUE
+        } (OUTPUT_LAYER)
+    }
+ 
+    if (cut_fatContactThreshold2 > 0) {
+    	SIZE METAL_LAYER2   { UNDER_OVER = cut_fatContactThreshold2 / 2.0 - TOLERANCE } TEMP = m_fat
+    	BOOLEAN m_fat AND METAL_LAYER2 { } TEMP = m_fat
+ 
+    	SELECT CUT_LAYER INSIDE  m_fat { } TEMP = v_fat
+ 
+    	EXTERNAL v_fat CUT_LAYER {
+            COMMENT = "$layer_name FatContSpc: fat contact ( cut_fatContactThreshold2 um, upper layer) minimum spacing = cut_fatContactMinSpacing um"
+            SPACING < cut_fatContactMinSpacing
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = TRUE
+        } (OUTPUT_LAYER)
+    }
+}
+/* Avoid empty optimization result parsing error */
+if (addEmptyViaCheck) {
+   BOOLEAN empty OR empty {
+      COMMENT = "$layer_name Empty: Dummy Output"
+   } (OUTPUT_LAYER)
+   SET addEmptyViaCheck=0;
+}
+ 
+/* reset variables */
+@undef DEFAULT_CUT
+@undef CUT_TOP_LAYER
+@undef CUT_FRAM_LAYER
+@undef CUT_BLOCKAGE_LAYER
+@undef CUT_LAYER0
+@undef CUT_LAYER1
+@undef CUT_LAYER2
+@undef CUT_LAYER3
+@undef CUT_LAYER4
+@undef CUT_LAYER5
+@undef CUT_LAYER6
+@undef CUT_LAYER7
+@undef CUT_LAYER8
+@undef CUT_LAYER9
+@undef CUT_LAYER10
+SET cut_size = 0;
+SET cut_minSpacing = 0;
+SET cut_sameNetMinSpacing = 0;
+SET cut_cornerMinSpacing = 0;
+SET cutBlkg_minSpacing = 0;
+SET cut_maxNumAdjacentCut = 0;
+SET cut_adjacentCutRange = 0;
+SET cut_enclosedCutNeighborRange = 0;
+SET cut_enclosedCutNumNeighbor = 0;
+SET cut_enclosedCutMinSpacing = 0;
+SET cut_enclosedCutToNeighborMinSpacing = 0;
+SET cut_enclosedCutDiagViaExcluded = 0;
+SET cut_maxStackLevel = 0;
+SET cut_defaultContactMinSpacing = 0;
+SET cut_fatContactThreshold1 = 0;
+SET cut_fatContactThreshold2 = 0;
+SET cut_fatContactMinSpacing = 0;
+SET cut_maxCutSpacing = 0; 
+SET cut_fatTblDimension = 0;
+SET cut_fatTblThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+SET cut_fatTblMinSpacing = 0;
+SET cut_fatTblExtensionRange = 0;
+SET cut_fatTblExtensionMinCuts = 0;
+SET cut_fatTblExtensionMinSpacing = 0;

@@ -1,0 +1,11 @@
+@nLint message generated warning file.
+
+*** Working Directory [/home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_10/hdl] ***
+
+write_out.v(10): Warning 25009: the fan-out number of signal "sram_write_enable" is 102 whereas the limitation is 10. (Design Style)
+write_out.v(12): Warning 25009: the fan-out number of signal "data_set" is 102 whereas the limitation is 10. (Design Style)
+write_out.v(13): Warning 25009: the fan-out number of signal "matrix_index" is 76 whereas the limitation is 10. (Design Style)
+write_out.v(15): Warning 25009: the fan-out number of signal "quantized_data" is 192 whereas the limitation is 10. (Design Style)
+write_out.v(48): Warning 22117: "Synchronous" reset "srstn" is detected. (Design Style)
+
+Total 5 Warning(s)

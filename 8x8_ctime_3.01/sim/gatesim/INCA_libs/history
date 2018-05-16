@@ -1,0 +1,16 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(03Jan2018:23:42:05):( ncverilog -f sim_gate.f )
+s2::(06Jan2018:00:12:21):( ncverilog -f sim_gate.f )
+s3::(06Jan2018:00:14:46):( ncverilog -f sim_gate.f )
+s4::(06Jan2018:09:34:00):( ncverilog -f sim_gate.f )
+s5::(06Jan2018:11:49:46):( ncverilog -f sim_gate.f )
+s6::(06Jan2018:12:11:33):( ncverilog -f sim_gate.f )
+s7::(06Jan2018:12:12:03):( ncverilog -f sim_gate.f )
+s8::(06Jan2018:12:12:32):( ncverilog -f sim_gate.f )
+s9::(06Jan2018:12:20:43):( ncverilog -f sim_gate.f )
+s10::(06Jan2018:12:30:53):( ncverilog -f sim_gate.f )
+s11::(06Jan2018:12:34:57):( ncverilog -f sim_gate.f )
+s12::(16Jan2018:22:27:34):( ncverilog -f sim_gate.f )

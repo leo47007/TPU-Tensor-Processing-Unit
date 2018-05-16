@@ -1,0 +1,48 @@
+/*protrusion length rule*/
+SIZE METAL_LAYER    { UNDER_OVER = fatTblThresh_protru / 2.0 - TOLERANCE } TEMP = fat
+BOOLEAN fat AND METAL_LAYER {  } TEMP = fat 
+BOOLEAN METAL_LAYER NOT fat {  } TEMP = fat_nbr
+SIZE fat { OVERSIZE = fatTblLength_protru + TOLERANCE } TEMP = fat_ext
+BOOLEAN fat_nbr AND fat_ext {} TEMP = fat_nbr
+SELECT fat_nbr INTERACT fat TEMP = fat_nbr
+/* Get the correct fat extension */
+SELECT_EDGE fat_nbr TOUCHING fat { } TEMP = ext_filter
+SIZE ext_filter { VSIZE_INSIDE = TOLERANCE } TEMP = ext_filter
+SIZE ext_filter INSIDE fat_nbr {
+   OVERSIZE = fatTblLength_protru-TOLERANCE
+   INCREMENT = minSpacing
+} TEMP=dummy TEMP = fat_nbr
+  
+VERTEX fat_nbr {
+   CONCAVE = TRUE
+   SIZE = DBU
+} TEMP = corners
+SELECT fat_nbr OUTSIDE corners { } TEMP = fat_nbr1
+BOOLEAN fat_nbr NOT fat_nbr1 { } TEMP = fat_nbr2
+SELECT_CONTAINS fat_nbr1 {
+   WIDTH =  DBU
+   HEIGHT = fatTblLength_protru
+} TEMP = good_fat_nbr1
+BOOLEAN fat_nbr1 NOT good_fat_nbr1 { } TEMP = fat_nbr1
+/* check with L or T shape of fat extension */
+SELECT_EDGE fat_nbr2 INTERACT corners { } TEMP = side_edge
+LENGTH side_edge { SPACING < fatTblLength_protru } TEMP = vio_edge
+SELECT fat_nbr2 INTERACT vio_edge { } TEMP = fat_nbr2
+BOOLEAN fat_nbr1 OR fat_nbr2 { } TEMP = fat_nbr
+INTERAL fat_nbr {
+   SPACING < fatTblWidth_protru
+} TEMP = possible_err
+if (!layer_empty(possible_err)) {
+   SELECT fat_nbr INTERACT possible_err { } TEMP=fat_nbr
+   SELECT fat INTERACT fat_nbr {} TEMP=fat
+   BOOLEAN fat OR fat_nbr {} TEMP=fat
+   INTERNAL fat {
+      COMMENT = "$layer_name ProtrusionLength : threshold fatTblThresh_protru um, length  fatTblLength_protru um, width fatTblWidth_protru um"
+      SPACING < fatTblWidth_protru
+   } (OUTPUT_LAYER)
+}
+/* protrusion leng rule check */
+SET fatTblThresh_protru = 0;
+SET fatTblLength_protru = 0;
+SET fatTblWidth_protru = 0;
+SET minSpacing = 0;

@@ -1,0 +1,154 @@
+/*
+@if __VERSION__ < "2003.3.0000"
+@error  Hercules version must be later than 2003.3.0000
+@endif
+*/
+@define MAXIMUM_NUMBER 9999999999
+VARIABLE string layer_name = "NULL";
+VARIABLE double ignoreBlockage = 0;
+VARIABLE double readCellView = 0;
+VARIABLE double ignoreFRAM_Err = 0;
+VARIABLE double ignoreContactCodeSpacing = 0;
+VARIABLE double checkCrossHierShort = 0;
+VARIABLE double ignoreChildCell = 0;
+/* For Router special DRC option */
+VARIABLE double router_ignoreSameNetAdjacentViaDRC=0;
+VARIABLE double router_parallelLengthNetMode = 0;
+/* Variables for metal layers*/
+VARIABLE double fatTblSpacingMode = 0;
+VARIABLE double fatTblMinEnclosedAreaMode = 0;
+VARIABLE double fatWireExtensionMode = 0;
+VARIABLE double minEdgeMode = 0;
+VARIABLE double minLengthMode = 0;
+VARIABLE double parallelLengthMode = 0;
+VARIABLE double minWidth = 0;
+VARIABLE double maxWidth = 0;
+VARIABLE double minArea = 0;
+VARIABLE double minEnclosedArea = 0;
+VARIABLE double minEnclosedWidth = 0;
+VARIABLE double windowSize = 0;
+VARIABLE double maxDensity = 0;
+VARIABLE double minDensity = 0;
+VARIABLE double gradientWindowSize = 0;
+VARIABLE double maxGradientDensity = 0;
+VARIABLE string layer2_name = "NULL";
+VARIABLE double numOfMultiLayer = 0;
+VARIABLE double consecutiveWindowSize = 0;
+VARIABLE double maxConsecutiveDensity = 0;
+VARIABLE double maxNumMinEdge = 0;
+VARIABLE double maxTotalMinEdgeLength = 0;
+VARIABLE double minEdgeLength = 0;
+VARIABLE double minEdgeLength2 = 0;
+VARIABLE double minEdgeLength3 = 0;
+VARIABLE double minSpacing = 0;
+VARIABLE double sameNetMinSpacing = 0;
+VARIABLE double sameNetWidthThreshold = 0;
+VARIABLE double stub2StubSpacing = 0;
+VARIABLE double stubSpacing = 0;
+VARIABLE double sideStubExt = 0;
+VARIABLE double sideStubThreshold = 0;
+VARIABLE double stubThreshold = 0;
+VARIABLE double stubRange = 0;
+VARIABLE double stubMode = 0;
+VARIABLE double fatWireThreshold = 0;
+VARIABLE double fatThinMinSpacing = 0;
+VARIABLE double fatFatMinSpacing = 0;
+VARIABLE double fatTblDimension = 0;
+VARIABLE double fatTblThreshold = 0;
+VARIABLE double fatTblNextThreshold = 0;
+VARIABLE double fatTblThreshold_Start = 0;
+VARIABLE double fatTblThreshold_End = 0;
+VARIABLE double fatTblThreshold_1 = 0;
+VARIABLE double fatTblExtensionRange = 0;
+VARIABLE double fatTblParallelLength = 0;
+VARIABLE double fatTblSpacing = 0;
+VARIABLE double fatTblSpacing_dg = 0;
+VARIABLE double fatTblEnclosedArea = 0;
+/* Variables for cut layers*/
+VARIABLE double cornerSpacingMode = 0;
+VARIABLE double cut_size = 0;
+VARIABLE double metalLayer1_minSpacing = 0;
+VARIABLE double metalLayer2_minSpacing = 0;
+VARIABLE double cut_minSpacing = 0;
+VARIABLE double cut_sameNetMinSpacing = 0;
+VARIABLE double cut_cornerMinSpacing = 0;
+VARIABLE double cutBlkg_minSpacing = 0;
+VARIABLE double cut_maxNumAdjacentCut = 0;
+VARIABLE double cut_adjacentCutRange = 0;
+VARIABLE double cut_width = 0;
+VARIABLE double cut_lineTblThreshold = 0;
+VARIABLE double cut_lineTblNextThreshold = 0;
+VARIABLE double cut_lineTblMinSpacing = 0;
+VARIABLE double cut_matrixTblThreshold = 0;
+VARIABLE double cut_matrixTblNextThreshold = 0;
+VARIABLE double cut_matrixTblMinSpacing = 0;
+VARIABLE double cut_enclosedCutNeighborRange = 0;
+VARIABLE double cut_enclosedCutNumNeighbor = 0;
+VARIABLE double cut_enclosedCutMinSpacing = 0;
+VARIABLE double cut_enclosedCutToNeighborMinSpacing = 0;
+VARIABLE double cut_enclosedCutDiagViaExcluded = 0;
+VARIABLE double cut_defaultContactMinSpacing = 0;
+VARIABLE double cut_fatContactThreshold1 = 0;
+VARIABLE double cut_fatContactThreshold2 = 0;
+VARIABLE double cut_fatContactMinSpacing = 0;
+VARIABLE double cut_maxStackLevel = 0;
+VARIABLE double cut_maxCutSpacing = 0;
+VARIABLE double cut_fatTblDimension = 0;
+VARIABLE double cut_fatTblThreshold_1 = 0;
+VARIABLE double cut_fatTblThreshold_2 = 0;
+VARIABLE double cut_fatTblNextThreshold_1 = 0;
+VARIABLE double cut_fatTblNextThreshold_2 = 0;
+VARIABLE double cut_fatMetalAndMode = 0;
+VARIABLE double cut_fatTblExtensionRange = 0;
+VARIABLE double cut_fatTblMinCuts = 0;
+VARIABLE double cut_fatTblMinSpacing = 0;
+VARIABLE double cut_fatTblExtensionMinCuts = 0;
+VARIABLE double cut_fatTblExtensionMinSpacing = 0;
+/* Variables for Via Farm, Enclosure rule */
+VARIABLE double cut_ViaFarm_spacing = 0;
+VARIABLE double cut_ViaFarm_maxNum = 0;
+VARIABLE double cut_minEnclosure1 = -1;
+VARIABLE double cut_minEnclosure2 = -1;
+VARIABLE double cut_EOLEnclosure1 = 0;
+VARIABLE double cut_EOLEnclosure2 = 0;
+VARIABLE double cut_ExtViaFarm_spacing = 0;
+VARIABLE double cut_ExtViaFarm_maxNum = 0;
+VARIABLE double cut_ExtMinEnclosure1 = -1;
+VARIABLE double cut_ExtMinEnclosure2 = -1;
+VARIABLE double cut_ExtEOLEnclosure1 = 0;
+VARIABLE double cut_ExtEOLEnclosure2 = 0;
+/* Variables for diff layers */
+VARIABLE double diff_minSpacing = 0;
+VARIABLE double diff_netMinSpacing = 0;
+VARIABLE double diff_cornerMinSpacing = 0;
+VARIABLE double diff_minEnclosure = 0;
+VARIABLE double diff_endOfLineMode = 0;
+VARIABLE double diff_endOfLineEnclosure = 0;
+VARIABLE double diff_not_stackable = 0;
+VARIABLE double diff_fatTblViaKeepoutThreshold = 0;
+VARIABLE double diff_fatTblViaKeepoutNextThreshold = 0;
+VARIABLE double diff_fatTblViaKeepoutMinSize = 0;
+VARIABLE double diff_fatTblViaKeepoutEnclosure = 0;
+/* spacing to handle via array in stackLevel */
+VARIABLE double cut_stackLevelSpacing = 0;
+/* Variable for bound box length of polygon */
+VARIABLE double minLength = 0;
+VARIABLE double maxLength = 0;
+/* Fat Poly Contact Rule */
+VARIABLE double fatPolyContactRule = 0;
+/* protrusion leng rule check */
+VARIABLE double fatTblThresh_protru = 0;
+VARIABLE double fatTblLength_protru = 0;
+VARIABLE double fatTblWidth_protru = 0;
+/* Contact code checking */
+VARIABLE double viaFarm_maxNum=0;
+VARIABLE double viaFarm_spacing=0;
+VARIABLE double via_minEnclosure1=-1;
+VARIABLE double via_EOLEnclosure1=0;
+VARIABLE double via_minEnclosure2=-1;
+VARIABLE double via_EOLEnclosure2=0;
+/* For temporary usage */
+VARIABLE double temporary_1 = 0;
+VARIABLE double temporary_2 = 0;
+VARIABLE double addEmptyMetalCheck = 1;
+VARIABLE double addEmptyViaCheck = 1;

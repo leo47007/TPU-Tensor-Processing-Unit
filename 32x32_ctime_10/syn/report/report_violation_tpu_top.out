@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : tpu_top
+Version: G-2012.06-SP5
+Date   : Fri Jan  5 00:30:31 2018
+****************************************
+
+
+   max_fanout
+
+                             Required        Actual
+   Net                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   systolic/n3034               1.64         705.24        -703.60  (VIOLATED)
+   systolic/n3028               1.64         705.18        -703.54  (VIOLATED)
+   systolic/n3031               1.64         705.14        -703.50  (VIOLATED)
+   systolic/n3145               1.64          13.67         -12.03  (VIOLATED)
+   systolic/n3146               1.64          13.67         -12.03  (VIOLATED)
+   systolic/n43887              1.64          13.67         -12.03  (VIOLATED)
+   systolic/n2716               1.64           1.83          -0.19  (VIOLATED)
+   systolic/n2717               1.64           1.72          -0.08  (VIOLATED)
+   systolic/n2718               1.64           1.70          -0.06  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      12              -2147.04  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   systolic/n3028             168.00        1063.32        -895.32  (VIOLATED)
+   systolic/n3031             168.00        1063.32        -895.32  (VIOLATED)
+   systolic/n3034             168.00        1063.32        -895.32  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      3               -2685.96  
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   tpu_top                      0.00       1749229.00     -1749229.00
+                                                                    (VIOLATED)
+
+
+1

@@ -1,0 +1,7 @@
+@nLint message generated warning file.
+
+*** Working Directory [/home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/16x16_ctime10/hdl] ***
+
+quantize.v(17): Warning 25009: the fan-out number of signal "ori_shifted_data[20:5]" is 16 whereas the limitation is 10. (Design Style)
+
+Total 1 Warning(s)

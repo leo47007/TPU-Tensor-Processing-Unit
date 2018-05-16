@@ -1,0 +1,2564 @@
+*** CHIP		Mon Jan 15 18:42:23 2018
+
+AFTER removing temp no_explodes & post-vcell processing
+
+
+
+		DESIGN STATISTICS DEFINITIONS
+		______ __________ ______________.
+
+Hierarchical levels       The number of levels in the design.
+Unique Cells              The number of unique cells in the design.
+Hierarchical placements   The total number of placements (srefs and arefs)
+			  at each level in the design.
+Total Design placements   The total number of placements (srefs and arefs)
+			  in the design.
+Exploded references       The total number of exploded references in the
+			   design.
+Exploded placements       The total number of exploded placements in the
+			   design.
+Total Data count          The total number of all polygons, paths, 
+			  vectors, and rectangles in the design.
+Sref Placements           The total number of cell references in the design.
+Arefs                     The total number of array references in the design.
+Aref Placements           The total number of references in each array
+			  reference in the design.
+Data                      The number of data primitives in each cell
+			  of the design.
+Text                      The number of text primitives in each cell of the design.
+
+
+*********************************************************************************
+
+
+		DESIGN STATISTICS FOR "CHIP".
+		______ __________ ___ ___________.
+
+	Hierarchical levels	=         1
+	Unique cells		=         1
+	Hierarchical placements	=         1
+	Total design placements	=         1
+	Exploded references	=         0
+	Exploded placements	=         0
+	Total data count	=   1917681
+	SREF placements		=         1
+	AREFS			=         0
+	AREF placements		=         0
+	DATA 			=   1917681
+	TEXT			=         0
+
+
+*********************************************************************************
+
+		HIERARCHICAL TREE FOR BLOCK "CHIP".
+
+
+							     TOTAL SREF AREF
+ CHIP                                         Level=0  Count=   1    1    0 
+
+
+*********************************************************************************
+
+
+		CELL STATISTICS
+
+
+CELL = CHIP
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, 0.000) (449.064, 448.000)
+	Cell Area		= 201180.67
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=  1917681
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 902157  0       
+   metal1_top 902157  0       
+   metal1_rbkg 902157  0       
+   metal2_pin 375638  0       
+   metal2_top 375638  0       
+   metal2_rbkg 375638  0       
+   metal3_pin 190353  0       
+   metal3_top 190353  0       
+   metal3_rbkg 190353  0       
+   metal4_pin 30986   0       
+   metal4_top 30986   0       
+   metal4_rbkg 30986   0       
+   metal5_pin 12813   0       
+   metal5_top 12813   0       
+   metal5_rbkg 12813   0       
+   metal6_pin 7506    0       
+   metal6_top 7506    0       
+   metal6_rbkg 7506    0       
+   metal7_pin 4154    0       
+   metal7_top 4154    0       
+   metal7_rbkg 4154    0       
+   metal8_pin 1471    0       
+   metal8_top 1471    0       
+   metal8_rbkg 1471    0       
+   metal9_pin 446     0       
+   metal9_top 446     0       
+   metal9_rbkg 446     0       
+   via1_top   143977  0       
+   via1_fram  143977  0       
+   via2_top   132057  0       
+   via2_fram  132057  0       
+   via3_top   41730   0       
+   via3_fram  41730   0       
+   via4_top   37272   0       
+   via4_fram  37272   0       
+   via5_top   2721    0       
+   via5_fram  2721    0       
+   via6_top   1895    0       
+   via6_fram  1895    0       
+   via7_top   683     0       
+   via7_fram  683     0       
+   via8_top   286     0       
+   via8_fram  286     0       
+   PR_BNDY    31536   0       
+
+CELL = $$VIA12SQ_120_120_2_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.115, -0.030) (0.115, 0.030)
+	Cell Area		= 0.01
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        4
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 1       0       
+   metal1_top 1       0       
+   metal1_rbkg 1       0       
+   metal2_pin 1       0       
+   metal2_top 1       0       
+   metal2_rbkg 1       0       
+   via1_top   2       0       
+   via1_fram  2       0       
+
+CELL = $$VIA78SQ_120_120_2_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.115, -0.030) (0.115, 0.030)
+	Cell Area		= 0.01
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        4
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal7_pin 1       0       
+   metal7_top 1       0       
+   metal7_rbkg 1       0       
+   metal8_pin 1       0       
+   metal8_top 1       0       
+   metal8_rbkg 1       0       
+   via7_top   2       0       
+   via7_fram  2       0       
+
+CELL = $$VIA12SQ_C_120_120_2_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.115, -0.055) (0.115, 0.055)
+	Cell Area		= 0.03
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        4
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 1       0       
+   metal1_top 1       0       
+   metal1_rbkg 1       0       
+   metal2_pin 1       0       
+   metal2_top 1       0       
+   metal2_rbkg 1       0       
+   via1_top   2       0       
+   via1_fram  2       0       
+
+CELL = $$VIA12SQ_C_120_120_33_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.975, -0.055) (1.975, 0.055)
+	Cell Area		= 0.43
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 1       0       
+   metal1_top 1       0       
+   metal1_rbkg 1       0       
+   metal2_pin 1       0       
+   metal2_top 1       0       
+   metal2_rbkg 1       0       
+   via1_top   33      0       
+   via1_fram  33      0       
+
+CELL = $$VIA12SQ_C_120_120_16_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.955, -0.055) (0.955, 0.055)
+	Cell Area		= 0.21
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 1       0       
+   metal1_top 1       0       
+   metal1_rbkg 1       0       
+   metal2_pin 1       0       
+   metal2_top 1       0       
+   metal2_rbkg 1       0       
+   via1_top   16      0       
+   via1_fram  16      0       
+
+CELL = $$VIA23SQ_C_120_120_33_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.975, -0.055) (1.975, 0.055)
+	Cell Area		= 0.43
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal2_pin 1       0       
+   metal2_top 1       0       
+   metal2_rbkg 1       0       
+   metal3_pin 1       0       
+   metal3_top 1       0       
+   metal3_rbkg 1       0       
+   via2_top   33      0       
+   via2_fram  33      0       
+
+CELL = $$VIA23SQ_C_120_120_16_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.955, -0.055) (0.955, 0.055)
+	Cell Area		= 0.21
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal2_pin 1       0       
+   metal2_top 1       0       
+   metal2_rbkg 1       0       
+   metal3_pin 1       0       
+   metal3_top 1       0       
+   metal3_rbkg 1       0       
+   via2_top   16      0       
+   via2_fram  16      0       
+
+CELL = $$VIA34SQ_C_120_120_33_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.975, -0.055) (1.975, 0.055)
+	Cell Area		= 0.43
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal3_pin 1       0       
+   metal3_top 1       0       
+   metal3_rbkg 1       0       
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   via3_top   33      0       
+   via3_fram  33      0       
+
+CELL = $$VIA34SQ_C_120_120_16_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.955, -0.055) (0.955, 0.055)
+	Cell Area		= 0.21
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal3_pin 1       0       
+   metal3_top 1       0       
+   metal3_rbkg 1       0       
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   via3_top   16      0       
+   via3_fram  16      0       
+
+CELL = $$VIA34BAR_C_135_185_29_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.945, -0.080) (1.945, 0.080)
+	Cell Area		= 0.62
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       31
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal3_pin 1       0       
+   metal3_top 1       0       
+   metal3_rbkg 1       0       
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   via3_top   29      0       
+   via3_fram  29      0       
+
+CELL = $$VIA34BAR_C_135_185_14_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.932, -0.080) (0.932, 0.080)
+	Cell Area		= 0.30
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       16
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal3_pin 1       0       
+   metal3_top 1       0       
+   metal3_rbkg 1       0       
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   via3_top   14      0       
+   via3_fram  14      0       
+
+CELL = $$VIA45BAR_C_135_185_29_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.945, -0.080) (1.945, 0.080)
+	Cell Area		= 0.62
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       31
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   metal5_pin 1       0       
+   metal5_top 1       0       
+   metal5_rbkg 1       0       
+   via4_top   29      0       
+   via4_fram  29      0       
+
+CELL = $$VIA45BAR_C_135_185_14_1
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.932, -0.080) (0.932, 0.080)
+	Cell Area		= 0.30
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       16
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   metal5_pin 1       0       
+   metal5_top 1       0       
+   metal5_rbkg 1       0       
+   via4_top   14      0       
+   via4_fram  14      0       
+
+CELL = $$VIA45LG_C_185_185_10_21
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.913, -1.905) (0.913, 1.905)
+	Cell Area		= 6.95
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      212
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   metal5_pin 1       0       
+   metal5_top 1       0       
+   metal5_rbkg 1       0       
+   via4_top   210     0       
+   via4_fram  210     0       
+
+CELL = $$VIA45LG_C_185_185_10_11
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.913, -0.980) (0.913, 0.980)
+	Cell Area		= 3.58
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      112
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   metal5_pin 1       0       
+   metal5_top 1       0       
+   metal5_rbkg 1       0       
+   via4_top   110     0       
+   via4_fram  110     0       
+
+CELL = $$VIA45LG_C_185_185_21_11
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.930, -0.980) (1.930, 0.980)
+	Cell Area		= 7.57
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      233
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   metal5_pin 1       0       
+   metal5_top 1       0       
+   metal5_rbkg 1       0       
+   via4_top   231     0       
+   via4_fram  231     0       
+
+CELL = $$VIA45LG_C_185_185_21_21
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.930, -1.905) (1.930, 1.905)
+	Cell Area		= 14.71
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      443
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal4_pin 1       0       
+   metal4_top 1       0       
+   metal4_rbkg 1       0       
+   metal5_pin 1       0       
+   metal5_top 1       0       
+   metal5_rbkg 1       0       
+   via4_top   441     0       
+   via4_fram  441     0       
+
+CELL = INVX2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.912, 1.702)
+	Cell Area		= 1.58
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 4       0       
+   metal1_top 4       0       
+   metal1_rbkg 4       0       
+   PR_BNDY    1       0       
+
+CELL = NAND4X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       24
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 23      0       
+   metal1_top 23      0       
+   metal1_rbkg 23      0       
+   PR_BNDY    1       0       
+
+CELL = NAND4X0_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        8
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 7       0       
+   metal1_top 7       0       
+   metal1_rbkg 7       0       
+   PR_BNDY    1       0       
+
+CELL = INVX4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 4       0       
+   metal1_top 4       0       
+   metal1_rbkg 4       0       
+   PR_BNDY    1       0       
+
+CELL = NBUFFX8_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 18      0       
+   metal1_top 18      0       
+   metal1_rbkg 18      0       
+   PR_BNDY    1       0       
+
+CELL = INVX8_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 4       0       
+   metal1_top 4       0       
+   metal1_rbkg 4       0       
+   PR_BNDY    1       0       
+
+CELL = INVX0_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.760, 1.702)
+	Cell Area		= 1.32
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 4       0       
+   metal1_top 4       0       
+   metal1_rbkg 4       0       
+   PR_BNDY    1       0       
+
+CELL = AND4X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       16
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 15      0       
+   metal1_top 15      0       
+   metal1_rbkg 15      0       
+   PR_BNDY    1       0       
+
+CELL = AND2X4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       12
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 11      0       
+   metal1_top 11      0       
+   metal1_rbkg 11      0       
+   PR_BNDY    1       0       
+
+CELL = NBUFFX4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 13      0       
+   metal1_top 13      0       
+   metal1_rbkg 13      0       
+   PR_BNDY    1       0       
+
+CELL = INVX1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.760, 1.702)
+	Cell Area		= 1.32
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 4       0       
+   metal1_top 4       0       
+   metal1_rbkg 4       0       
+   PR_BNDY    1       0       
+
+CELL = NAND3X0_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.064, 1.702)
+	Cell Area		= 1.84
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        7
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 6       0       
+   metal1_top 6       0       
+   metal1_rbkg 6       0       
+   PR_BNDY    1       0       
+
+CELL = AND2X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       12
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 11      0       
+   metal1_top 11      0       
+   metal1_rbkg 11      0       
+   PR_BNDY    1       0       
+
+CELL = AND3X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 13      0       
+   metal1_top 13      0       
+   metal1_rbkg 13      0       
+   PR_BNDY    1       0       
+
+CELL = OA21X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 22      0       
+   metal1_top 22      0       
+   metal1_rbkg 22      0       
+   PR_BNDY    1       0       
+
+CELL = OR2X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 12      0       
+   metal1_top 12      0       
+   metal1_rbkg 12      0       
+   PR_BNDY    1       0       
+
+CELL = OR2X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 12      0       
+   metal1_top 12      0       
+   metal1_rbkg 12      0       
+   PR_BNDY    1       0       
+
+CELL = NBUFFX2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 12      0       
+   metal1_top 12      0       
+   metal1_rbkg 12      0       
+   PR_BNDY    1       0       
+
+CELL = NBUFFX16_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.648, 1.702)
+	Cell Area		= 6.32
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       17
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 16      0       
+   metal1_top 16      0       
+   metal1_rbkg 16      0       
+   PR_BNDY    1       0       
+
+CELL = DELLN1X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.040, 1.702)
+	Cell Area		= 5.27
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       30
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 29      0       
+   metal1_top 29      0       
+   metal1_rbkg 29      0       
+   PR_BNDY    1       0       
+
+CELL = AND2X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       12
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 11      0       
+   metal1_top 11      0       
+   metal1_rbkg 11      0       
+   PR_BNDY    1       0       
+
+CELL = NAND2X0_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.912, 1.702)
+	Cell Area		= 1.58
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        6
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 5       0       
+   metal1_top 5       0       
+   metal1_rbkg 5       0       
+   PR_BNDY    1       0       
+
+CELL = DELLN3X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (5.776, 1.702)
+	Cell Area		= 10.00
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       57
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 56      0       
+   metal1_top 56      0       
+   metal1_rbkg 56      0       
+   PR_BNDY    1       0       
+
+CELL = INVX32_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (5.472, 1.702)
+	Cell Area		= 9.48
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 4       0       
+   metal1_top 4       0       
+   metal1_rbkg 4       0       
+   PR_BNDY    1       0       
+
+CELL = OA21X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       25
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 24      0       
+   metal1_top 24      0       
+   metal1_rbkg 24      0       
+   PR_BNDY    1       0       
+
+CELL = NAND2X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 20      0       
+   metal1_top 20      0       
+   metal1_rbkg 20      0       
+   PR_BNDY    1       0       
+
+CELL = IBUFFX4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 22      0       
+   metal1_top 22      0       
+   metal1_rbkg 22      0       
+   PR_BNDY    1       0       
+
+CELL = NAND2X4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 18      0       
+   metal1_top 18      0       
+   metal1_rbkg 18      0       
+   PR_BNDY    1       0       
+
+CELL = NOR2X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 20      0       
+   metal1_top 20      0       
+   metal1_rbkg 20      0       
+   PR_BNDY    1       0       
+
+CELL = IBUFFX8_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       29
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 28      0       
+   metal1_top 28      0       
+   metal1_rbkg 28      0       
+   PR_BNDY    1       0       
+
+CELL = NAND3X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 21      0       
+   metal1_top 21      0       
+   metal1_rbkg 21      0       
+   PR_BNDY    1       0       
+
+CELL = XOR3X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.408, 1.702)
+	Cell Area		= 7.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       65
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 64      0       
+   metal1_top 64      0       
+   metal1_rbkg 64      0       
+   PR_BNDY    1       0       
+
+CELL = OR3X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 13      0       
+   metal1_top 13      0       
+   metal1_rbkg 13      0       
+   PR_BNDY    1       0       
+
+CELL = XOR2X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       37
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 36      0       
+   metal1_top 36      0       
+   metal1_rbkg 36      0       
+   PR_BNDY    1       0       
+
+CELL = XOR2X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.736, 1.702)
+	Cell Area		= 4.74
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       37
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 36      0       
+   metal1_top 36      0       
+   metal1_rbkg 36      0       
+   PR_BNDY    1       0       
+
+CELL = OAI21X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       36
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 35      0       
+   metal1_top 35      0       
+   metal1_rbkg 35      0       
+   PR_BNDY    1       0       
+
+CELL = FADDX1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.888, 1.702)
+	Cell Area		= 5.00
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       27
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 26      0       
+   metal1_top 26      0       
+   metal1_rbkg 26      0       
+   PR_BNDY    1       0       
+
+CELL = OAI21X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       34
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 33      0       
+   metal1_top 33      0       
+   metal1_rbkg 33      0       
+   PR_BNDY    1       0       
+
+CELL = NAND3X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 21      0       
+   metal1_top 21      0       
+   metal1_rbkg 21      0       
+   PR_BNDY    1       0       
+
+CELL = XOR3X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.256, 1.702)
+	Cell Area		= 7.37
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       72
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 71      0       
+   metal1_top 71      0       
+   metal1_rbkg 71      0       
+   PR_BNDY    1       0       
+
+CELL = NOR2X0_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 20      0       
+   metal1_top 20      0       
+   metal1_rbkg 20      0       
+   PR_BNDY    1       0       
+
+CELL = HADDX1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       24
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 23      0       
+   metal1_top 23      0       
+   metal1_rbkg 23      0       
+   PR_BNDY    1       0       
+
+CELL = AO21X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 13      0       
+   metal1_top 13      0       
+   metal1_rbkg 13      0       
+   PR_BNDY    1       0       
+
+CELL = INVX16_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.040, 1.702)
+	Cell Area		= 5.27
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 4       0       
+   metal1_top 4       0       
+   metal1_rbkg 4       0       
+   PR_BNDY    1       0       
+
+CELL = IBUFFX2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 22      0       
+   metal1_top 22      0       
+   metal1_rbkg 22      0       
+   PR_BNDY    1       0       
+
+CELL = NAND2X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 20      0       
+   metal1_top 20      0       
+   metal1_rbkg 20      0       
+   PR_BNDY    1       0       
+
+CELL = NOR2X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 21      0       
+   metal1_top 21      0       
+   metal1_rbkg 21      0       
+   PR_BNDY    1       0       
+
+CELL = OAI221X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       36
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 35      0       
+   metal1_top 35      0       
+   metal1_rbkg 35      0       
+   PR_BNDY    1       0       
+
+CELL = OAI221X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       38
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 37      0       
+   metal1_top 37      0       
+   metal1_rbkg 37      0       
+   PR_BNDY    1       0       
+
+CELL = NBUFFX32_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (6.384, 1.702)
+	Cell Area		= 11.06
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 18      0       
+   metal1_top 18      0       
+   metal1_rbkg 18      0       
+   PR_BNDY    1       0       
+
+CELL = AO222X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 32      0       
+   metal1_top 32      0       
+   metal1_rbkg 32      0       
+   PR_BNDY    1       0       
+
+CELL = AO222X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       32
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 31      0       
+   metal1_top 31      0       
+   metal1_rbkg 31      0       
+   PR_BNDY    1       0       
+
+CELL = AO221X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       27
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 26      0       
+   metal1_top 26      0       
+   metal1_rbkg 26      0       
+   PR_BNDY    1       0       
+
+CELL = AO22X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 21      0       
+   metal1_top 21      0       
+   metal1_rbkg 21      0       
+   PR_BNDY    1       0       
+
+CELL = OA22X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       20
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 19      0       
+   metal1_top 19      0       
+   metal1_rbkg 19      0       
+   PR_BNDY    1       0       
+
+CELL = DFFSSRX1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.408, 1.702)
+	Cell Area		= 7.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       96
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 95      0       
+   metal1_top 95      0       
+   metal1_rbkg 95      0       
+   PR_BNDY    1       0       
+
+CELL = AOI21X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 18      0       
+   metal1_top 18      0       
+   metal1_rbkg 18      0       
+   PR_BNDY    1       0       
+
+CELL = AO21X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 17      0       
+   metal1_top 17      0       
+   metal1_rbkg 17      0       
+   PR_BNDY    1       0       
+
+CELL = DFFSSRX2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.712, 1.702)
+	Cell Area		= 8.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       99
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 98      0       
+   metal1_top 98      0       
+   metal1_rbkg 98      0       
+   PR_BNDY    1       0       
+
+CELL = HADDX2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       26
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 25      0       
+   metal1_top 25      0       
+   metal1_rbkg 25      0       
+   PR_BNDY    1       0       
+
+CELL = FADDX2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.192, 1.702)
+	Cell Area		= 5.53
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       28
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 27      0       
+   metal1_top 27      0       
+   metal1_rbkg 27      0       
+   PR_BNDY    1       0       
+
+CELL = OR2X4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 12      0       
+   metal1_top 12      0       
+   metal1_rbkg 12      0       
+   PR_BNDY    1       0       
+
+CELL = AOI21X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       26
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 25      0       
+   metal1_top 25      0       
+   metal1_rbkg 25      0       
+   PR_BNDY    1       0       
+
+CELL = NOR2X4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 21      0       
+   metal1_top 21      0       
+   metal1_rbkg 21      0       
+   PR_BNDY    1       0       
+
+CELL = XNOR2X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       40
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 39      0       
+   metal1_top 39      0       
+   metal1_rbkg 39      0       
+   PR_BNDY    1       0       
+
+CELL = XNOR2X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.736, 1.702)
+	Cell Area		= 4.74
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 32      0       
+   metal1_top 32      0       
+   metal1_rbkg 32      0       
+   PR_BNDY    1       0       
+
+CELL = OA221X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       29
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 28      0       
+   metal1_top 28      0       
+   metal1_rbkg 28      0       
+   PR_BNDY    1       0       
+
+CELL = MUX41X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.344, 1.702)
+	Cell Area		= 5.79
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       62
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 61      0       
+   metal1_top 61      0       
+   metal1_rbkg 61      0       
+   PR_BNDY    1       0       
+
+CELL = OA222X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       31
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 30      0       
+   metal1_top 30      0       
+   metal1_rbkg 30      0       
+   PR_BNDY    1       0       
+
+CELL = IBUFFX32_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (6.992, 1.702)
+	Cell Area		= 12.11
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       29
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 28      0       
+   metal1_top 28      0       
+   metal1_rbkg 28      0       
+   PR_BNDY    1       0       
+
+CELL = MUX21X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       26
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 25      0       
+   metal1_top 25      0       
+   metal1_rbkg 25      0       
+   PR_BNDY    1       0       
+
+CELL = OR4X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       34
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 33      0       
+   metal1_top 33      0       
+   metal1_rbkg 33      0       
+   PR_BNDY    1       0       
+
+CELL = OR4X4_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 34      0       
+   metal1_top 34      0       
+   metal1_rbkg 34      0       
+   PR_BNDY    1       0       
+
+CELL = OR4X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 32      0       
+   metal1_top 32      0       
+   metal1_rbkg 32      0       
+   PR_BNDY    1       0       
+
+CELL = AO22X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 21      0       
+   metal1_top 21      0       
+   metal1_rbkg 21      0       
+   PR_BNDY    1       0       
+
+CELL = AND3X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 12      0       
+   metal1_top 12      0       
+   metal1_rbkg 12      0       
+   PR_BNDY    1       0       
+
+CELL = NOR3X0_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 22      0       
+   metal1_top 22      0       
+   metal1_rbkg 22      0       
+   PR_BNDY    1       0       
+
+CELL = LATCHX1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.040, 1.702)
+	Cell Area		= 5.27
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       38
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 37      0       
+   metal1_top 37      0       
+   metal1_rbkg 37      0       
+   PR_BNDY    1       0       
+
+CELL = LATCHX2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.344, 1.702)
+	Cell Area		= 5.79
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       41
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 40      0       
+   metal1_top 40      0       
+   metal1_rbkg 40      0       
+   PR_BNDY    1       0       
+
+CELL = OAI22X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       30
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 29      0       
+   metal1_top 29      0       
+   metal1_rbkg 29      0       
+   PR_BNDY    1       0       
+
+CELL = NOR4X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       25
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 24      0       
+   metal1_top 24      0       
+   metal1_rbkg 24      0       
+   PR_BNDY    1       0       
+
+CELL = OA222X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 32      0       
+   metal1_top 32      0       
+   metal1_rbkg 32      0       
+   PR_BNDY    1       0       
+
+CELL = OAI222X1_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       38
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 37      0       
+   metal1_top 37      0       
+   metal1_rbkg 37      0       
+   PR_BNDY    1       0       
+
+CELL = OAI222X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.432, 1.702)
+	Cell Area		= 4.21
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       40
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 39      0       
+   metal1_top 39      0       
+   metal1_rbkg 39      0       
+   PR_BNDY    1       0       
+
+CELL = OA22X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       24
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 23      0       
+   metal1_top 23      0       
+   metal1_rbkg 23      0       
+   PR_BNDY    1       0       
+
+CELL = AND4X2_HVT
+	Cell Status		= EXPLODED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        0
+	Flat Placements		=        0
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       32
+	TEXT			=        0
+	Via			=        0
+   Current Data Counts for Cell:
+   Name    Data     Text
+   -----   -----    -----
+   metal1_pin 31      0       
+   metal1_top 31      0       
+   metal1_rbkg 31      0       
+   PR_BNDY    1       0       

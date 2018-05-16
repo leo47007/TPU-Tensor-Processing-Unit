@@ -1,0 +1,554 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : tpu_top
+Version: G-2012.06-SP5
+Date   : Sat Jan  6 12:34:34 2018
+****************************************
+
+
+Library(s) Used:
+
+    saed32hvt_ss0p95v125c (File: /usr/cadtool/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db)
+
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+tpu_top                140000            saed32hvt_ss0p95v125c
+quantize_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_OUTPUT_DATA_WIDTH16
+                       8000              saed32hvt_ss0p95v125c
+addr_sel               ForQA             saed32hvt_ss0p95v125c
+systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8
+                       140000            saed32hvt_ss0p95v125c
+systolic_controll_ARRAY_SIZE8
+                       8000              saed32hvt_ss0p95v125c
+write_out_ARRAY_SIZE8_OUTPUT_DATA_WIDTH16
+                       8000              saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_0
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_294
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_293
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_292
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_291
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_290
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_289
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_288
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_287
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_286
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_285
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_284
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_283
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_282
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_281
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_280
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_279
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_278
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_277
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_276
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_275
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_274
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_273
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_272
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_271
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_270
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_269
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_268
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_267
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_266
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_265
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_264
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_263
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_262
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_261
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_260
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_259
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_258
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_257
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_256
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_255
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_254
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_253
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_252
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_251
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_250
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_249
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_248
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_247
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_246
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_245
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_244
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_243
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_242
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_241
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_240
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_239
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_238
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_237
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_236
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_235
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_234
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_233
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_232
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_231
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_230
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_229
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_228
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_227
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_226
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_225
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_224
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_223
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_222
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_221
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_220
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_219
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_218
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_217
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_216
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_215
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_214
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_213
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_212
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_211
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_210
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_209
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_208
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_207
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_206
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_205
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_204
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_203
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_202
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_201
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_200
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_199
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_198
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_197
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_196
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_195
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_194
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_193
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_192
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_191
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_190
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_188
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_187
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_184
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_168
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_167
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_166
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_165
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_164
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_163
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_162
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_161
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_160
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_158
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_157
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_154
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_144
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_143
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_142
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_141
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_140
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_139
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_138
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_137
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_136
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_135
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_134
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_133
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_132
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_131
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_130
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_128
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_127
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_120
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_119
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_118
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_117
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_116
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_115
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_114
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_113
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_112
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_111
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_110
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_109
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_108
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_107
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_106
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_105
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_104
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_103
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_100
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_96
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_95
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_94
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_93
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_92
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_91
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_90
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_89
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_88
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_87
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_86
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_85
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_84
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_83
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_82
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_81
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_80
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_79
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_77
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_76
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_72
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_71
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_70
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_69
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_68
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_67
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_66
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_65
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_64
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_63
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_62
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_61
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_60
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_59
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_58
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_57
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_56
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_55
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_54
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_53
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_52
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_49
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_48
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_47
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_46
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_45
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_44
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_43
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_42
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_41
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_40
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_39
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_38
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_37
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_36
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_35
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_34
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_33
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_32
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_31
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_30
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_29
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_28
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_26
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_25
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_24
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_23
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_22
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_21
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_20
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_19
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_18
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_17
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_16
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_15
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_14
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_13
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_12
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_11
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_10
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_9
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_8
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_7
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_6
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_5
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_4
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_3
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_2
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_1
+                       ForQA             saed32hvt_ss0p95v125c
+SNPS_CLOCK_GATE_HIGH_systolic_controll_ARRAY_SIZE8
+                       ForQA             saed32hvt_ss0p95v125c
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+tpu_top                                 598.044 4.90e+03 1.35e+09 6.85e+03 100.0
+  write_out (write_out_ARRAY_SIZE8_OUTPUT_DATA_WIDTH16)
+                                         10.712  747.837 9.84e+07  856.981  12.5
+  systolic_controll (systolic_controll_ARRAY_SIZE8)
+                                          2.600   53.016 6.17e+06   61.784   0.9
+  systolic (systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8)
+                                        581.756 4.07e+03 1.24e+09 5.89e+03  86.0
+  quantize (quantize_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_OUTPUT_DATA_WIDTH16)
+                                          2.481    3.094 5.74e+06   11.318   0.2
+  addr_sel (addr_sel)                     0.293   24.784 3.23e+06   28.308   0.4
+1

@@ -1,0 +1,3693 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/sim/tpu.fsdb}
+wvSelectGroup -win $_nWave1 {G1}
+wvSelectGroup -win $_nWave1 {G1}
+wvSelectGroup -win $_nWave1 {G1}
+wvRenameGroup -win $_nWave1 {G1} {addr_sel}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvSelectGroup -win $_nWave1 {addr_sel}
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvSetPosition -win $_nWave1 {("addr_sel" 9)}
+wvSetPosition -win $_nWave1 {("addr_sel" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("addr_sel" 9)}
+wvSetPosition -win $_nWave1 {("addr_sel" 9)}
+wvSetPosition -win $_nWave1 {("addr_sel" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("addr_sel" 9)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "addr_sel" 1 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 1)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 2 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 2)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 3 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 3)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 4 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 4)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 5 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 5)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 6 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 6)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 7 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 7)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 8 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 8)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 9 )} 
+wvSetRadix -win $_nWave1 -format UDec {("addr_sel" 9)}
+wvSelectSignal -win $_nWave1 {( "addr_sel" 9 )} 
+wvSelectGroup -win $_nWave1 {G2}
+wvRenameGroup -win $_nWave1 {G2} {systolic controll}
+wvSetPosition -win $_nWave1 {("systolic controll" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvRenameGroup -win $_nWave1 {systolic controll} {systolic}
+wvResizeWindow -win $_nWave1 524 116 1078 757
+wvResizeWindow -win $_nWave1 754 103 1012 757
+wvRenameGroup -win $_nWave1 {systolic} {systolic controll}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvSetPosition -win $_nWave1 {("systolic controll" 9)}
+wvSetPosition -win $_nWave1 {("systolic controll" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 9)}
+wvSetPosition -win $_nWave1 {("systolic controll" 9)}
+wvSetPosition -win $_nWave1 {("systolic controll" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 9)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic controll" 9 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 8)}
+wvSetPosition -win $_nWave1 {("systolic controll" 5)}
+wvSetPosition -win $_nWave1 {("systolic controll" 2)}
+wvSetPosition -win $_nWave1 {("systolic controll" 1)}
+wvSetPosition -win $_nWave1 {("systolic controll" 0)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic controll" 0)}
+wvSetPosition -win $_nWave1 {("systolic controll" 1)}
+wvSetPosition -win $_nWave1 {("systolic controll" 8)}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 8 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 7)}
+wvSetPosition -win $_nWave1 {("systolic controll" 6)}
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvSetPosition -win $_nWave1 {("systolic controll" 3)}
+wvSetPosition -win $_nWave1 {("systolic controll" 2)}
+wvSetPosition -win $_nWave1 {("systolic controll" 1)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic controll" 1)}
+wvSetPosition -win $_nWave1 {("systolic controll" 2)}
+wvSetCursor -win $_nWave1 242.735586 -snap {("addr_sel" 2)}
+wvSetCursor -win $_nWave1 347.168338 -snap {("systolic controll" 3)}
+wvSetCursor -win $_nWave1 454.423597 -snap {("systolic controll" 3)}
+wvSetCursor -win $_nWave1 536.276295 -snap {("systolic controll" 3)}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 3 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic controll" 3)}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 5 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic controll" 5)}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 7 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic controll" 7)}
+wvSelectGroup -win $_nWave1 {G3}
+wvRenameGroup -win $_nWave1 {G3} {write out}
+wvRenameGroup -win $_nWave1 {write out} {systolic}
+wvSetPosition -win $_nWave1 {("systolic" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 4)}
+wvSetPosition -win $_nWave1 {("systolic" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 1 2 3 4 )} 
+wvSetPosition -win $_nWave1 {("systolic" 4)}
+wvSetPosition -win $_nWave1 {("systolic" 4)}
+wvSetPosition -win $_nWave1 {("systolic" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 1 2 3 4 )} 
+wvSetPosition -win $_nWave1 {("systolic" 4)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic" 2 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic" 2)}
+wvSelectSignal -win $_nWave1 {( "systolic" 3 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic" 3)}
+wvSelectSignal -win $_nWave1 {( "systolic" 4 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic" 4)}
+wvSelectSignal -win $_nWave1 {( "systolic" 3 4 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic" 2)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 3 )} 
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 3 )} 
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvGetSignalClose -win $_nWave1
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G4" 0)}
+wvSetPosition -win $_nWave1 {("systolic" 2)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 3 )} 
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 3 )} 
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvGetSignalClose -win $_nWave1
+wvSetRadix -win $_nWave1 -format UDec {("systolic" 3)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 4 5 6 7 8 9 10 11 )} 
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 4 5 6 7 8 9 10 11 )} 
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 564.501363 -snap {("systolic" 4)}
+wvSetCursor -win $_nWave1 547.566322 -snap {("systolic" 4)}
+wvSetCursor -win $_nWave1 547.566322 -snap {("systolic" 1)}
+wvSetPosition -win $_nWave1 {("systolic" 4)}
+wvSetPosition -win $_nWave1 {("systolic" 3)}
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 12 )} 
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 12 )} 
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvGetSignalClose -win $_nWave1
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G4" 0)}
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 19)}
+wvSetPosition -win $_nWave1 {("systolic" 19)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 12 13 14 15 16 17 18 19 )} 
+wvSetPosition -win $_nWave1 {("systolic" 19)}
+wvSetPosition -win $_nWave1 {("systolic" 19)}
+wvSetPosition -win $_nWave1 {("systolic" 19)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 12 13 14 15 16 17 18 19 )} 
+wvSetPosition -win $_nWave1 {("systolic" 19)}
+wvGetSignalClose -win $_nWave1
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic" 11)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 12 )} 
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 12 )} 
+wvSetPosition -win $_nWave1 {("systolic" 12)}
+wvGetSignalClose -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 13)}
+wvSetPosition -win $_nWave1 {("systolic" 13)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 13 )} 
+wvSetPosition -win $_nWave1 {("systolic" 13)}
+wvSetPosition -win $_nWave1 {("systolic" 13)}
+wvSetPosition -win $_nWave1 {("systolic" 13)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 13 )} 
+wvSetPosition -win $_nWave1 {("systolic" 13)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 657.644088 -snap {("systolic" 12)}
+wvSetCursor -win $_nWave1 651.999074 -snap {("systolic" 13)}
+wvSelectSignal -win $_nWave1 {( "systolic" 12 )} 
+wvSelectSignal -win $_nWave1 {( "systolic" 13 )} 
+wvSelectSignal -win $_nWave1 {( "systolic" 12 )} 
+wvSelectSignal -win $_nWave1 {( "systolic" 13 )} 
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 14)}
+wvSetPosition -win $_nWave1 {("systolic" 14)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 14 )} 
+wvSetPosition -win $_nWave1 {("systolic" 14)}
+wvSetPosition -win $_nWave1 {("systolic" 14)}
+wvSetPosition -win $_nWave1 {("systolic" 14)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 14 )} 
+wvSetPosition -win $_nWave1 {("systolic" 14)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 375.393406 -snap {("systolic" 14)}
+wvSetCursor -win $_nWave1 361.280872 -snap {("systolic" 11)}
+wvSetCursor -win $_nWave1 646.354060 -snap {("systolic" 13)}
+wvResizeWindow -win $_nWave1 905 101 985 757
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 15)}
+wvSetPosition -win $_nWave1 {("systolic" 15)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 15 )} 
+wvSetPosition -win $_nWave1 {("systolic" 15)}
+wvSetPosition -win $_nWave1 {("systolic" 15)}
+wvSetPosition -win $_nWave1 {("systolic" 15)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 15 )} 
+wvSetPosition -win $_nWave1 {("systolic" 15)}
+wvGetSignalClose -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic" 1)}
+wvSetPosition -win $_nWave1 {("systolic" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 1)}
+wvSetPosition -win $_nWave1 {("systolic" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 1 )} 
+wvSetPosition -win $_nWave1 {("systolic" 1)}
+wvSetPosition -win $_nWave1 {("systolic" 1)}
+wvSetPosition -win $_nWave1 {("systolic" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 1 )} 
+wvSetPosition -win $_nWave1 {("systolic" 1)}
+wvGetSignalClose -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic" 16 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic" 16)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic" 17)}
+wvSetPosition -win $_nWave1 {("systolic" 17)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome_00\[15:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 17 )} 
+wvSetPosition -win $_nWave1 {("systolic" 17)}
+wvSetPosition -win $_nWave1 {("systolic" 17)}
+wvSetPosition -win $_nWave1 {("systolic" 17)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_result\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome_00\[15:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic" 17 )} 
+wvSetPosition -win $_nWave1 {("systolic" 17)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic" 4 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G4" 0)}
+wvSetPosition -win $_nWave1 {("systolic" 16)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic" 15 )} 
+wvSelectSignal -win $_nWave1 {( "systolic" 15 16 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic" 14)}
+wvResizeWindow -win $_nWave1 695 91 1146 793
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvResizeWindow -win $_nWave1 501 95 1146 1003
+wvResizeWindow -win $_nWave1 1003 71 941 1003
+wvSelectGroup -win $_nWave1 {systolic}
+wvRenameGroup -win $_nWave1 {systolic} {systolic(data in)}
+wvSelectGroup -win $_nWave1 {G4}
+wvRenameGroup -win $_nWave1 {G4} {systolic(data out)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic(data out)" 4)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G5" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data out)" 1 2 3 4 )} 
+wvSetPosition -win $_nWave1 {("systolic(data out)" 4)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 4)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G5" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data out)" 1 2 3 4 )} 
+wvSetPosition -win $_nWave1 {("systolic(data out)" 4)}
+wvGetSignalClose -win $_nWave1
+wvResizeWindow -win $_nWave1 1003 71 941 1003
+wvResizeWindow -win $_nWave1 1003 71 941 1003
+wvSelectSignal -win $_nWave1 {( "systolic(data out)" 4 )} 
+wvSetPosition -win $_nWave1 {("systolic(data out)" 3)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 2)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 1)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic(data out)" 1)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 2)}
+wvSelectSignal -win $_nWave1 {( "systolic(data out)" 1 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic(data out)" 1)}
+wvSelectSignal -win $_nWave1 {( "systolic(data out)" 2 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic(data out)" 2)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 0)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic(data out)" 0)}
+wvSetPosition -win $_nWave1 {("systolic(data out)" 1)}
+wvSetCursor -win $_nWave1 3846.224430 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 750.576562 -snap {("systolic(data in)" 14)}
+wvSetCursor -win $_nWave1 3848.592517 -snap {("systolic(data in)" 14)}
+wvSelectGroup -win $_nWave1 {G5}
+wvRenameGroup -win $_nWave1 {G5} {quantize}
+wvSetPosition -win $_nWave1 {("quantize" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/quantize"
+wvSetPosition -win $_nWave1 {("quantize" 2)}
+wvSetPosition -win $_nWave1 {("quantize" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G6" \
+}
+wvSelectSignal -win $_nWave1 {( "quantize" 1 2 )} 
+wvSetPosition -win $_nWave1 {("quantize" 2)}
+wvSetPosition -win $_nWave1 {("quantize" 2)}
+wvSetPosition -win $_nWave1 {("quantize" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G6" \
+}
+wvSelectSignal -win $_nWave1 {( "quantize" 1 2 )} 
+wvSetPosition -win $_nWave1 {("quantize" 2)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic(data out)" 3 )} 
+wvSetCursor -win $_nWave1 4395.238843 -snap {("quantize" 2)}
+wvSetRadix -win $_nWave1 -format UDec {("systolic(data out)" 3)}
+wvSelectGroup -win $_nWave1 {G6}
+wvRenameGroup -win $_nWave1 {G6} {data_out}
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 4 )} 
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 4 5 6 7 8 9 10 11 )} 
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 11 )} 
+wvSelectGroup -win $_nWave1 {data_out}
+wvSetPosition -win $_nWave1 {("data_out" 0)}
+wvResizeWindow -win $_nWave1 1003 14 941 1148
+wvSetCursor -win $_nWave1 3844.738200 -snap {("systolic controll" 8)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 3 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("data_out" 0)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 2)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic(data in)" 3)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"data_out" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 3 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 3)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 3)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"data_out" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 3 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 3)}
+wvGetSignalClose -win $_nWave1
+wvSetRadix -win $_nWave1 -format UDec {("systolic(data in)" 3)}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 5 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic(data in)" 4)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 3)}
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvSetPosition -win $_nWave1 {("systolic controll" 3)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"data_out" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 4 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"data_out" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 4 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvGetSignalClose -win $_nWave1
+wvSetRadix -win $_nWave1 -format UDec {("systolic controll" 4)}
+wvSetCursor -win $_nWave1 3950.925119 -snap {("systolic(data out)" 4)}
+wvResizeWindow -win $_nWave1 944 14 941 1148
+wvSetCursor -win $_nWave1 3856.319802 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 3941.588115 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 4043.910090 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 3853.477525 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 3951.514879 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4045.310023 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4147.631998 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4244.269419 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4332.380009 -snap {("quantize" 2)}
+wvSelectGroup -win $_nWave1 {data_out}
+wvSetPosition -win $_nWave1 {("data_out" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/write_out"
+wvGetSignalClose -win $_nWave1
+wvRenameGroup -win $_nWave1 {data_out} {write_out}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/write_out"
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 1 2 3 4 5 6 7 8 )} 
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 1 2 3 4 5 6 7 8 )} 
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "write_out" 2 )} 
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 2)}
+wvSelectSignal -win $_nWave1 {( "write_out" 3 )} 
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 3)}
+wvSelectSignal -win $_nWave1 {( "write_out" 4 )} 
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 4)}
+wvSelectSignal -win $_nWave1 {( "write_out" 5 )} 
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 5)}
+wvSetCursor -win $_nWave1 3862.215048 -snap {("systolic controll" 7)}
+wvSetCursor -win $_nWave1 3853.688217 -snap {("systolic controll" 8)}
+wvSelectSignal -win $_nWave1 {( "write_out" 6 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 6 7 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 6 7 8 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 3 6 7 8 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 3 4 6 7 8 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 3 4 5 6 7 8 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("write_out" 2)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/write_out"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/write_out"
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 3 4 5 6 7 8 )} 
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 3 4 5 6 7 8 )} 
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "write_out" 3 )} 
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 3)}
+wvSelectSignal -win $_nWave1 {( "write_out" 4 )} 
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 4)}
+wvSelectSignal -win $_nWave1 {( "write_out" 5 )} 
+wvSetRadix -win $_nWave1 -format Ascii {("write_out" 5)}
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 5)}
+wvSelectSignal -win $_nWave1 {( "write_out" 6 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 2 )} 
+wvSetPosition -win $_nWave1 {("write_out" 2)}
+wvSetPosition -win $_nWave1 {("write_out" 1)}
+wvSetPosition -win $_nWave1 {("write_out" 0)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("write_out" 0)}
+wvSetPosition -win $_nWave1 {("write_out" 1)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 7057.632234 -snap {("write_out" 7)}
+wvSetCursor -win $_nWave1 13347.181782 -snap {("write_out" 4)}
+wvSetCursor -win $_nWave1 10150.111561 -snap {("write_out" 6)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 752.388870 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4657.910725 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4751.705869 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4865.396952 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 4981.930313 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5044.460409 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5172.362878 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5232.050696 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5323.003563 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5439.536924 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5545.022515 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5650.186767 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5704.190032 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 5860.515272 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 15872.004693 -snap {("systolic(data in)" 12)}
+wvResizeWindow -win $_nWave1 805 14 1098 1148
+wvSetCursor -win $_nWave1 753.776400 -snap {("systolic(data in)" 12)}
+wvSetCursor -win $_nWave1 3958.799858 -snap {("systolic(data in)" 14)}
+wvSetCursor -win $_nWave1 7152.708467 -snap {("systolic(data in)" 14)}
+wvSetCursor -win $_nWave1 3932.159077 -snap {("systolic(data in)" 3)}
+wvSetPosition -win $_nWave1 {("write_out" 2)}
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 248.560205 -snap {("addr_sel" 2)}
+wvSetCursor -win $_nWave1 545.137723 -snap {("systolic(data in)" 4)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 11)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic(data in)" 19)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 19)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 12 13 14 15 16 17 18 19 )} \
+           
+wvSetPosition -win $_nWave1 {("systolic(data in)" 19)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 19)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 19)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 12 13 14 15 16 17 18 19 )} \
+           
+wvSetPosition -win $_nWave1 {("systolic(data in)" 19)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 12 )} 
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 4 )} 
+wvSetRadix -win $_nWave1 -format UDec {("systolic(data in)" 4)}
+wvSetRadix -win $_nWave1 -2Com {("systolic(data in)" 4)}
+wvSetRadix -win $_nWave1 -format Hex {("systolic(data in)" 4)}
+wvSetRadix -win $_nWave1 -Unsigned {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 245.735658 -snap {("systolic controll" 2)}
+wvSetPosition -win $_nWave1 {("systolic controll" 4)}
+wvSetPosition -win $_nWave1 {("systolic controll" 3)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic_controll"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/write_out"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/addr_sel"
+wvSetPosition -win $_nWave1 {("systolic controll" 11)}
+wvSetPosition -win $_nWave1 {("systolic controll" 11)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 4 5 6 7 8 9 10 11 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 11)}
+wvSetPosition -win $_nWave1 {("systolic controll" 11)}
+wvSetPosition -win $_nWave1 {("systolic controll" 11)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic controll" 4 5 6 7 8 9 10 11 )} 
+wvSetPosition -win $_nWave1 {("systolic controll" 11)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 344.594830 -snap {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 443.454003 -snap {("systolic controll" 3)}
+wvSetCursor -win $_nWave1 237.262014 -snap {("systolic controll" 4)}
+wvSetCursor -win $_nWave1 353.068474 -snap {("systolic controll" 3)}
+wvSetCursor -win $_nWave1 454.752194 -snap {("systolic controll" 3)}
+wvSetCursor -win $_nWave1 350.243926 -snap {("systolic controll" 3)}
+wvSetCursor -win $_nWave1 536.664080 -snap {("systolic controll" 4)}
+wvSetCursor -win $_nWave1 655.295087 -snap {("systolic(data in)" 20)}
+wvResizeWindow -win $_nWave1 886 14 1017 1148
+wvSetCursor -win $_nWave1 552.354620 -snap {("systolic(data in)" 2)}
+wvSetCursor -win $_nWave1 246.435138 -snap {("systolic controll" 2)}
+wvSetCursor -win $_nWave1 354.073474 -snap {("systolic controll" 3)}
+wvSetCursor -win $_nWave1 450.381459 -snap {("systolic controll" 4)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 558.019796 -snap {("systolic(data in)" 20)}
+wvSetCursor -win $_nWave1 649.885559 -snap {("quantize" 2)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 21)}
+wvResizeWindow -win $_nWave1 828 14 1017 1148
+wvResizeWindow -win $_nWave1 828 14 1017 1148
+wvSetCursor -win $_nWave1 838.927985 -snap {("systolic(data in)" 21)}
+wvSetCursor -win $_nWave1 657.873689 -snap {("systolic(data in)" 22)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 22)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic(data in)" 23)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 23)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 23 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 23)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 23)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 23)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 23 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 23)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 745.571864 -snap {("systolic(data in)" 23)}
+wvSetCursor -win $_nWave1 853.072852 -snap {("systolic(data in)" 23)}
+wvSetCursor -win $_nWave1 937.942054 -snap {("systolic(data in)" 23)}
+wvSetCursor -win $_nWave1 3744.000745 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3851.501734 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3753.336358 -snap {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 657.509368 -snap {("systolic(data in)" 23)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 3846.707155 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3756.180007 -snap {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 3860.852021 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 3747.693086 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 3858.023048 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 3759.008980 -snap {("systolic(data in)" 3)}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 12 )} 
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 4 )} 
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 12 )} 
+wvSetCursor -win $_nWave1 3773.153847 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 3767.495900 -snap {("quantize" 2)}
+wvSetCursor -win $_nWave1 3628.745516 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3747.562398 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3657.035250 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3739.075478 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3665.522170 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3739.075478 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3648.548330 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 446.977793 -snap {("systolic(data in)" 2)}
+wvSetCursor -win $_nWave1 551.649808 -snap {("systolic(data in)" 2)}
+wvSetCursor -win $_nWave1 3745.969565 -snap {("quantize" 1)}
+wvSetCursor -win $_nWave1 3842.154660 -snap {("quantize" 1)}
+wvSetPosition -win $_nWave1 {("write_out" 8)}
+wvGetSignalOpen -win $_nWave1
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 9 10 )} 
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c_nx\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0_nx} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0_nx} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 9 10 )} 
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "write_out" 9 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 10 )} 
+wvSetCursor -win $_nWave1 3856.299526 -snap {("write_out" 10)}
+wvSetCursor -win $_nWave1 562.965702 -snap {("systolic(data in)" 20)}
+wvSetCursor -win $_nWave1 650.663877 -snap {("systolic(data in)" 12)}
+wvSetCursor -win $_nWave1 758.164865 -snap {("systolic(data in)" 12)}
+wvSetCursor -win $_nWave1 656.321823 -snap {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 780.796652 -snap {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 670.466690 -snap {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 752.506918 -snap {("systolic(data in)" 12)}
+wvSetCursor -win $_nWave1 3749.804210 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3848.818278 -snap {("systolic(data in)" 3)}
+wvResizeWindow -win $_nWave1 828 14 1017 1148
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 3748.715996 -snap {("quantize" 1)}
+wvSelectSignal -win $_nWave1 {( "write_out" 9 )} 
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 9)}
+wvSetRadix -win $_nWave1 -2Com {("write_out" 9)}
+wvSetRadix -win $_nWave1 -format Hex {("write_out" 9)}
+wvSetRadix -win $_nWave1 -Mag {("write_out" 9)}
+wvSetRadix -win $_nWave1 -format UDec {("write_out" 9)}
+wvSetRadix -win $_nWave1 -2Com {("write_out" 9)}
+wvSetRadix -win $_nWave1 -format Hex {("write_out" 9)}
+wvSetRadix -win $_nWave1 -Unsigned {("write_out" 9)}
+wvSetCursor -win $_nWave1 1839.021975 -snap {("quantize" 1)}
+wvSetCursor -win $_nWave1 3744.915897 -snap {("write_out" 9)}
+wvSetCursor -win $_nWave1 1926.338781 -snap {("quantize" 1)}
+wvSetCursor -win $_nWave1 1841.364504 -snap {("quantize" 1)}
+wvSetCursor -win $_nWave1 1951.831064 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 2053.800197 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 1948.998588 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 16354.396783 -snap {("systolic(data in)" 22)}
+wvSetCursor -win $_nWave1 16362.894210 -snap {("systolic(data in)" 21)}
+wvSetCursor -win $_nWave1 16351.564307 -snap {("systolic(data in)" 22)}
+wvSetCursor -win $_nWave1 16343.066879 -snap {("write_out" 8)}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 15598.125714 -snap {("systolic controll" 3)}
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 3852.549981 -snap {("write_out" 10)}
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 3756.245800 -snap {("systolic(data in)" 4)}
+wvSetCursor -win $_nWave1 3849.717506 -snap {("systolic(data out)" 4)}
+wvSetCursor -win $_nWave1 3756.245800 -snap {("systolic(data in)" 3)}
+wvSetCursor -win $_nWave1 3861.047409 -snap {("systolic(data in)" 3)}
+wvSelectSignal -win $_nWave1 {( "write_out" 3 )} 
+wvSelectSignal -win $_nWave1 {( "write_out" 3 4 5 6 7 8 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("write_out" 4)}
+wvGetSignalOpen -win $_nWave1
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 5 6 7 8 9 10 )} 
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "write_out" 5 6 7 8 9 10 )} 
+wvSetPosition -win $_nWave1 {("write_out" 10)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 3746.704689 -snap {("systolic(data in)" 3)}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 12 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetPosition -win $_nWave1 {("systolic(data in)" 22)}
+wvScrollUp -win $_nWave1 1
+wvSetPosition -win $_nWave1 {("systolic(data out)" 0)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 23)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic(data in)" 25)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 25)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/data_00\[7:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_00\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 24 25 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 25)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 25)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 25)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/data_00\[7:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_00\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 24 25 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 25)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 24 )} 
+wvSetCursor -win $_nWave1 3732.542309 -snap {("systolic(data in)" 24)}
+wvSetCursor -win $_nWave1 3749.537165 -snap {("systolic(data in)" 24)}
+wvResizeWindow -win $_nWave1 666 14 1017 1148
+wvSetCursor -win $_nWave1 3846.190033 -snap {("systolic(data in)" 25)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_lenet/my_tpu_top/systolic"
+wvSetPosition -win $_nWave1 {("systolic(data in)" 27)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 27)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/data_00\[7:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_00\[7:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_0000\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_total_0000\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 26 27 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 27)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 27)}
+wvSetPosition -win $_nWave1 {("systolic(data in)" 27)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"addr_sel" \
+{/test_lenet/my_tpu_top/addr_sel/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_d7\[9:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic controll" \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/state\[2:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/addr_serial_num\[6:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w0\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w1\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w2\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w3\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w4\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w5\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w6\[9:0\]} \
+{/test_lenet/my_tpu_top/addr_sel/sram_raddr_w7\[9:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/alu_start} \
+{/test_lenet/my_tpu_top/systolic_controll/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic_controll/sram_write_enable} \
+{/test_lenet/my_tpu_top/systolic_controll/tpu_done} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data in)" \
+{/test_lenet/my_tpu_top/systolic/srstn} \
+{/test_lenet/my_tpu_top/systolic/alu_start} \
+{/test_lenet/my_tpu_top/systolic/cycle_num\[8:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_d7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w0\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w1\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w2\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w3\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w4\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w5\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w6\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/sram_rdata_w7\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/data_queue\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_mul_2D\[0:31\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_00\[31:0\]} \
+{/test_lenet/my_tpu_top/systolic/data_00\[7:0\]} \
+{/test_lenet/my_tpu_top/systolic/weight_00\[7:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_0000\[15:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_total_0000\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"systolic(data out)" \
+{/test_lenet/my_tpu_top/systolic/upper_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/lower_bound\[6:0\]} \
+{/test_lenet/my_tpu_top/systolic/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/systolic/mul_outcome\[1023:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"quantize" \
+{/test_lenet/my_tpu_top/quantize/ori_data\[1023:0\]} \
+{/test_lenet/my_tpu_top/quantize/quantized_data\[511:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"write_out" \
+{/test_lenet/my_tpu_top/write_out/matrix_index\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/data_set\[1:0\]} \
+{/test_lenet/my_tpu_top/write_out/quantized_data\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_wdata_a\[511:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_a\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_b\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_waddr_c\[5:0\]} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_a0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_b0} \
+{/test_lenet/my_tpu_top/write_out/sram_write_enable_c0} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "systolic(data in)" 26 27 )} 
+wvSetPosition -win $_nWave1 {("systolic(data in)" 27)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 3746.997394 -snap {("systolic(data in)" 21)}
+wvSetCursor -win $_nWave1 3846.190033 -snap {("systolic(data in)" 22)}
+wvSetCursor -win $_nWave1 3752.665545 -snap {("systolic(data in)" 22)}
+wvSetCursor -win $_nWave1 3849.024108 -snap {("systolic(data in)" 3)}
+wvResizeWindow -win $_nWave1 1997 14 1017 1028

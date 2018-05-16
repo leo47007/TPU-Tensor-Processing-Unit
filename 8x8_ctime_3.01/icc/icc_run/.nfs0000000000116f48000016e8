@@ -1,0 +1,3387 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Technology	{
+		name				= "saed32"
+		date				= "Dec 20 2012"
+		dielectric			= 3450
+		unitTimeName			= "ns"
+		timePrecision			= 1000
+		unitLengthName			= "micron"
+		lengthPrecision			= 1000
+		gridResolution			= 1
+		unitVoltageName			= "V"
+		voltagePrecision		= 1000000
+		unitCurrentName			= "uA"
+		currentPrecision		= 1
+		unitPowerName			= "pw"
+		powerPrecision			= 1000
+		unitResistanceName		= "kohm"
+		resistancePrecision		= 10000
+		unitCapacitanceName		= "ff"
+		capacitancePrecision		= 10000
+		unitInductanceName		= "nh"
+		inductancePrecision		= 100
+		minBaselineTemperature		= 25
+		nomBaselineTemperature		= 25
+		maxBaselineTemperature		= 25
+		minEdgeMode			= 1
+}
+
+Color		6 {
+		name				= "6"
+		rgbDefined			= 1
+		redIntensity			= 0
+		greenIntensity			= 80
+		blueIntensity			= 190
+}
+
+Color		8 {
+		name				= "8"
+		rgbDefined			= 1
+		redIntensity			= 0
+		greenIntensity			= 175
+		blueIntensity			= 0
+}
+
+Color		10 {
+		name				= "10"
+		rgbDefined			= 1
+		redIntensity			= 0
+		greenIntensity			= 175
+		blueIntensity			= 190
+}
+
+Color		11 {
+		name				= "11"
+		rgbDefined			= 1
+		redIntensity			= 0
+		greenIntensity			= 175
+		blueIntensity			= 255
+}
+
+Color		13 {
+		name				= "13"
+		rgbDefined			= 1
+		redIntensity			= 0
+		greenIntensity			= 255
+		blueIntensity			= 100
+}
+
+Color		20 {
+		name				= "20"
+		rgbDefined			= 1
+		redIntensity			= 90
+		greenIntensity			= 80
+		blueIntensity			= 0
+}
+
+Color		23 {
+		name				= "23"
+		rgbDefined			= 1
+		redIntensity			= 90
+		greenIntensity			= 80
+		blueIntensity			= 255
+}
+
+Color		25 {
+		name				= "25"
+		rgbDefined			= 1
+		redIntensity			= 90
+		greenIntensity			= 175
+		blueIntensity			= 100
+}
+
+Color		27 {
+		name				= "27"
+		rgbDefined			= 1
+		redIntensity			= 90
+		greenIntensity			= 175
+		blueIntensity			= 255
+}
+
+Color		28 {
+		name				= "28"
+		rgbDefined			= 1
+		redIntensity			= 90
+		greenIntensity			= 255
+		blueIntensity			= 0
+}
+
+Color		31 {
+		name				= "31"
+		rgbDefined			= 1
+		redIntensity			= 90
+		greenIntensity			= 255
+		blueIntensity			= 255
+}
+
+Color		32 {
+		name				= "32"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 0
+		blueIntensity			= 0
+}
+
+Color		34 {
+		name				= "34"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 0
+		blueIntensity			= 190
+}
+
+Color		35 {
+		name				= "35"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 0
+		blueIntensity			= 255
+}
+
+Color		36 {
+		name				= "36"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 80
+		blueIntensity			= 0
+}
+
+Color		38 {
+		name				= "38"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 80
+		blueIntensity			= 190
+}
+
+Color		40 {
+		name				= "40"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 175
+		blueIntensity			= 0
+}
+
+Color		43 {
+		name				= "43"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 175
+		blueIntensity			= 255
+}
+
+Color		44 {
+		name				= "44"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 255
+		blueIntensity			= 0
+}
+
+Color		47 {
+		name				= "47"
+		rgbDefined			= 1
+		redIntensity			= 180
+		greenIntensity			= 255
+		blueIntensity			= 255
+}
+
+Color		50 {
+		name				= "50"
+		rgbDefined			= 1
+		redIntensity			= 255
+		greenIntensity			= 0
+		blueIntensity			= 190
+}
+
+Color		51 {
+		name				= "ltGreen"
+		rgbDefined			= 1
+		redIntensity			= 0
+		greenIntensity			= 240
+		blueIntensity			= 110
+}
+
+Color		52 {
+		name				= "52"
+		rgbDefined			= 1
+		redIntensity			= 255
+		greenIntensity			= 80
+		blueIntensity			= 0
+}
+
+Color		54 {
+		name				= "54"
+		rgbDefined			= 1
+		redIntensity			= 255
+		greenIntensity			= 80
+		blueIntensity			= 190
+}
+
+Color		58 {
+		name				= "58"
+		rgbDefined			= 1
+		redIntensity			= 255
+		greenIntensity			= 175
+		blueIntensity			= 190
+}
+
+Color		59 {
+		name				= "59"
+		rgbDefined			= 1
+		redIntensity			= 255
+		greenIntensity			= 175
+		blueIntensity			= 255
+}
+
+Color		62 {
+		name				= "62"
+		rgbDefined			= 1
+		redIntensity			= 255
+		greenIntensity			= 255
+		blueIntensity			= 190
+}
+
+Stipple		"impdot" {
+		width			= 16
+		height			= 16
+		pattern			= (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1) 
+}
+
+Stipple		"hidot" {
+		width			= 16
+		height			= 16
+		pattern			= (1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1) 
+}
+
+Stipple		"rhidot" {
+		width			= 16
+		height			= 16
+		pattern			= (0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 
+					   0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
+					   1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0) 
+}
+
+Stipple		"twelldot" {
+		width			= 16
+		height			= 16
+		pattern			= (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) 
+}
+
+Stipple		"welldot" {
+		width			= 16
+		height			= 16
+		pattern			= (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+					   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) 
+}
+
+Tile		"unit" {
+		width				= 152
+		height				= 1672
+}
+
+Layer		"NWELL" {
+		layerNumber			= 1
+		maskName			= "nwell"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "lead"
+		lineStyle			= "solid"
+		pattern				= "backSlash"
+		pitch				= 0
+		defaultWidth			= 230
+		minWidth			= 230
+		minSpacing			= 230
+}
+
+Layer		"DNW" {
+		layerNumber			= 2
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "36"
+		lineStyle			= "solid"
+		pattern				= "backSlash"
+		pitch				= 0
+		defaultWidth			= 3000
+		minWidth			= 3000
+		minSpacing			= 3500
+}
+
+Layer		"DIFF" {
+		layerNumber			= 3
+		maskName			= "active"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "40"
+		lineStyle			= "solid"
+		pattern				= "solid"
+		pitch				= 0
+		defaultWidth			= 44
+		minWidth			= 44
+		minSpacing			= 50
+}
+
+LayerDataType		"DDMY" {
+		layerNumber			= 3
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "40"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"PIMP" {
+		layerNumber			= 4
+		maskName			= "pplus"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "32"
+		lineStyle			= "solid"
+		pattern				= "dot"
+		pitch				= 0
+		defaultWidth			= 102
+		minWidth			= 102
+		minSpacing			= 170
+}
+
+Layer		"NIMP" {
+		layerNumber			= 5
+		maskName			= "nplus"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "ltGreen"
+		lineStyle			= "solid"
+		pattern				= "dot"
+		pitch				= 0
+		defaultWidth			= 102
+		minWidth			= 102
+		minSpacing			= 170
+}
+
+Layer		"DIFF_18" {
+		layerNumber			= 6
+		maskName			= "18volt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "yellow"
+		lineStyle			= "solid"
+		pattern				= "zigzag"
+		pitch				= 0
+		defaultWidth			= 330
+		minWidth			= 330
+		minSpacing			= 330
+}
+
+Layer		"PAD" {
+		layerNumber			= 7
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "orange"
+		lineStyle			= "dash"
+		pattern				= "solid"
+		pitch				= 0
+		defaultWidth			= 55000
+		minWidth			= 55000
+		minSpacing			= 10000
+}
+
+Layer		"ESD_25" {
+		layerNumber			= 8
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "drab"
+		lineStyle			= "dash"
+		pattern				= "zigzag"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"SBLK" {
+		layerNumber			= 9
+		maskName			= "sblk"
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "62"
+		lineStyle			= "dash"
+		pattern				= "solid"
+		pitch				= 0
+		defaultWidth			= 330
+		minWidth			= 330
+		minSpacing			= 330
+}
+
+Layer		"PO" {
+		layerNumber			= 10
+		maskName			= "poly"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "red"
+		lineStyle			= "none"
+		pattern				= "solid"
+		pitch				= 0
+		defaultWidth			= 30
+		minWidth			= 30
+		minSpacing			= 122
+		minArea				= 12000
+}
+
+LayerDataType		"PODMY" {
+		layerNumber			= 10
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "red"
+		lineStyle			= "none"
+		pattern				= "brick"
+}
+
+Layer		"M1" {
+			
+		layerNumber			= 11
+		isDefaultLayer			= 1
+		maskName			= "metal1"
+		pitch				= 152
+			
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "blue"
+		lineStyle			= "solid"
+		pattern				= "impdot"
+			
+		
+		minWidth			= 50
+		maxWidth			= 5000
+		defaultWidth			= 50
+		minSpacing			= 50
+
+
+		
+		fatTblDimension			= 5
+		fatTblThreshold			= (0,151,301,1501,3001)
+		fatTblParallelLength		= (0,151,301,1501,3001)
+		fatTblSpacing			= (50,60,100,500,600,
+		60,60,100,500,600,
+		100,100,100,500,600,
+		500,500,500,500,600,
+		600,600,600,600,600)
+
+		protrusionTblDim       		= 3 			
+		protrusionFatThresholdTbl	= (150,300,1500)
+		protrusionLengthLimitTbl	= (100,170,700)
+		protrusionMinWidthTbl		= (60,70,150)
+
+		minArea				= 10000
+		minEnclosedArea			= 200000
+		
+}
+
+LayerDataType	"M1DMY" {
+		layerNumber			= 11
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "blue"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA1" {
+		layerNumber			= 12
+		maskName			= "via1"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "cyan"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 50
+		minWidth			= 50
+		minSpacing			= 70
+		fatTblDimension			= 2
+		fatTblThreshold			= (0,160)
+		fatTblDimension2		= 2
+		fatTblThreshold2		= (0,160)
+		fatTblFatContactNumberEndIndexTbl = (1,5,9,15)
+		fatTblFatContactNumber		= (1,5,3,7,1,5,3,7,1,5,4,8,3,7,1,5)
+		fatTblFatContactMinCuts		= (1,1,1,1,2,2,1,1,2,2,1,1,2,2,4,4)
+		cutTblSize			= 3
+	cutNameTbl = (1375,1376,1377)
+		cutWidthTbl			= (50,50,100)
+		cutHeightTbl			= (50,100,100)
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+
+}
+
+Layer		"M2" {
+		layerNumber			= 13
+		maskName			= "metal2"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "50"
+		lineStyle			= "solid"
+		pattern				= "twelldot"
+		pitch				= 152
+		defaultWidth			= 56
+		minWidth			= 56
+		minSpacing			= 56
+		maxWidth			= 5000
+		sameNetMinSpacing		= 56
+		
+		protrusionTblDim       		= 4 			
+		protrusionFatThresholdTbl	= (150,300,1500,3000)
+		protrusionLengthLimitTbl	= (100,150,700,1500)
+		protrusionMinWidthTbl		= (60,70,150,300)
+
+		fatTblDimension			= 5
+		fatTblThreshold			= (5,155,305,1505,3005)
+		fatTblParallelLength		= (0,150,300,1500,3000)
+		fatTblSpacing			= (56,64,120,600,700,
+		64,64,120,600,700,
+		120,120,120,600,700,
+		600,600,600,600,700,
+		700,700,700,700,700)
+
+		minArea				= 16000
+		minEnclosedArea			= 200000
+		
+}
+
+LayerDataType		"M2DMY" {
+		layerNumber			= 13
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "50"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA2" {
+		layerNumber			= 14
+		maskName			= "via2"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "yellow"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 50
+		minWidth			= 50
+		minSpacing			= 70
+		fatTblDimension			= 2
+		fatTblThreshold			= (0,160)
+		fatTblDimension2		= 2
+		fatTblThreshold2		= (0,160)
+		fatTblFatContactNumberEndIndexTbl = (1,5,9,15)
+		fatTblFatContactNumber		= (9,13,11,15,9,13,11,15,9,13,12,16,11,15,9,13)
+		fatTblFatContactMinCuts		= (1,1,1,1,2,2,1,1,2,2,1,1,2,2,4,4)
+		cutTblSize			= 3
+	cutNameTbl = (1378,1379,1380)
+		cutWidthTbl			= (50,50,100)
+		cutHeightTbl			= (50,100,100)
+		
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+}
+
+Layer		"M3" {
+		layerNumber			= 15
+		maskName			= "metal3"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "38"
+		lineStyle			= "solid"
+		pattern				= "hidot"
+		pitch				= 304
+		defaultWidth			= 56
+		minWidth			= 56
+		minSpacing			= 56
+		maxWidth			= 5000
+		sameNetMinSpacing		= 56
+
+		protrusionTblDim       		= 4 			
+		protrusionFatThresholdTbl	= (150,300,1500,3000)
+		protrusionLengthLimitTbl	= (100,150,700,1500)
+		protrusionMinWidthTbl		= (60,70,150,300)
+
+		fatTblDimension			= 5
+		fatTblThreshold			= (5,155,305,1505,3005)
+		fatTblParallelLength		= (5,155,305,1505,3005)
+		fatTblSpacing			= (56,64,120,600,700,
+		64,64,120,600,700,
+		120,120,120,600,700,
+		600,600,600,600,700,
+		700,700,700,700,700)
+		minArea				= 16000
+		minEnclosedArea			= 200000
+}
+
+LayerDataType		"M3DMY" {
+		layerNumber			= 15
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "38"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA3" {
+		layerNumber			= 16
+		maskName			= "via3"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "27"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 50
+		minWidth			= 50
+		minSpacing			= 70
+		fatTblDimension			= 2
+		fatTblThreshold			= (0,160)
+		fatTblDimension2		= 2
+		fatTblThreshold2		= (0,160)
+		fatTblFatContactNumberEndIndexTbl = (1,5,9,15)
+		fatTblFatContactNumber		= (17,21,19,23,17,21,19,23,17,21,20,24,19,23,17,21)
+		fatTblFatContactMinCuts		= (1,1,1,1,2,2,1,1,2,2,1,1,2,2,4,4)
+		cutTblSize			= 3
+	cutNameTbl = (1381,1382,1383)
+		cutWidthTbl			= (50,50,100)
+		cutHeightTbl			= (50,100,100)
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+}
+
+Layer		"M4" {
+		layerNumber			= 17
+		maskName			= "metal4"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "green"
+		lineStyle			= "solid"
+		pattern				= "rhidot"
+		pitch				= 304
+		defaultWidth			= 56
+		minWidth			= 56
+		minSpacing			= 56
+		maxWidth			= 5000
+		sameNetMinSpacing		= 56
+		
+		protrusionTblDim       		= 4 			
+		protrusionFatThresholdTbl	= (150,300,1500,3000)
+		protrusionLengthLimitTbl	= (100,150,700,1500)
+		protrusionMinWidthTbl		= (60,70,150,300)
+
+		fatTblDimension			= 5
+		fatTblThreshold			= (5,155,305,1505,3005)
+		fatTblParallelLength		= (5,155,305,1505,3005)
+		fatTblSpacing			= (56,64,120,600,700,
+		64,64,120,600,700,
+		120,120,120,600,700,
+		600,600,600,600,700,
+		700,700,700,700,700)
+		minArea				= 16000
+		minEnclosedArea			= 200000
+}
+
+LayerDataType		"M4DMY" {
+		layerNumber			= 17
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "green"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA4" {
+		layerNumber			= 18
+		maskName			= "via4"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "orange"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 50
+		minWidth			= 50
+		minSpacing			= 70
+		fatTblDimension			= 2
+		fatTblThreshold			= (0,160)
+		fatTblDimension2		= 2
+		fatTblThreshold2		= (0,160)
+		fatTblFatContactNumberEndIndexTbl = (1,5,9,15)
+		fatTblFatContactNumber		= (25,29,27,31,25,29,27,31,25,29,28,32,27,31,25,29)
+		fatTblFatContactMinCuts		= (1,1,1,1,2,2,1,1,2,2,1,1,2,2,4,4)
+		cutTblSize			= 3
+	cutNameTbl = (1384,1385,1386)
+		cutWidthTbl			= (50,50,100)
+		cutHeightTbl			= (50,100,100)
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+}
+
+Layer		"M5" {
+		layerNumber			= 19
+		maskName			= "metal5"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "aqua"
+		lineStyle			= "solid"
+		pattern				= "welldot"
+		pitch				= 608
+		defaultWidth			= 56
+		minWidth			= 56
+		minSpacing			= 56
+		maxWidth			= 5000
+		sameNetMinSpacing		= 56
+
+		protrusionTblDim       		= 4 			
+		protrusionFatThresholdTbl	= (150,300,1500,3000)
+		protrusionLengthLimitTbl	= (100,150,700,1500)
+		protrusionMinWidthTbl		= (60,70,150,300)
+
+		fatTblDimension			= 5
+		fatTblThreshold			= (5,155,305,1505,3005)
+		fatTblParallelLength		= (5,155,305,1505,3005)
+		fatTblSpacing			= (56,64,120,600,700,
+		64,64,120,600,700,
+		120,120,120,600,700,
+		600,600,600,600,700,
+		700,700,700,700,700)
+		minArea				= 16000
+		minEnclosedArea			= 200000
+}
+
+LayerDataType		"M5DMY" {
+		layerNumber			= 19
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "aqua"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA5" {
+		layerNumber			= 20
+		maskName			= "via5"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "40"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 50
+		minWidth			= 50
+		minSpacing			= 70
+		fatTblDimension			= 2
+		fatTblThreshold			= (0,160)
+		fatTblDimension2		= 2
+		fatTblThreshold2		= (0,160)
+		fatTblFatContactNumberEndIndexTbl = (1,5,9,15)
+		fatTblFatContactNumber		= (33,37,35,39,33,37,35,39,33,37,36,40,35,39,33,37)
+		fatTblFatContactMinCuts		= (1,1,1,1,2,2,1,1,2,2,1,1,2,2,4,4)
+		cutTblSize			= 3
+	cutNameTbl = (1387,1388,1389)
+		cutWidthTbl			= (50,50,100)
+		cutHeightTbl			= (50,100,100)
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+}
+
+Layer		"M6" {
+		layerNumber			= 21
+		maskName			= "metal6"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "58"
+		lineStyle			= "solid"
+		pattern				= "impdot"
+		pitch				= 608
+		defaultWidth			= 56
+		minWidth			= 56
+		minSpacing			= 56
+		maxWidth			= 5000
+		sameNetMinSpacing		= 56
+		
+		protrusionTblDim       		= 4 			
+		protrusionFatThresholdTbl	= (150,300,1500,3000)
+		protrusionLengthLimitTbl	= (100,150,700,1500)
+		protrusionMinWidthTbl		= (60,70,150,300)
+
+		fatTblDimension			= 5
+		fatTblThreshold			= (5,155,305,1505,3005)
+		fatTblParallelLength		= (5,155,305,1505,3005)
+		fatTblSpacing			= (56,64,120,600,700,
+		64,64,120,600,700,
+		120,120,120,600,700,
+		600,600,600,600,700,
+		700,700,700,700,700)
+		minArea				= 16000
+		minEnclosedArea			= 200000
+}
+
+LayerDataType		"M6DMY" {
+		layerNumber			= 21
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "58"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA6" {
+		layerNumber			= 22
+		maskName			= "via6"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "52"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 50
+		minWidth			= 50
+		minSpacing			= 70
+		fatTblDimension			= 2
+		fatTblThreshold			= (0,160)
+		fatTblDimension2		= 2
+		fatTblThreshold2		= (0,160)
+		fatTblFatContactNumberEndIndexTbl = (1,5,9,15)
+		fatTblFatContactNumber		= (41,45,43,47,41,45,43,47,41,45,44,48,43,47,41,45)
+		fatTblFatContactMinCuts		= (1,1,1,1,2,2,1,1,2,2,1,1,2,2,4,4)
+		cutTblSize			= 3
+	cutNameTbl = (1390,1391,1392)
+		cutWidthTbl			= (50,50,100)
+		cutHeightTbl			= (50,100,100)
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+}
+
+Layer		"M7" {
+		layerNumber			= 23
+		maskName			= "metal7"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "cyan"
+		lineStyle			= "solid"
+		pattern				= "twelldot"
+		pitch				= 1216
+		defaultWidth			= 56
+		minWidth			= 56
+		minSpacing			= 56
+		maxWidth			= 5000
+		sameNetMinSpacing		= 56
+
+		protrusionTblDim       		= 4 			
+		protrusionFatThresholdTbl	= (150,300,1500,3000)
+		protrusionLengthLimitTbl	= (100,150,700,1500)
+		protrusionMinWidthTbl		= (60,70,150,300)
+
+		fatTblDimension			= 5
+		fatTblThreshold			= (5,155,305,1505,3005)
+		fatTblParallelLength		= (5,155,305,1505,3005)
+		fatTblSpacing			= (56,64,120,600,700,
+		64,64,120,600,700,
+		120,120,120,600,700,
+		600,600,600,600,700,
+		700,700,700,700,700)
+		minArea				= 16000
+		minEnclosedArea			= 200000
+}
+
+LayerDataType		"M7DMY" {
+		layerNumber			= 23
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "cyan"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA7" {
+		layerNumber			= 24
+		maskName			= "via7"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "blue"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 50
+		minWidth			= 50
+		minSpacing			= 70
+		fatTblDimension			= 2
+		fatTblThreshold			= (0,160)
+		fatTblDimension2		= 2
+		fatTblThreshold2		= (0,160)
+		fatTblFatContactNumberEndIndexTbl = (1,5,9,15)
+		fatTblFatContactNumber		= (49,53,51,55,49,53,51,55,49,53,52,56,51,55,49,53)
+		fatTblFatContactMinCuts		= (1,1,1,1,2,2,1,1,2,2,1,1,2,2,4,4)
+		cutTblSize			= 3
+	cutNameTbl = (1393,1394,1395)
+		cutWidthTbl			= (50,50,100)
+		cutHeightTbl			= (50,100,100)
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+}
+
+Layer		"M8" {
+		layerNumber			= 25
+		maskName			= "metal8"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "43"
+		lineStyle			= "solid"
+		pattern				= "hidot"
+		pitch				= 1216
+		defaultWidth			= 56
+		minWidth			= 56
+		minSpacing			= 56
+		maxWidth			= 5000
+		sameNetMinSpacing		= 56
+
+		protrusionTblDim       		= 4 			
+		protrusionFatThresholdTbl	= (150,300,1500,3000)
+		protrusionLengthLimitTbl	= (100,150,700,1500)
+		protrusionMinWidthTbl		= (60,70,150,300)
+
+		fatTblDimension			= 5
+		fatTblThreshold			= (5,155,305,1505,3005)
+		fatTblParallelLength		= (5,155,305,1505,3005)
+		fatTblSpacing			= (56,64,120,600,700,
+		64,64,120,600,700,
+		120,120,120,600,700,
+		600,600,600,600,700,
+		700,700,700,700,700)
+		minArea				= 16000
+		minEnclosedArea			= 200000
+}
+
+LayerDataType		"M8DMY" {
+		layerNumber			= 25
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "43"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"VIA8" {
+		layerNumber			= 26
+		maskName			= "via8"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "drab"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		
+		defaultWidth			= 130
+		minWidth			= 130
+		minSpacing			= 120
+		sameSegAlignedUpperWireMaxSpaci	= 80
+		sameSegAlignedLowerWireMaxSpaci	= 80
+		sameSegAlignedCutMinSpacing	= 70
+}
+
+Layer		"M9" {
+		layerNumber			= 27
+		maskName			= "metal9"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "59"
+		lineStyle			= "solid"
+		pattern				= "rhidot"
+		pitch				= 2432
+		defaultWidth			= 160
+		minWidth			= 160
+		minSpacing			= 160
+		maxWidth			= 10000
+		fatTblDimension			= 3
+		fatTblThreshold			= (0,501,1701)
+		fatTblParallelLength		= (0,501,1701)
+		fatTblSpacing			= (160,180,500,
+		180,180,500,
+		500,500,500)
+		minArea				= 55000
+		minEnclosedArea			= 200000
+}
+
+LayerDataType		"M9DMY" {
+		layerNumber			= 27
+		dataTypeNumber			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "59"
+		lineStyle			= "solid"
+		pattern				= "brick"
+}
+
+Layer		"CO" {
+		layerNumber			= 28
+		maskName			= "polyCont"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		pitch				= 0
+		defaultWidth			= 42
+		minWidth			= 42
+		minSpacing			= 50
+		maxCurrDensity			= 701000
+}
+
+Layer		"HVTIMP" {
+		layerNumber			= 29
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "orange"
+		lineStyle			= "solid"
+		pattern				= "zigzag"
+		pitch				= 0
+		defaultWidth			= 850
+		minWidth			= 850
+		minSpacing			= 850
+}
+
+Layer		"LVTIMP" {
+		layerNumber			= 30
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "31"
+		lineStyle			= "solid"
+		pattern				= "zigzag"
+		pitch				= 0
+		defaultWidth			= 850
+		minWidth			= 850
+		minSpacing			= 850
+}
+
+Layer		"M1PIN" {
+		layerNumber			= 31
+		maskName			= "m1txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M2PIN" {
+		layerNumber			= 32
+		maskName			= "m2txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M3PIN" {
+		layerNumber			= 33
+		maskName			= "m3txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M4PIN" {
+		layerNumber			= 34
+		maskName			= "m4txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M5PIN" {
+		layerNumber			= 35
+		maskName			= "m5txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M6PIN" {
+		layerNumber			= 36
+		maskName			= "m6txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M7PIN" {
+		layerNumber			= 37
+		maskName			= "m7txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M8PIN" {
+		layerNumber			= 38
+		maskName			= "m8txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"M9PIN" {
+		layerNumber			= 39
+		maskName			= "m9txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"MRDL" {
+		layerNumber			= 41
+		maskName			= "metal10"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "59"
+		lineStyle			= "solid"
+		pattern				= "solid"
+		pitch				= 4864
+		defaultWidth			= 2000
+		minWidth			= 2000
+		minSpacing			= 2000
+		maxWidth			= 30000
+		minArea				= 4000000
+		minEnclosedArea			= 200000
+}
+
+Layer		"VIARDL" {
+		layerNumber			= 42
+		maskName			= "via9"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "drab"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		pitch				= 360
+		defaultWidth			= 2000
+		minWidth			= 2000
+		minSpacing			= 2000
+}
+
+Layer		"MRDL9PIN" {
+		layerNumber			= 43
+		maskName			= "mrdl9txt"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 10
+		defaultWidth			= 10
+		minWidth			= 10
+		minSpacing			= 10
+}
+
+Layer		"HOTNWL" {
+		layerNumber			= 44
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "drab"
+		lineStyle			= "solid"
+		pattern				= "zigzag"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"DIOD" {
+		layerNumber			= 46
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"BJTDMY" {
+		layerNumber			= 47
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "62"
+		lineStyle			= "solid"
+		pattern				= "rectangleX"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RNW" {
+		layerNumber			= 48
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "drab"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RMARK" {
+		layerNumber			= 49
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "58"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"prBoundary" {
+		layerNumber			= 50
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "yellow"
+		lineStyle			= "solid"
+		pattern				= "dot"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"LOGO" {
+		layerNumber			= 51
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "orange"
+		lineStyle			= "solid"
+		pattern				= "solid"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 450
+}
+
+Layer		"IP" {
+		layerNumber			= 52
+		maskName			= "tag"
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "white"
+		lineStyle			= "solid"
+		pattern				= "slash"
+		pitch				= 100
+		defaultWidth			= 100
+		minWidth			= 100
+		minSpacing			= 100
+}
+
+Layer		"RM1" {
+		layerNumber			= 53
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "25"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM2" {
+		layerNumber			= 54
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "44"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM3" {
+		layerNumber			= 55
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "31"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM4" {
+		layerNumber			= 56
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "43"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM5" {
+		layerNumber			= 57
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "40"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM6" {
+		layerNumber			= 58
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "52"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM7" {
+		layerNumber			= 59
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "orange"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM8" {
+		layerNumber			= 60
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "36"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"RM9" {
+		layerNumber			= 61
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "23"
+		lineStyle			= "solid"
+		pattern				= "horizontal"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"DM1EXCL" {
+		layerNumber			= 64
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "drab"
+		lineStyle			= "dash"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM2EXCL" {
+		layerNumber			= 65
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "28"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM3EXCL" {
+		layerNumber			= 66
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "31"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM4EXCL" {
+		layerNumber			= 67
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "43"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM5EXCL" {
+		layerNumber			= 68
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "40"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM6EXCL" {
+		layerNumber			= 69
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "52"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM7EXCL" {
+		layerNumber			= 70
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "orange"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM8EXCL" {
+		layerNumber			= 71
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "36"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DM9EXCL" {
+		layerNumber			= 72
+		maskName			= ""
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "23"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 450
+		minWidth			= 450
+		minSpacing			= 0
+}
+
+Layer		"DIFF_25" {
+		layerNumber			= 75
+		maskName			= "25volt"
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "6"
+		lineStyle			= "dot"
+		pattern				= "zigzag"
+		pitch				= 0
+		defaultWidth			= 660
+		minWidth			= 660
+		minSpacing			= 660
+}
+
+Layer		"DIFF_FM" {
+		layerNumber			= 100
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "40"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+Layer		"PO_FM" {
+		layerNumber			= 101
+		maskName			= ""
+		isDefaultLayer			= 1
+		visible				= 1
+		selectable			= 1
+		blink				= 0
+		color				= "10"
+		lineStyle			= "solid"
+		pattern				= "enter"
+		pitch				= 0
+		defaultWidth			= 0
+		minWidth			= 0
+		minSpacing			= 0
+}
+
+ContactCode	"VIA12SQ_C" {
+		contactCodeNumber		= 1
+		cutLayer			= "VIA1"
+		lowerLayer			= "M1"
+		upperLayer			= "M2"
+		isDefaultContact		= 1
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA12BAR_C" {
+		contactCodeNumber		= 3
+		cutLayer			= "VIA1"
+		lowerLayer			= "M1"
+		upperLayer			= "M2"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA12LG_C" {
+		contactCodeNumber		= 4
+		cutLayer			= "VIA1"
+		lowerLayer			= "M1"
+		upperLayer			= "M2"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA12SQ" {
+		contactCodeNumber		= 5
+		cutLayer			= "VIA1"
+		lowerLayer			= "M1"
+		upperLayer			= "M2"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA12BAR" {
+		contactCodeNumber		= 7
+		cutLayer			= "VIA1"
+		lowerLayer			= "M1"
+		upperLayer			= "M2"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA12LG" {
+		contactCodeNumber		= 8
+		cutLayer			= "VIA1"
+		lowerLayer			= "M1"
+		upperLayer			= "M2"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA23SQ_C" {
+		contactCodeNumber		= 9
+		cutLayer			= "VIA2"
+		lowerLayer			= "M2"
+		upperLayer			= "M3"
+		isDefaultContact		= 1
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA23BAR_C" {
+		contactCodeNumber		= 11
+		cutLayer			= "VIA2"
+		lowerLayer			= "M2"
+		upperLayer			= "M3"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA23LG_C" {
+		contactCodeNumber		= 12
+		cutLayer			= "VIA2"
+		lowerLayer			= "M2"
+		upperLayer			= "M3"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA23SQ" {
+		contactCodeNumber		= 13
+		cutLayer			= "VIA2"
+		lowerLayer			= "M2"
+		upperLayer			= "M3"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA23BAR" {
+		contactCodeNumber		= 15
+		cutLayer			= "VIA2"
+		lowerLayer			= "M2"
+		upperLayer			= "M3"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA23LG" {
+		contactCodeNumber		= 16
+		cutLayer			= "VIA2"
+		lowerLayer			= "M2"
+		upperLayer			= "M3"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA34SQ_C" {
+		contactCodeNumber		= 17
+		cutLayer			= "VIA3"
+		lowerLayer			= "M3"
+		upperLayer			= "M4"
+		isDefaultContact		= 1
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA34BAR_C" {
+		contactCodeNumber		= 19
+		cutLayer			= "VIA3"
+		lowerLayer			= "M3"
+		upperLayer			= "M4"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA34LG_C" {
+		contactCodeNumber		= 20
+		cutLayer			= "VIA3"
+		lowerLayer			= "M3"
+		upperLayer			= "M4"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA34SQ" {
+		contactCodeNumber		= 21
+		cutLayer			= "VIA3"
+		lowerLayer			= "M3"
+		upperLayer			= "M4"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA34BAR" {
+		contactCodeNumber		= 23
+		cutLayer			= "VIA3"
+		lowerLayer			= "M3"
+		upperLayer			= "M4"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA34LG" {
+		contactCodeNumber		= 24
+		cutLayer			= "VIA3"
+		lowerLayer			= "M3"
+		upperLayer			= "M4"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA45SQ_C" {
+		contactCodeNumber		= 25
+		cutLayer			= "VIA4"
+		lowerLayer			= "M4"
+		upperLayer			= "M5"
+		isDefaultContact		= 1
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA45BAR_C" {
+		contactCodeNumber		= 27
+		cutLayer			= "VIA4"
+		lowerLayer			= "M4"
+		upperLayer			= "M5"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA45LG_C" {
+		contactCodeNumber		= 28
+		cutLayer			= "VIA4"
+		lowerLayer			= "M4"
+		upperLayer			= "M5"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA45SQ" {
+		contactCodeNumber		= 29
+		cutLayer			= "VIA4"
+		lowerLayer			= "M4"
+		upperLayer			= "M5"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA45BAR" {
+		contactCodeNumber		= 31
+		cutLayer			= "VIA4"
+		lowerLayer			= "M4"
+		upperLayer			= "M5"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA45LG" {
+		contactCodeNumber		= 32
+		cutLayer			= "VIA4"
+		lowerLayer			= "M4"
+		upperLayer			= "M5"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA56SQ_C" {
+		contactCodeNumber		= 33
+		cutLayer			= "VIA5"
+		lowerLayer			= "M5"
+		upperLayer			= "M6"
+		isDefaultContact		= 1
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA56BAR_C" {
+		contactCodeNumber		= 35
+		cutLayer			= "VIA5"
+		lowerLayer			= "M5"
+		upperLayer			= "M6"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA56LG_C" {
+		contactCodeNumber		= 36
+		cutLayer			= "VIA5"
+		lowerLayer			= "M5"
+		upperLayer			= "M6"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA56SQ" {
+		contactCodeNumber		= 37
+		cutLayer			= "VIA5"
+		lowerLayer			= "M5"
+		upperLayer			= "M6"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA56BAR" {
+		contactCodeNumber		= 39
+		cutLayer			= "VIA5"
+		lowerLayer			= "M5"
+		upperLayer			= "M6"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA56LG" {
+		contactCodeNumber		= 40
+		cutLayer			= "VIA5"
+		lowerLayer			= "M5"
+		upperLayer			= "M6"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA67SQ_C" {
+		contactCodeNumber		= 41
+		cutLayer			= "VIA6"
+		lowerLayer			= "M6"
+		upperLayer			= "M7"
+		isDefaultContact		= 1
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA67BAR_C" {
+		contactCodeNumber		= 43
+		cutLayer			= "VIA6"
+		lowerLayer			= "M6"
+		upperLayer			= "M7"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA67LG_C" {
+		contactCodeNumber		= 44
+		cutLayer			= "VIA6"
+		lowerLayer			= "M6"
+		upperLayer			= "M7"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA67SQ" {
+		contactCodeNumber		= 45
+		cutLayer			= "VIA6"
+		lowerLayer			= "M6"
+		upperLayer			= "M7"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA67BAR" {
+		contactCodeNumber		= 47
+		cutLayer			= "VIA6"
+		lowerLayer			= "M6"
+		upperLayer			= "M7"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA67LG" {
+		contactCodeNumber		= 48
+		cutLayer			= "VIA6"
+		lowerLayer			= "M6"
+		upperLayer			= "M7"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA78SQ_C" {
+		contactCodeNumber		= 49
+		cutLayer			= "VIA7"
+		lowerLayer			= "M7"
+		upperLayer			= "M8"
+		isDefaultContact		= 1
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA78BAR_C" {
+		contactCodeNumber		= 51
+		cutLayer			= "VIA7"
+		lowerLayer			= "M7"
+		upperLayer			= "M8"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 5
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA78LG_C" {
+		contactCodeNumber		= 52
+		cutLayer			= "VIA7"
+		lowerLayer			= "M7"
+		upperLayer			= "M8"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA78SQ" {
+		contactCodeNumber		= 53
+		cutLayer			= "VIA7"
+		lowerLayer			= "M7"
+		upperLayer			= "M8"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 50
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 70
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA78BAR" {
+		contactCodeNumber		= 55
+		cutLayer			= "VIA7"
+		lowerLayer			= "M7"
+		upperLayer			= "M8"
+		isDefaultContact		= 0
+		cutWidth			= 50
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA78LG" {
+		contactCodeNumber		= 56
+		cutLayer			= "VIA7"
+		lowerLayer			= "M7"
+		upperLayer			= "M8"
+		isDefaultContact		= 0
+		cutWidth			= 100
+		cutHeight			= 100
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 5
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 5
+		minCutSpacing			= 85
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA89_C" {
+		contactCodeNumber		= 57
+		cutLayer			= "VIA8"
+		lowerLayer			= "M8"
+		upperLayer			= "M9"
+		isDefaultContact		= 1
+		cutWidth			= 130
+		cutHeight			= 130
+		upperLayerEncWidth		= 15
+		upperLayerEncHeight		= 30
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 15
+		minCutSpacing			= 120
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA89" {
+		contactCodeNumber		= 58
+		cutLayer			= "VIA8"
+		lowerLayer			= "M8"
+		upperLayer			= "M9"
+		isDefaultContact		= 1
+		cutWidth			= 130
+		cutHeight			= 130
+		upperLayerEncWidth		= 30
+		upperLayerEncHeight		= 15
+		lowerLayerEncWidth		= 30
+		lowerLayerEncHeight		= 15
+		minCutSpacing			= 120
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+ContactCode	"VIA9RDL" {
+		contactCodeNumber		= 67
+		cutLayer			= "VIARDL"
+		lowerLayer			= "M9"
+		upperLayer			= "MRDL"
+		isDefaultContact		= 1
+		cutWidth			= 2000
+		cutHeight			= 2000
+		upperLayerEncWidth		= 500
+		upperLayerEncHeight		= 500
+		lowerLayerEncWidth		= 500
+		lowerLayerEncHeight		= 500
+		minCutSpacing			= 2000
+		maxNumRowsNonTurning		= 4
+		unitMinResistance		= 8
+		unitNomResistance		= 16
+		unitMaxResistance		= 24
+}
+
+
+DesignRule	{
+		layer1				= "VIA1"
+		layer2				= "VIA1"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1375,1376,1377)
+	cut2NameTbl = (1375,1376,1377)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA2"
+		layer2				= "VIA2"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1378,1379,1380)
+	cut2NameTbl = (1378,1379,1380)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA3"
+		layer2				= "VIA3"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1381,1382,1383)
+	cut2NameTbl = (1381,1382,1383)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA4"
+		layer2				= "VIA4"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1384,1385,1386)
+	cut2NameTbl = (1384,1385,1386)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA5"
+		layer2				= "VIA5"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1387,1388,1389)
+	cut2NameTbl = (1387,1388,1389)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA6"
+		layer2				= "VIA6"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1390,1391,1392)
+	cut2NameTbl = (1390,1391,1392)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA7"
+		layer2				= "VIA7"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1393,1394,1395)
+	cut2NameTbl = (1393,1394,1395)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA1"
+		layer2				= "VIA2"
+		stackable			= 1
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1375,1376,1377)
+	cut2NameTbl = (1378,1379,1380)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA2"
+		layer2				= "VIA3"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+		stackable			= 1
+	cut1NameTbl = (1378,1379,1380)
+	cut2NameTbl = (1381,1382,1383)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA3"
+		layer2				= "VIA4"
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+		stackable			= 1
+	cut1NameTbl = (1381,1382,1383)
+	cut2NameTbl = (1384,1385,1386)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA4"
+		layer2				= "VIA5"
+		stackable			= 1
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1384,1385,1386)
+	cut2NameTbl = (1387,1388,1389)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA5"
+		layer2				= "VIA6"
+		stackable			= 1
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1387,1388,1389)
+	cut2NameTbl = (1390,1391,1392)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA6"
+		layer2				= "VIA7"
+		stackable			= 1
+		cut1TblSize			= 3
+		cut2TblSize			= 3
+	cut1NameTbl = (1390,1391,1392)
+	cut2NameTbl = (1393,1394,1395)
+		sameNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+		diffNetXMinSpacingTbl		= (70,80,80,
+		80,85,85,
+		80,85,85)
+}
+
+DesignRule	{
+		layer1				= "VIA7"
+		layer2				= "VIA8"
+		stackable			= 1
+}
+
+DesignRule	{
+		layer1				= "NWELL"
+		layer2				= "PIMP"
+		minEnclosure			= 0
+}
+
+DesignRule	{
+		layer1				= "PO"
+		layer2				= "DIFF"
+		minSpacing			= 50
+}
+
+DesignRule	{
+		layer1				= "DIFF"
+		layer2				= "CO"
+		minSpacing			= 40
+}
+
+DesignRule	{
+		layer1				= "PO"
+		layer2				= "CO"
+		minSpacing			= 40
+		minEnclosure			= 40
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 30
+		endOfLineEncSideThreshold	= (50)
+		endOfLineEncTbl			= (50)
+}
+
+DesignRule	{
+		layer1				= "PIMP"
+		layer2				= "NIMP"
+		minSpacing			= 240
+}
+
+DesignRule	{
+		layer1				= "M1"
+		layer2				= "CO"
+		minEnclosure			= 4
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 50
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (35)
+}
+
+DesignRule	{
+		layer1				= "VIA1"
+		layer2				= "CO"
+		stackable			= 1
+}
+
+DesignRule	{
+		layer1				= "M1"
+		layer2				= "VIA1"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+
+}
+
+DesignRule	{
+		layer1				= "M2"
+		layer2				= "VIA1"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M2"
+		layer2				= "VIA2"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M3"
+		layer2				= "VIA2"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M3"
+		layer2				= "VIA3"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M4"
+		layer2				= "VIA3"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M4"
+		layer2				= "VIA4"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M5"
+		layer2				= "VIA4"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M5"
+		layer2				= "VIA5"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M6"
+		layer2				= "VIA5"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M6"
+		layer2				= "VIA6"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M7"
+		layer2				= "VIA6"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M7"
+		layer2				= "VIA7"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M8"
+		layer2				= "VIA7"
+		minEnclosure			= 5
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M8"
+		layer2				= "VIA8"
+		minEnclosure			= 15
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M9"
+		layer2				= "VIA8"
+		minEnclosure			= 15
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+DesignRule	{
+		layer1				= "M9"
+		layer2				= "VIARDL"
+		minEnclosure			= 15
+		endOfLineEncTblSize		= 1
+		endOfLineEncWidthThreshold	= 60
+		endOfLineEncSideThreshold	= (35)
+		endOfLineEncTbl			= (30)
+}
+
+PRRule		{
+		rowSpacingTopTop		= 560
+		rowSpacingTopBot		= 280
+		rowSpacingBotBot		= 560
+		abuttableTopTop			= 1
+		abuttableTopBot			= 0
+		abuttableBotBot			= 1
+}
+
+DensityRule	{
+		layer				= "M1"
+		windowSize			= 75000
+		minDensity			= 10000000
+		maxDensity			= 85000000
+}
+
+DensityRule	{
+		layer				= "M1"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 60000000
+}
+
+DensityRule	{
+		layer				= "M2"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M2"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 70000000
+}
+
+DensityRule	{
+		layer				= "M3"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M3"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 70000000
+}
+
+DensityRule	{
+		layer				= "M4"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M4"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 70000000
+}
+
+DensityRule	{
+		layer				= "M5"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M5"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 70000000
+}
+
+DensityRule	{
+		layer				= "M6"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M6"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 70000000
+}
+
+DensityRule	{
+		layer				= "M7"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M7"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 70000000
+}
+
+DensityRule	{
+		layer				= "M8"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M8"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 70000000
+}
+
+DensityRule	{
+		layer				= "M9"
+		windowSize			= 50000
+		minDensity			= 15000000
+		maxDensity			= 100000000
+}
+
+DensityRule	{
+		layer				= "M9"
+		windowSize			= 100000
+		minDensity			= 1000000
+		maxDensity			= 60000000
+}

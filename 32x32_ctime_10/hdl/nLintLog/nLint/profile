@@ -1,0 +1,70 @@
+@nLint rc file Version 1.0
+[ClockRules]
+31 = T
+71 = T
+72 = T
+187 = T
+303 = T
+304 = T
+564 = T
+565 = T
+[CombLoop]
+42 = T
+44 = T
+45 = T
+307 = T
+[DriveLoad]
+63 = T
+73 = T
+74 = T
+75 = T
+76 = T
+77 = T
+78 = T
+79 = T
+105 = T
+115 = T
+116 = T
+117 = T
+118 = T
+119 = T
+122 = T
+124 = T
+133 = T
+137 = T
+138 = T
+141 = T
+147 = T
+148 = T
+149 = T
+150 = T
+160 = T
+162 = T
+163 = T
+164 = T
+165 = T
+166 = T
+167 = T
+188 = T
+189 = T
+224 = T
+225 = T
+226 = T
+305 = T
+306 = T
+444 = T
+445 = T
+446 = T
+447 = T
+[SignalDrive]
+32 = T
+33 = T
+51 = T
+97 = T
+313 = T
+[CompileError]
+T = T
+[RuleArgument]
+T = T
+[OtherRules]
+T = T

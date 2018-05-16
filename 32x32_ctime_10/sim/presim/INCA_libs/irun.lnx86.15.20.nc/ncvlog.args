@@ -1,0 +1,25 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx86.15.20.nc
+-RUNMODE
+test_top.v
+../../hdl/tpu_top.v
+../../hdl/addr_sel.v
+../../hdl/quantize.v
+../../hdl/systolic.v
+../../hdl/systolic_controll.v
+../../hdl/write_out.v
+sram_model/sram_256x32b.v
+sram_model/sram_64x512b.v
+-CDSLIB
+./INCA_libs/irun.lnx86.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx86.15.20.nc/xllibs
+-ALLOWUNBOUND

@@ -1,0 +1,1778 @@
+MACROS
+
+@define TOLERANCE 0.0001
+@define DBU 0.0002
+@include "adrc_variables.ev"
+
+HEADER {
+	INLIB = CHIP
+	OUTLIB = hercules_out
+	LAYOUT_PATH = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run
+	BLOCK = CHIP
+	FORMAT = MILKYWAY
+	GROUP_DIR = run_details/group
+	OUTPUT_FORMAT = MILKYWAY
+	MILKYWAY_VIEW_NAME = trash
+	OUTPUT_LAYOUT_PATH = run_details
+}
+
+DATABASE_OPTIONS {
+	USE_REF_CONTROL_FILE = TRUE
+	HIER_REF_LIB_MODE = TRUE
+	DB_MODE = DRC_BLACK_BOX
+	IGNORE_MISSING_CELL = TRUE
+	DB_CELL_LIST = {*}
+}
+
+OPTIONS {
+	INTERNAL_RESOLUTION = DBU
+	MAXIMUM_CELLNAME_LENGTH = 127
+}
+
+EXPLODE_OPTIONS {
+	EXPLODE_ALL = {*}
+}
+
+DRC_OPTIONS {
+	DRC_ERROR_BOX = 0.01
+}
+
+ERROR_PROPERTY {
+	comment_property (51)
+}
+
+
+ASSIGN {
+	metal1_pin       (11) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal1_top       (11) {VIEW = { CEL}}
+	metal1_rbkg      (11) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal2_pin       (13) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal2_top       (13) {VIEW = { CEL}}
+	metal2_rbkg      (13) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal3_pin       (15) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal3_top       (15) {VIEW = { CEL}}
+	metal3_rbkg      (15) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal4_pin       (17) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal4_top       (17) {VIEW = { CEL}}
+	metal4_rbkg      (17) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal5_pin       (19) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal5_top       (19) {VIEW = { CEL}}
+	metal5_rbkg      (19) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal6_pin       (21) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal6_top       (21) {VIEW = { CEL}}
+	metal6_rbkg      (21) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal7_pin       (23) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal7_top       (23) {VIEW = { CEL}}
+	metal7_rbkg      (23) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal8_pin       (25) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal8_top       (25) {VIEW = { CEL}}
+	metal8_rbkg      (25) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal9_pin       (27) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal9_top       (27) {VIEW = { CEL}}
+	metal9_rbkg      (27) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+	metal10_pin       (41) {VIEW = FRAM, OBJECT_TYPE = PIN }
+	metal10_top       (41) {VIEW = { CEL}}
+	metal10_rbkg      (41) {VIEW = FRAM, OBJECT_TYPE = {*,!PIN}}
+
+	metal1_blockage  (218)
+	metal2_blockage  (219)
+	metal3_blockage  (220)
+	metal4_blockage  (216)
+	metal5_blockage  (239)
+	metal6_blockage  (240)
+	metal7_blockage  (208)
+	metal8_blockage  (210)
+	metal9_blockage  (214)
+	metal10_blockage  (236)
+
+	via1_top         (12)  {VIEW = CEL}
+	via1_fram        (12)  {VIEW = FRAM}
+	via2_top         (14)  {VIEW = CEL}
+	via2_fram        (14)  {VIEW = FRAM}
+	via3_top         (16)  {VIEW = CEL}
+	via3_fram        (16)  {VIEW = FRAM}
+	via4_top         (18)  {VIEW = CEL}
+	via4_fram        (18)  {VIEW = FRAM}
+	via5_top         (20)  {VIEW = CEL}
+	via5_fram        (20)  {VIEW = FRAM}
+	via6_top         (22)  {VIEW = CEL}
+	via6_fram        (22)  {VIEW = FRAM}
+	via7_top         (24)  {VIEW = CEL}
+	via7_fram        (24)  {VIEW = FRAM}
+	via8_top         (26)  {VIEW = CEL}
+	via8_fram        (26)  {VIEW = FRAM}
+	via9_top         (42)  {VIEW = CEL}
+	via9_fram        (42)  {VIEW = FRAM}
+
+	via1_blockage    (224)
+	via2_blockage    (225)
+	via3_blockage    (217)
+	via4_blockage    (241)
+	via5_blockage    (242)
+	via6_blockage    (243)
+	via7_blockage    (209)
+	via8_blockage    (211)
+	via9_blockage    (215)
+
+	PR_BNDY  	         (255)
+
+	empty  	         (255;255)
+}
+
+/*Data preparation*/
+BOOLEAN metal1_top OR metal1_pin  {  } TEMP=metal1_top
+BOOLEAN metal1_top OR metal1_rbkg {  } TEMP=metal1
+BOOLEAN metal2_top OR metal2_pin  {  } TEMP=metal2_top
+BOOLEAN metal2_top OR metal2_rbkg {  } TEMP=metal2
+BOOLEAN metal3_top OR metal3_pin  {  } TEMP=metal3_top
+BOOLEAN metal3_top OR metal3_rbkg {  } TEMP=metal3
+BOOLEAN metal4_top OR metal4_pin  {  } TEMP=metal4_top
+BOOLEAN metal4_top OR metal4_rbkg {  } TEMP=metal4
+BOOLEAN metal5_top OR metal5_pin  {  } TEMP=metal5_top
+BOOLEAN metal5_top OR metal5_rbkg {  } TEMP=metal5
+BOOLEAN metal6_top OR metal6_pin  {  } TEMP=metal6_top
+BOOLEAN metal6_top OR metal6_rbkg {  } TEMP=metal6
+BOOLEAN metal7_top OR metal7_pin  {  } TEMP=metal7_top
+BOOLEAN metal7_top OR metal7_rbkg {  } TEMP=metal7
+BOOLEAN metal8_top OR metal8_pin  {  } TEMP=metal8_top
+BOOLEAN metal8_top OR metal8_rbkg {  } TEMP=metal8
+BOOLEAN metal9_top OR metal9_pin  {  } TEMP=metal9_top
+BOOLEAN metal9_top OR metal9_rbkg {  } TEMP=metal9
+BOOLEAN metal10_top OR metal10_pin  {  } TEMP=metal10_top
+BOOLEAN metal10_top OR metal10_rbkg {  } TEMP=metal10
+
+BOOLEAN via1_top OR via1_fram { } TEMP=via1
+BOOLEAN via2_top OR via2_fram { } TEMP=via2
+BOOLEAN via3_top OR via3_fram { } TEMP=via3
+BOOLEAN via4_top OR via4_fram { } TEMP=via4
+BOOLEAN via5_top OR via5_fram { } TEMP=via5
+BOOLEAN via6_top OR via6_fram { } TEMP=via6
+BOOLEAN via7_top OR via7_fram { } TEMP=via7
+BOOLEAN via8_top OR via8_fram { } TEMP=via8
+BOOLEAN via9_top OR via9_fram { } TEMP=via9
+
+CONNECT {
+   metal1 metal2 BY via1
+   metal2 metal3 BY via2
+   metal3 metal4 BY via3
+   metal4 metal5 BY via4
+   metal5 metal6 BY via5
+   metal6 metal7 BY via6
+   metal7 metal8 BY via7
+   metal8 metal9 BY via8
+   metal9 metal10 BY via9
+} CONNECT_DB = all_layer
+
+SET ignoreBlockage = 1;
+SET readCellView = 0;
+
+@define CHECK_NOTCH TRUE
+
+/*Metal rules*/
+SET minEdgeMode = 1;
+SET stubMode = 0;
+
+/*metal 1*/
+SET layer_name = "Met1";
+
+@define OUTPUT_LAYER 11
+@define METAL_LAYER metal1
+@define METAL_PIN metal1_pin
+@define METAL_BLOCKAGE_LAYER metal1_blockage
+@define METAL_TOP_DATA metal1_top
+@define METAL_REAL_BLOCKAGE metal1_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.05;
+SET maxWidth = 5;
+SET minArea = 0.01;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.05;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.05;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.05;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.17;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.05;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met1 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.151;
+SET fatTblParallelLength = 0.151;
+SET minWidth = 0.05;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.06;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.301;
+SET fatTblParallelLength = 0.301;
+SET minWidth = 0.05;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.1;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.501;
+SET fatTblParallelLength = 1.501;
+SET minWidth = 0.05;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.5;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.001;
+SET fatTblParallelLength = 3.001;
+SET minWidth = 0.05;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met1 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 2*/
+SET layer_name = "Met2";
+
+@define OUTPUT_LAYER 13
+@define METAL_LAYER metal2
+@define METAL_PIN metal2_pin
+@define METAL_BLOCKAGE_LAYER metal2_blockage
+@define METAL_TOP_DATA metal2_top
+@define METAL_REAL_BLOCKAGE metal2_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.056;
+SET maxWidth = 5;
+SET minArea = 0.016;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.056;
+SET sameNetMinSpacing = 0.056;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.15;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 3;
+SET fatTblLength_protru = 1.5;
+SET fatTblWidth_protru = 0.3;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met2 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.155;
+SET fatTblParallelLength = 0.15;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.064;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.305;
+SET fatTblParallelLength = 0.3;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.12;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.505;
+SET fatTblParallelLength = 1.5;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.005;
+SET fatTblParallelLength = 3;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.7;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met2 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 3*/
+SET layer_name = "Met3";
+
+@define OUTPUT_LAYER 15
+@define METAL_LAYER metal3
+@define METAL_PIN metal3_pin
+@define METAL_BLOCKAGE_LAYER metal3_blockage
+@define METAL_TOP_DATA metal3_top
+@define METAL_REAL_BLOCKAGE metal3_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.056;
+SET maxWidth = 5;
+SET minArea = 0.016;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.056;
+SET sameNetMinSpacing = 0.056;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.15;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 3;
+SET fatTblLength_protru = 1.5;
+SET fatTblWidth_protru = 0.3;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met3 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.155;
+SET fatTblParallelLength = 0.155;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.064;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.305;
+SET fatTblParallelLength = 0.305;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.12;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.505;
+SET fatTblParallelLength = 1.505;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.005;
+SET fatTblParallelLength = 3.005;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.7;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met3 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 4*/
+SET layer_name = "Met4";
+
+@define OUTPUT_LAYER 17
+@define METAL_LAYER metal4
+@define METAL_PIN metal4_pin
+@define METAL_BLOCKAGE_LAYER metal4_blockage
+@define METAL_TOP_DATA metal4_top
+@define METAL_REAL_BLOCKAGE metal4_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.056;
+SET maxWidth = 5;
+SET minArea = 0.016;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.056;
+SET sameNetMinSpacing = 0.056;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.15;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 3;
+SET fatTblLength_protru = 1.5;
+SET fatTblWidth_protru = 0.3;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met4 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.155;
+SET fatTblParallelLength = 0.155;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.064;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.305;
+SET fatTblParallelLength = 0.305;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.12;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.505;
+SET fatTblParallelLength = 1.505;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.005;
+SET fatTblParallelLength = 3.005;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.7;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met4 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 5*/
+SET layer_name = "Met5";
+
+@define OUTPUT_LAYER 19
+@define METAL_LAYER metal5
+@define METAL_PIN metal5_pin
+@define METAL_BLOCKAGE_LAYER metal5_blockage
+@define METAL_TOP_DATA metal5_top
+@define METAL_REAL_BLOCKAGE metal5_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.056;
+SET maxWidth = 5;
+SET minArea = 0.016;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.056;
+SET sameNetMinSpacing = 0.056;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.15;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 3;
+SET fatTblLength_protru = 1.5;
+SET fatTblWidth_protru = 0.3;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met5 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.155;
+SET fatTblParallelLength = 0.155;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.064;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.305;
+SET fatTblParallelLength = 0.305;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.12;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.505;
+SET fatTblParallelLength = 1.505;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.005;
+SET fatTblParallelLength = 3.005;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.7;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met5 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 6*/
+SET layer_name = "Met6";
+
+@define OUTPUT_LAYER 21
+@define METAL_LAYER metal6
+@define METAL_PIN metal6_pin
+@define METAL_BLOCKAGE_LAYER metal6_blockage
+@define METAL_TOP_DATA metal6_top
+@define METAL_REAL_BLOCKAGE metal6_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.056;
+SET maxWidth = 5;
+SET minArea = 0.016;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.056;
+SET sameNetMinSpacing = 0.056;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.15;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 3;
+SET fatTblLength_protru = 1.5;
+SET fatTblWidth_protru = 0.3;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met6 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.155;
+SET fatTblParallelLength = 0.155;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.064;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.305;
+SET fatTblParallelLength = 0.305;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.12;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.505;
+SET fatTblParallelLength = 1.505;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.005;
+SET fatTblParallelLength = 3.005;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.7;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met6 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 7*/
+SET layer_name = "Met7";
+
+@define OUTPUT_LAYER 23
+@define METAL_LAYER metal7
+@define METAL_PIN metal7_pin
+@define METAL_BLOCKAGE_LAYER metal7_blockage
+@define METAL_TOP_DATA metal7_top
+@define METAL_REAL_BLOCKAGE metal7_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.056;
+SET maxWidth = 5;
+SET minArea = 0.016;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.056;
+SET sameNetMinSpacing = 0.056;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.15;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 3;
+SET fatTblLength_protru = 1.5;
+SET fatTblWidth_protru = 0.3;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met7 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.155;
+SET fatTblParallelLength = 0.155;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.064;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.305;
+SET fatTblParallelLength = 0.305;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.12;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.505;
+SET fatTblParallelLength = 1.505;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.005;
+SET fatTblParallelLength = 3.005;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.7;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met7 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 8*/
+SET layer_name = "Met8";
+
+@define OUTPUT_LAYER 25
+@define METAL_LAYER metal8
+@define METAL_PIN metal8_pin
+@define METAL_BLOCKAGE_LAYER metal8_blockage
+@define METAL_TOP_DATA metal8_top
+@define METAL_REAL_BLOCKAGE metal8_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.056;
+SET maxWidth = 5;
+SET minArea = 0.016;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.056;
+SET sameNetMinSpacing = 0.056;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 5;
+@include "adrc_check_metal.ev"
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.15;
+SET fatTblLength_protru = 0.1;
+SET fatTblWidth_protru = 0.06;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 0.3;
+SET fatTblLength_protru = 0.15;
+SET fatTblWidth_protru = 0.07;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 1.5;
+SET fatTblLength_protru = 0.7;
+SET fatTblWidth_protru = 0.15;
+@include "adrc_protru.ev"
+
+SET minSpacing = 0.056;
+SET fatTblThresh_protru = 3;
+SET fatTblLength_protru = 1.5;
+SET fatTblWidth_protru = 0.3;
+@include "adrc_protru.ev"
+
+
+
+
+/* Start of Met8 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.155;
+SET fatTblParallelLength = 0.155;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.064;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0.305;
+SET fatTblParallelLength = 0.305;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.12;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.505;
+SET fatTblParallelLength = 1.505;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.6;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 3.005;
+SET fatTblParallelLength = 3.005;
+SET minWidth = 0.056;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.7;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met8 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 9*/
+SET layer_name = "Met9";
+
+@define OUTPUT_LAYER 27
+@define METAL_LAYER metal9
+@define METAL_PIN metal9_pin
+@define METAL_BLOCKAGE_LAYER metal9_blockage
+@define METAL_TOP_DATA metal9_top
+@define METAL_REAL_BLOCKAGE metal9_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 0.16;
+SET maxWidth = 10;
+SET minArea = 0.055;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 0.16;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 3;
+@include "adrc_check_metal.ev"
+
+
+/* Start of Met9 fat table spacing rules */
+SET fatTblSpacingMode = 0;
+SET parallelLengthMode = 0;
+SET router_parallelLengthNetMode = 0;
+
+SET fatTblThreshold = 0.501;
+SET fatTblParallelLength = 0.501;
+SET minWidth = 0.16;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.18;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 1.701;
+SET fatTblParallelLength = 1.701;
+SET minWidth = 0.16;
+
+SET fatTblThreshold_Start = 0;
+SET fatTblSpacing = 0.5;
+@include "adrc_fatMetal.ev"
+
+SET fatTblThreshold = 0;
+SET fatTblEnclosedArea = 0;
+SET fatTblExtensionRange = 0;
+SET fatTblParallelLength = 0;
+SET minWidth = 0;
+
+/* End of Met9 fat table spacing rules */
+
+
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*metal 10*/
+SET layer_name = "Met10";
+
+@define OUTPUT_LAYER 41
+@define METAL_LAYER metal10
+@define METAL_PIN metal10_pin
+@define METAL_BLOCKAGE_LAYER metal10_blockage
+@define METAL_TOP_DATA metal10_top
+@define METAL_REAL_BLOCKAGE metal10_rbkg
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_MANHATTAN_SPACING_FLAG 0
+
+SET minWidth = 2;
+SET maxWidth = 30;
+SET minArea = 4;
+SET minEnclosedArea = 0.2;
+SET minSpacing = 2;
+SET stub2StubSpacing = 0;
+
+SET fatTblDimension = 0;
+@include "adrc_check_metal.ev"
+@undef OUTPUT_LAYER
+@undef METAL_LAYER
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_MANHATTAN_SPACING_FLAG
+@undef METAL_BLOCKAGE_LAYER
+@undef METAL_REAL_BLOCKAGE
+
+
+/*Via rules*/
+
+SET ignoreContactCodeSpacing = 1;
+/*via 1*/
+SET layer_name = "Via1";
+
+@define OUTPUT_LAYER 12
+@define CUT_LAYER via1
+@define CUT_TOP_LAYER via1_top
+@define CUT_FRAM_LAYER via1_fram
+@define CUT_BLOCKAGE_LAYER via1_blockage
+@define METAL_LAYER1 metal1
+@define METAL_LAYER2 metal2
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via1
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.07;
+SET cut_fatContactThreshold1 = 0.16;
+SET cut_fatContactThreshold2 = 0.16;
+SET cut_fatTblDimension = 2;
+@include "adrc_check_via.ev"
+
+
+/* Start of Via1 fat table spacing rules */
+SET cut_maxCutSpacing = 0.1285;
+SIZE CUT_LAYER {
+   OVER_UNDER = cut_maxCutSpacing/2.0
+} TEMP = via_cluster
+SET cut_fatMetalAndMode = 0;
+SET cut_fatTblThreshold_1 = 0.16;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0.16;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+@include "adrc_fatVia.ev"
+
+
+
+/* End of Via1 fat table spacing rules */
+
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 2*/
+SET layer_name = "Via2";
+
+@define OUTPUT_LAYER 14
+@define CUT_LAYER via2
+@define CUT_TOP_LAYER via2_top
+@define CUT_FRAM_LAYER via2_fram
+@define CUT_BLOCKAGE_LAYER via2_blockage
+@define METAL_LAYER1 metal2
+@define METAL_LAYER2 metal3
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via2
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.07;
+SET cut_fatContactThreshold1 = 0.16;
+SET cut_fatContactThreshold2 = 0.16;
+SET cut_fatTblDimension = 2;
+@include "adrc_check_via.ev"
+
+
+/* Start of Via2 fat table spacing rules */
+SET cut_maxCutSpacing = 0.1285;
+SIZE CUT_LAYER {
+   OVER_UNDER = cut_maxCutSpacing/2.0
+} TEMP = via_cluster
+SET cut_fatMetalAndMode = 0;
+SET cut_fatTblThreshold_1 = 0.16;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0.16;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+@include "adrc_fatVia.ev"
+
+
+
+/* End of Via2 fat table spacing rules */
+
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 3*/
+SET layer_name = "Via3";
+
+@define OUTPUT_LAYER 16
+@define CUT_LAYER via3
+@define CUT_TOP_LAYER via3_top
+@define CUT_FRAM_LAYER via3_fram
+@define CUT_BLOCKAGE_LAYER via3_blockage
+@define METAL_LAYER1 metal3
+@define METAL_LAYER2 metal4
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via3
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.07;
+SET cut_fatContactThreshold1 = 0.16;
+SET cut_fatContactThreshold2 = 0.16;
+SET cut_fatTblDimension = 2;
+@include "adrc_check_via.ev"
+
+
+/* Start of Via3 fat table spacing rules */
+SET cut_maxCutSpacing = 0.1285;
+SIZE CUT_LAYER {
+   OVER_UNDER = cut_maxCutSpacing/2.0
+} TEMP = via_cluster
+SET cut_fatMetalAndMode = 0;
+SET cut_fatTblThreshold_1 = 0.16;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0.16;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+@include "adrc_fatVia.ev"
+
+
+
+/* End of Via3 fat table spacing rules */
+
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 4*/
+SET layer_name = "Via4";
+
+@define OUTPUT_LAYER 18
+@define CUT_LAYER via4
+@define CUT_TOP_LAYER via4_top
+@define CUT_FRAM_LAYER via4_fram
+@define CUT_BLOCKAGE_LAYER via4_blockage
+@define METAL_LAYER1 metal4
+@define METAL_LAYER2 metal5
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via4
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.07;
+SET cut_fatContactThreshold1 = 0.16;
+SET cut_fatContactThreshold2 = 0.16;
+SET cut_fatTblDimension = 2;
+@include "adrc_check_via.ev"
+
+
+/* Start of Via4 fat table spacing rules */
+SET cut_maxCutSpacing = 0.1285;
+SIZE CUT_LAYER {
+   OVER_UNDER = cut_maxCutSpacing/2.0
+} TEMP = via_cluster
+SET cut_fatMetalAndMode = 0;
+SET cut_fatTblThreshold_1 = 0.16;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0.16;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+@include "adrc_fatVia.ev"
+
+
+
+/* End of Via4 fat table spacing rules */
+
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 5*/
+SET layer_name = "Via5";
+
+@define OUTPUT_LAYER 20
+@define CUT_LAYER via5
+@define CUT_TOP_LAYER via5_top
+@define CUT_FRAM_LAYER via5_fram
+@define CUT_BLOCKAGE_LAYER via5_blockage
+@define METAL_LAYER1 metal5
+@define METAL_LAYER2 metal6
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via5
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.07;
+SET cut_fatContactThreshold1 = 0.16;
+SET cut_fatContactThreshold2 = 0.16;
+SET cut_fatTblDimension = 2;
+@include "adrc_check_via.ev"
+
+
+/* Start of Via5 fat table spacing rules */
+SET cut_maxCutSpacing = 0.1285;
+SIZE CUT_LAYER {
+   OVER_UNDER = cut_maxCutSpacing/2.0
+} TEMP = via_cluster
+SET cut_fatMetalAndMode = 0;
+SET cut_fatTblThreshold_1 = 0.16;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0.16;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+@include "adrc_fatVia.ev"
+
+
+
+/* End of Via5 fat table spacing rules */
+
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 6*/
+SET layer_name = "Via6";
+
+@define OUTPUT_LAYER 22
+@define CUT_LAYER via6
+@define CUT_TOP_LAYER via6_top
+@define CUT_FRAM_LAYER via6_fram
+@define CUT_BLOCKAGE_LAYER via6_blockage
+@define METAL_LAYER1 metal6
+@define METAL_LAYER2 metal7
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via6
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.07;
+SET cut_fatContactThreshold1 = 0.16;
+SET cut_fatContactThreshold2 = 0.16;
+SET cut_fatTblDimension = 2;
+@include "adrc_check_via.ev"
+
+
+/* Start of Via6 fat table spacing rules */
+SET cut_maxCutSpacing = 0.1285;
+SIZE CUT_LAYER {
+   OVER_UNDER = cut_maxCutSpacing/2.0
+} TEMP = via_cluster
+SET cut_fatMetalAndMode = 0;
+SET cut_fatTblThreshold_1 = 0.16;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0.16;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+@include "adrc_fatVia.ev"
+
+
+
+/* End of Via6 fat table spacing rules */
+
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 7*/
+SET layer_name = "Via7";
+
+@define OUTPUT_LAYER 24
+@define CUT_LAYER via7
+@define CUT_TOP_LAYER via7_top
+@define CUT_FRAM_LAYER via7_fram
+@define CUT_BLOCKAGE_LAYER via7_blockage
+@define METAL_LAYER1 metal7
+@define METAL_LAYER2 metal8
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via7
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.07;
+SET cut_fatContactThreshold1 = 0.16;
+SET cut_fatContactThreshold2 = 0.16;
+SET cut_fatTblDimension = 2;
+@include "adrc_check_via.ev"
+
+
+/* Start of Via7 fat table spacing rules */
+SET cut_maxCutSpacing = 0.1285;
+SIZE CUT_LAYER {
+   OVER_UNDER = cut_maxCutSpacing/2.0
+} TEMP = via_cluster
+SET cut_fatMetalAndMode = 0;
+SET cut_fatTblThreshold_1 = 0.16;
+SET cut_fatTblNextThreshold_1 = 0;
+SET cut_fatTblThreshold_2 = 0.16;
+SET cut_fatTblNextThreshold_2 = 0;
+SET cut_fatTblMinCuts = 0;
+@include "adrc_fatVia.ev"
+
+
+
+/* End of Via7 fat table spacing rules */
+
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 8*/
+SET layer_name = "Via8";
+
+@define OUTPUT_LAYER 26
+@define CUT_LAYER via8
+@define CUT_TOP_LAYER via8_top
+@define CUT_FRAM_LAYER via8_fram
+@define CUT_BLOCKAGE_LAYER via8_blockage
+@define METAL_LAYER1 metal8
+@define METAL_LAYER2 metal9
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via8
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 0.12;
+SET cut_fatTblDimension = 0;
+@include "adrc_check_via.ev"
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*via 9*/
+SET layer_name = "Via9";
+
+@define OUTPUT_LAYER 42
+@define CUT_LAYER via9
+@define CUT_TOP_LAYER via9_top
+@define CUT_FRAM_LAYER via9_fram
+@define CUT_BLOCKAGE_LAYER via9_blockage
+@define METAL_LAYER1 metal9
+@define METAL_LAYER2 metal10
+@define CHECK_MANHATTAN_SPACING FALSE
+@define CHECK_CORNER_SPACING TRUE
+@define DEFAULT_CUT default_via9
+
+SET cornerSpacingMode = 0;
+SET cut_minSpacing = 2;
+SET cut_fatTblDimension = 0;
+@include "adrc_check_via.ev"
+@undef OUTPUT_LAYER
+@undef CUT_LAYER
+@undef METAL_LAYER1
+@undef METAL_LAYER2
+@undef CHECK_MANHATTAN_SPACING
+@undef CHECK_CORNER_SPACING
+
+
+
+
+/*Via/Via design rules*/
+
+/*Via/Metal design rules*/
+SET diff_endOfLineMode = 0;
+
+/*via 1 / metal 1*/
+SET layer_name = "V1/M1";
+
+@define OUTPUT_LAYER 11
+@define LAYER1 via1
+@define LAYER2 metal1
+
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 2 / metal 2*/
+SET layer_name = "V2/M2";
+
+@define OUTPUT_LAYER 13
+@define LAYER1 via2
+@define LAYER2 metal2
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 3 / metal 3*/
+SET layer_name = "V3/M3";
+
+@define OUTPUT_LAYER 15
+@define LAYER1 via3
+@define LAYER2 metal3
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 4 / metal 4*/
+SET layer_name = "V4/M4";
+
+@define OUTPUT_LAYER 17
+@define LAYER1 via4
+@define LAYER2 metal4
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 5 / metal 5*/
+SET layer_name = "V5/M5";
+
+@define OUTPUT_LAYER 19
+@define LAYER1 via5
+@define LAYER2 metal5
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 6 / metal 6*/
+SET layer_name = "V6/M6";
+
+@define OUTPUT_LAYER 21
+@define LAYER1 via6
+@define LAYER2 metal6
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 7 / metal 7*/
+SET layer_name = "V7/M7";
+
+@define OUTPUT_LAYER 23
+@define LAYER1 via7
+@define LAYER2 metal7
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 8 / metal 8*/
+SET layer_name = "V8/M8";
+
+@define OUTPUT_LAYER 25
+@define LAYER1 via8
+@define LAYER2 metal8
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 9 / metal 9*/
+SET layer_name = "V9/M9";
+
+@define OUTPUT_LAYER 27
+@define LAYER1 via9
+@define LAYER2 metal9
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 1 / metal 2*/
+SET layer_name = "V1/M2";
+
+@define OUTPUT_LAYER 13
+@define LAYER1 via1
+@define LAYER2 metal2
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 2 / metal 3*/
+SET layer_name = "V2/M3";
+
+@define OUTPUT_LAYER 15
+@define LAYER1 via2
+@define LAYER2 metal3
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 3 / metal 4*/
+SET layer_name = "V3/M4";
+
+@define OUTPUT_LAYER 17
+@define LAYER1 via3
+@define LAYER2 metal4
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 4 / metal 5*/
+SET layer_name = "V4/M5";
+
+@define OUTPUT_LAYER 19
+@define LAYER1 via4
+@define LAYER2 metal5
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 5 / metal 6*/
+SET layer_name = "V5/M6";
+
+@define OUTPUT_LAYER 21
+@define LAYER1 via5
+@define LAYER2 metal6
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 6 / metal 7*/
+SET layer_name = "V6/M7";
+
+@define OUTPUT_LAYER 23
+@define LAYER1 via6
+@define LAYER2 metal7
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 7 / metal 8*/
+SET layer_name = "V7/M8";
+
+@define OUTPUT_LAYER 25
+@define LAYER1 via7
+@define LAYER2 metal8
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*via 8 / metal 9*/
+SET layer_name = "V8/M9";
+
+@define OUTPUT_LAYER 27
+@define LAYER1 via8
+@define LAYER2 metal9
+
+LOAD_CONNECT_DB all_layer
+
+if (!layer_empty (LAYER1)) {
+    if (!layer_empty (LAYER2)) {
+        @include "adrc_check_diff.ev"
+    }
+}
+DISCONNECT
+
+
+/*Via keep-out area design rules*/
+

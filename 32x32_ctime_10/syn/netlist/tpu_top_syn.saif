@@ -1,0 +1,12 @@
+(SAIFILE
+(SAIFVERSION "2.0")
+(DIRECTION "backward")
+(DESIGN "tpu_top")
+(DATE "Fri Jan  5 00:29:48 2018")
+(VENDOR "Synopsys, Inc")
+(PROGRAM_NAME "Power Compiler write_saif")
+(PROGRAM_VERSION "G-2012.06-SP5")
+(DIVIDER / )
+(TIMESCALE 1 ns)
+(DURATION 1000.00)
+)

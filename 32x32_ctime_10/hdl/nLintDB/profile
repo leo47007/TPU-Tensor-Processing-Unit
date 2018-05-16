@@ -1,0 +1,46 @@
+@nLint rc file Version 1.0
+[description]
+bt_version = 
+lint_version = 
+counter = 12
+component_number = 8
+[component_1]
+name = nLint
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintDB/nLint
+component_key = 0
+depend = 0
+[component_2]
+name = nLintOtherRules
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintLog/nLint/OtherRules
+component_key = 1
+depend = 0
+[component_3]
+name = nLintRuleArgument
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintLog/nLint/RuleArgument
+component_key = 2
+depend = 0
+[component_4]
+name = nLintCompileError
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintLog/nLint/CompileError
+component_key = 3
+depend = 0
+[component_5]
+name = nLintSignalDrive
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintLog/nLint/SignalDrive
+component_key = 8
+depend = 0
+[component_6]
+name = nLintDriveLoad
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintLog/nLint/DriveLoad
+component_key = 9
+depend = 0
+[component_7]
+name = nLintCombLoop
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintLog/nLint/CombLoop
+component_key = 10
+depend = 0
+[component_8]
+name = nLintClockRules
+file_name = /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/new_ctime_10/hdl/nLintLog/nLint/ClockRules
+component_key = 11
+depend = 0

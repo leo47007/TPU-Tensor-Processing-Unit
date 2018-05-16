@@ -1,0 +1,96 @@
+if (viaFarm_maxNum > 0 && viaFarm_spacing > 0) {
+   SIZE TARGET_CUT {  
+     GROW_right = viaFarm_spacing - TOLERANCE
+   } TEMP = size_hor
+   SELECT size_hor INTERACT TARGET_CUT {
+      RANGE = [viaFarm_maxNum + 1, MAXIMUM_NUMBER]
+   } TEMP = size_hor
+   SIZE TARGET_CUT {  
+      GROW_top = viaFarm_spacing - TOLERANCE
+   } TEMP = size_ver
+   SELECT size_ver INTERACT TARGET_CUT {
+      RANGE = [viaFarm_maxNum + 1, MAXIMUM_NUMBER]
+   } TEMP = size_ver
+   BOOLEAN (size_hor OR size_ver) AND TARGET_CUT {
+      COMMENT = "$layer_name ViaFarmRule: max row/col number (spacing viaFarm_spacing um) = viaFarm_maxNum"
+   } (OUTPUT_LAYER)
+   SET viaFarm_maxNum = 0;
+   SET viaFarm_spacing = 0;      
+}
+/*check enclosure*/
+if (via_minEnclosure1 > 0) {
+    ENCLOSE TARGET_CUT BY METAL_LAYER1 {
+        COMMENT = "$layer_name Enclosure : min lower layer enclosure ( via_minEnclosure1 um)"
+        SPACING < via_minEnclosure1
+	NON_PARALLEL = TRUE
+	POINT_TOUCH = TRUE
+	TOUCH = TRUE
+    } (OUTPUT_LAYER)
+}
+/* Check out-side of enclosure */
+if (via_minEnclosure1 >= 0) {
+    BOOLEAN TARGET_CUT NOT METAL_LAYER1 {
+        COMMENT = "$layer_name Enclosure : min lower layer enclosure ( via_minEnclosure1 um)"
+    } (OUTPUT_LAYER)
+    SET via_minEnclosure1 = -1;
+}
+/*check end_of_line enclosure*/
+if (via_EOLEnclosure1 > 0) {
+   ENCLOSE TARGET_CUT BY METAL_LAYER1 {
+      SPACING < via_EOLEnclosure1
+      SET_CORNERS_TO_SPACING = FALSE
+      PARALLEL_POINT_PROJECTION = FALSE
+      SHADOW_OTHER_LAYER = TRUE  
+      TOUCH = TRUE
+      POINT_TOUCH = FALSE
+      NON_PARALLEL = TRUE
+      OUTPUT_EDGES = TRUE
+   } TEMP = violation
+ 
+   SELECT_EDGE TARGET_CUT TOUCHING violation {  } TEMP = edges
+   SELECT_VECTOR edges { ANGLE_RANGE = [0, 0] } TEMP = h_edges
+   SELECT_VECTOR edges { ANGLE_RANGE = [90, 90] } TEMP = v_edges
+   SELECT h_edges INTERACT v_edges { POINT_TOUCH = TRUE } TEMP = h_edges
+ 
+   SELECT TARGET_CUT ENCLOSING h_edges {
+      COMMENT = "$layer_name Enclosure: min lower layer EoL enclosure ( via_EOLEnclosure1 um)"
+   } (OUTPUT_LAYER)
+   SET via_EOLEnclosure1 = 0;
+}
+if (via_minEnclosure2 > 0) {
+    ENCLOSE TARGET_CUT BY METAL_LAYER2 {
+        COMMENT = "$layer_name Enclosure : min upper layer enclosure ( via_minEnclosure2 um)"
+        SPACING < via_minEnclosure2
+	NON_PARALLEL = TRUE
+	POINT_TOUCH = TRUE
+	TOUCH = TRUE
+    } (OUTPUT_LAYER)
+}
+if (via_minEnclosure2 >= 0) {
+    BOOLEAN TARGET_CUT NOT METAL_LAYER2 {
+        COMMENT = "$layer_name Enclosure : min upper layer enclosure ( via_minEnclosure2 um)"
+    } (OUTPUT_LAYER)
+    SET via_minEnclosure2 = 0;
+}
+if (via_EOLEnclosure2 > 0) {
+   ENCLOSE TARGET_CUT BY METAL_LAYER2 {
+      SPACING < via_EOLEnclosure2
+      SET_CORNERS_TO_SPACING = FALSE
+      PARALLEL_POINT_PROJECTION = FALSE
+      SHADOW_OTHER_LAYER = TRUE  
+      TOUCH = TRUE
+      POINT_TOUCH = FALSE
+      NON_PARALLEL = TRUE
+      OUTPUT_EDGES = TRUE
+   } TEMP = violation
+ 
+   SELECT_EDGE TARGET_CUT TOUCHING violation {  } TEMP = edges
+   SELECT_VECTOR edges { ANGLE_RANGE = [0, 0] } TEMP = h_edges
+   SELECT_VECTOR edges { ANGLE_RANGE = [90, 90] } TEMP = v_edges
+   SELECT h_edges INTERACT v_edges { POINT_TOUCH = TRUE } TEMP = h_edges
+ 
+   SELECT TARGET_CUT ENCLOSING h_edges {
+      COMMENT = "$layer_name Enclosure : min upper layer EoL enclosure ( via_EOLEnclosure2 um)"
+   } (OUTPUT_LAYER)
+   SET via_EOLEnclosure2 = 0;
+}

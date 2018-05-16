@@ -1,0 +1,24 @@
+@nLint message generated warning file.
+
+*** Working Directory [/home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_10/hdl] ***
+
+systolic.v(30): Warning 25009: the fan-out number of signal "matrix_mul_2D" is 256 whereas the limitation is 10. (Design Style)
+systolic.v(31): Warning 25009: the fan-out number of signal "matrix_mul_2D_nx" is 64 whereas the limitation is 10. (Design Style)
+systolic.v(32): Warning 25009: the fan-out number of signal "data_queue" is 59 whereas the limitation is 10. (Design Style)
+systolic.v(33): Warning 25009: the fan-out number of signal "weight_queue" is 59 whereas the limitation is 10. (Design Style)
+systolic.v(35): Warning 25009: the fan-out number of signal "mul_result[0]" is 768 whereas the limitation is 10. (Design Style)
+systolic.v(35): Warning 25009: the fan-out number of signal "mul_result[15:1]" is 128 whereas the limitation is 10. (Design Style)
+systolic.v(37): Warning 25009: the fan-out number of signal "upper_bound" is 36 whereas the limitation is 10. (Design Style)
+systolic.v(38): Warning 25009: the fan-out number of signal "lower_bound" is 28 whereas the limitation is 10. (Design Style)
+systolic_controll.v(44): Warning 22117: "Synchronous" reset "srstn" is detected. (Design Style)
+tpu_top.v(9): Warning 25009: the fan-out number of signal "srstn" is 208 whereas the limitation is 10. (Design Style)
+tpu_top.v(44): Warning 25009: the fan-out number of signal "addr_serial_num" is 14 whereas the limitation is 10. (Design Style)
+tpu_top.v(48): Warning 25009: the fan-out number of signal "quantized_data" is 48 whereas the limitation is 10. (Design Style)
+tpu_top.v(51): Warning 25009: the fan-out number of signal "alu_start" is 193 whereas the limitation is 10. (Design Style)
+tpu_top.v(52): Warning 25009: the fan-out number of signal "cycle_num" is 386 whereas the limitation is 10. (Design Style)
+tpu_top.v(53): Warning 25009: the fan-out number of signal "matrix_index" is 37 whereas the limitation is 10. (Design Style)
+tpu_top.v(56): Warning 25009: the fan-out number of signal "sram_write_enable" is 390 whereas the limitation is 10. (Design Style)
+tpu_top.v(57): Warning 25009: the fan-out number of signal "data_set" is 395 whereas the limitation is 10. (Design Style)
+write_out.v(48): Warning 22117: "Synchronous" reset "srstn" is detected. (Design Style)
+
+Total 18 Warning(s)

@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : tpu_top
+Version: G-2012.06-SP5
+Date   : Sat Jan  6 12:34:34 2018
+****************************************
+
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   tpu_top                      0.00       116493.19      -116493.19
+                                                                    (VIOLATED)
+
+
+1

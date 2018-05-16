@@ -1,0 +1,4 @@
+s1(03Jan2018:23:42:05):  ncverilog -f sim_gate.f 
+s2(05Jan2018:00:45:52):  ncverilog -f sim_gate.f 
+s3(05Jan2018:10:47:14):  ncverilog -f sim_gate.f 
+s4(05Jan2018:11:01:36):  ncverilog -f sim_gate.f 

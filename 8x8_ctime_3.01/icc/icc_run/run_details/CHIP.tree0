@@ -1,0 +1,2384 @@
+*** CHIP		Mon Jan 15 18:42:23 2018
+
+PRE_TREE
+
+
+
+		DESIGN STATISTICS DEFINITIONS
+		______ __________ ______________.
+
+Hierarchical levels       The number of levels in the design.
+Unique Cells              The number of unique cells in the design.
+Hierarchical placements   The total number of placements (srefs and arefs)
+			  at each level in the design.
+Total Design placements   The total number of placements (srefs and arefs)
+			  in the design.
+Exploded references       The total number of exploded references in the
+			   design.
+Exploded placements       The total number of exploded placements in the
+			   design.
+Total Data count          The total number of all polygons, paths, 
+			  vectors, and rectangles in the design.
+Sref Placements           The total number of cell references in the design.
+Arefs                     The total number of array references in the design.
+Aref Placements           The total number of references in each array
+			  reference in the design.
+Data                      The number of data primitives in each cell
+			  of the design.
+Text                      The number of text primitives in each cell of the design.
+
+
+*********************************************************************************
+
+
+		DESIGN STATISTICS FOR "CHIP".
+		______ __________ ___ ___________.
+
+	Hierarchical levels	=         2
+	Unique cells		=       104
+	Hierarchical placements	=     38924
+	Total design placements	=     38924
+	Exploded references	=         0
+	Exploded placements	=         0
+	Total data count	=   1917681
+	SREF placements		=     38924
+	AREFS			=         0
+	AREF placements		=         0
+	DATA 			=   1000942
+	TEXT			=         0
+
+
+*********************************************************************************
+
+		HIERARCHICAL TREE FOR BLOCK "CHIP".
+
+
+							     TOTAL SREF AREF
+ CHIP                                         Level=0  Count=   1    1    0 
+  $$VIA12SQ_120_120_2_1                       Level=1  Count=2346 2346    0 
+  $$VIA12SQ_C_120_120_16_1                    Level=1  Count= 747  747    0 
+  $$VIA12SQ_C_120_120_2_1                     Level=1  Count=   4    4    0 
+  $$VIA12SQ_C_120_120_33_1                    Level=1  Count= 500  500    0 
+  $$VIA23SQ_C_120_120_16_1                    Level=1  Count= 747  747    0 
+  $$VIA23SQ_C_120_120_33_1                    Level=1  Count= 500  500    0 
+  $$VIA34BAR_C_135_185_14_1                   Level=1  Count=   3    3    0 
+  $$VIA34BAR_C_135_185_29_1                   Level=1  Count=   2    2    0 
+  $$VIA34SQ_C_120_120_16_1                    Level=1  Count= 744  744    0 
+  $$VIA34SQ_C_120_120_33_1                    Level=1  Count= 498  498    0 
+  $$VIA45BAR_C_135_185_14_1                   Level=1  Count= 744  744    0 
+  $$VIA45BAR_C_135_185_29_1                   Level=1  Count= 498  498    0 
+  $$VIA45LG_C_185_185_10_11                   Level=1  Count=   6    6    0 
+  $$VIA45LG_C_185_185_10_21                   Level=1  Count=  12   12    0 
+  $$VIA45LG_C_185_185_21_11                   Level=1  Count=   4    4    0 
+  $$VIA45LG_C_185_185_21_21                   Level=1  Count=   8    8    0 
+  $$VIA78SQ_120_120_2_1                       Level=1  Count=  25   25    0 
+  AND2X1_HVT                                  Level=1  Count= 817  817    0 
+  AND2X2_HVT                                  Level=1  Count= 133  133    0 
+  AND2X4_HVT                                  Level=1  Count= 106  106    0 
+  AND3X1_HVT                                  Level=1  Count=  54   54    0 
+  AND3X2_HVT                                  Level=1  Count=   6    6    0 
+  AND4X1_HVT                                  Level=1  Count=  17   17    0 
+  AND4X2_HVT                                  Level=1  Count=   2    2    0 
+  AO21X1_HVT                                  Level=1  Count= 586  586    0 
+  AO21X2_HVT                                  Level=1  Count=  15   15    0 
+  AO221X1_HVT                                 Level=1  Count=  18   18    0 
+  AO222X1_HVT                                 Level=1  Count=  53   53    0 
+  AO222X2_HVT                                 Level=1  Count=   6    6    0 
+  AO22X1_HVT                                  Level=1  Count=1074 1074    0 
+  AO22X2_HVT                                  Level=1  Count=  21   21    0 
+  AOI21X1_HVT                                 Level=1  Count= 261  261    0 
+  AOI21X2_HVT                                 Level=1  Count=   3    3    0 
+  DELLN1X2_HVT                                Level=1  Count=  58   58    0 
+  DELLN3X2_HVT                                Level=1  Count=   1    1    0 
+  DFFSSRX1_HVT                                Level=1  Count=2693 2693    0 
+  DFFSSRX2_HVT                                Level=1  Count= 121  121    0 
+  FADDX1_HVT                                  Level=1  Count=3690 3690    0 
+  FADDX2_HVT                                  Level=1  Count=  26   26    0 
+  HADDX1_HVT                                  Level=1  Count= 667  667    0 
+  HADDX2_HVT                                  Level=1  Count=  29   29    0 
+  IBUFFX2_HVT                                 Level=1  Count=   3    3    0 
+  IBUFFX32_HVT                                Level=1  Count=   3    3    0 
+  IBUFFX4_HVT                                 Level=1  Count=   3    3    0 
+  IBUFFX8_HVT                                 Level=1  Count=   3    3    0 
+  INVX0_HVT                                   Level=1  Count=2378 2378    0 
+  INVX16_HVT                                  Level=1  Count=  51   51    0 
+  INVX1_HVT                                   Level=1  Count= 189  189    0 
+  INVX2_HVT                                   Level=1  Count= 335  335    0 
+  INVX32_HVT                                  Level=1  Count=  37   37    0 
+  INVX4_HVT                                   Level=1  Count= 456  456    0 
+  INVX8_HVT                                   Level=1  Count= 142  142    0 
+  LATCHX1_HVT                                 Level=1  Count= 244  244    0 
+  LATCHX2_HVT                                 Level=1  Count=   3    3    0 
+  MUX21X1_HVT                                 Level=1  Count= 760  760    0 
+  MUX41X1_HVT                                 Level=1  Count= 100  100    0 
+  NAND2X0_HVT                                 Level=1  Count=3981 3981    0 
+  NAND2X1_HVT                                 Level=1  Count=   7    7    0 
+  NAND2X2_HVT                                 Level=1  Count=  77   77    0 
+  NAND2X4_HVT                                 Level=1  Count=  37   37    0 
+  NAND3X0_HVT                                 Level=1  Count=  92   92    0 
+  NAND3X1_HVT                                 Level=1  Count=   8    8    0 
+  NAND3X2_HVT                                 Level=1  Count=  13   13    0 
+  NAND4X0_HVT                                 Level=1  Count= 104  104    0 
+  NAND4X1_HVT                                 Level=1  Count=  33   33    0 
+  NBUFFX16_HVT                                Level=1  Count=   8    8    0 
+  NBUFFX2_HVT                                 Level=1  Count=1792 1792    0 
+  NBUFFX32_HVT                                Level=1  Count=   2    2    0 
+  NBUFFX4_HVT                                 Level=1  Count= 599  599    0 
+  NBUFFX8_HVT                                 Level=1  Count= 262  262    0 
+  NOR2X0_HVT                                  Level=1  Count=3018 3018    0 
+  NOR2X1_HVT                                  Level=1  Count=1343 1343    0 
+  NOR2X2_HVT                                  Level=1  Count=  68   68    0 
+  NOR2X4_HVT                                  Level=1  Count=   1    1    0 
+  NOR3X0_HVT                                  Level=1  Count=   1    1    0 
+  NOR4X1_HVT                                  Level=1  Count=   1    1    0 
+  OA21X1_HVT                                  Level=1  Count= 212  212    0 
+  OA21X2_HVT                                  Level=1  Count=   6    6    0 
+  OA221X1_HVT                                 Level=1  Count= 108  108    0 
+  OA222X1_HVT                                 Level=1  Count=  39   39    0 
+  OA222X2_HVT                                 Level=1  Count=   1    1    0 
+  OA22X1_HVT                                  Level=1  Count= 569  569    0 
+  OA22X2_HVT                                  Level=1  Count=   8    8    0 
+  OAI21X1_HVT                                 Level=1  Count= 520  520    0 
+  OAI21X2_HVT                                 Level=1  Count= 133  133    0 
+  OAI221X1_HVT                                Level=1  Count=  39   39    0 
+  OAI221X2_HVT                                Level=1  Count=   1    1    0 
+  OAI222X1_HVT                                Level=1  Count=  14   14    0 
+  OAI222X2_HVT                                Level=1  Count=   2    2    0 
+  OAI22X1_HVT                                 Level=1  Count=   1    1    0 
+  OR2X1_HVT                                   Level=1  Count=1625 1625    0 
+  OR2X2_HVT                                   Level=1  Count=  53   53    0 
+  OR2X4_HVT                                   Level=1  Count=  46   46    0 
+  OR3X1_HVT                                   Level=1  Count= 140  140    0 
+  OR4X1_HVT                                   Level=1  Count= 106  106    0 
+  OR4X2_HVT                                   Level=1  Count=  58   58    0 
+  OR4X4_HVT                                   Level=1  Count=   4    4    0 
+  XNOR2X1_HVT                                 Level=1  Count= 632  632    0 
+  XNOR2X2_HVT                                 Level=1  Count=  11   11    0 
+  XOR2X1_HVT                                  Level=1  Count= 464  464    0 
+  XOR2X2_HVT                                  Level=1  Count=  11   11    0 
+  XOR3X1_HVT                                  Level=1  Count=  50   50    0 
+  XOR3X2_HVT                                  Level=1  Count=  71   71    0 
+
+
+*********************************************************************************
+
+
+		CELL STATISTICS
+
+
+CELL = CHIP
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, 0.000) (449.064, 448.000)
+	Cell Area		= 201180.67
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=    38923	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=   997418
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_top       11:0    147190/0   (0.81, 0.53) (448.06, 447.17)       9191.28    CEL   1   HW VW CO
+ via1_top         12:0    110825/0   (0.84, 0.54) (447.77, 447.16)       294.63     CEL   1   CO
+ metal2_top       13:0    370794/0   (0.07, 0.00) (447.77, 448.00)       17846.07   CEL   1   HW VW CO PI
+ via2_top         14:0    103605/0   (0.08, 1.90) (444.58, 445.19)       259.01     CEL   1   CO
+ metal3_top       15:0    187859/0   (0.00, 1.90) (449.06, 445.19)       15175.78   CEL   1   HW VW CO PI
+ via3_top         16:0    13292/0   (0.08, 11.02) (439.43, 433.63)       33.23      CEL   1   CO
+ metal4_top       17:0    28467/0   (0.07, 1.00) (448.06, 447.00)        14659.61   CEL   1   HW VW CO
+ via4_top         18:0     4782/0   (9.50, 20.45) (439.56, 431.50)       11.96      CEL   1   CO
+ metal5_top       19:0    11541/0   (1.00, 1.00) (448.06, 447.00)        14662.40   CEL   1   HW VW CO
+ via5_top         20:0     2721/0   (10.72, 25.92) (430.90, 431.50)      6.80       CEL   1   CO
+ metal6_top       21:0     7506/0   (10.71, 25.73) (430.90, 431.54)      1677.60    CEL   1   HW VW CO
+ via6_top         22:0     1895/0   (10.72, 25.92) (426.03, 424.82)      4.74       CEL   1   CO
+ metal7_top       23:0     4129/0   (10.69, 25.91) (426.06, 424.82)      1071.17    CEL   1   HW VW CO
+ via7_top         24:0      633/0   (11.33, 25.92) (426.03, 424.82)      1.72       CEL   1   CO
+ metal8_top       25:0     1446/0   (11.27, 25.89) (426.04, 424.85)      451.95     CEL   1   HW VW CO
+ via8_top         26:0      286/0   (11.29, 85.46) (421.36, 370.14)      4.83       CEL   1   CO
+ metal9_top       27:0      446/0   (11.26, 85.45) (421.39, 370.15)      660.26     CEL   1   HW VW CO
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (449.06, 448.00)        201180.67  CEL   1   BO
+
+CELL = $$VIA12SQ_120_120_2_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.115, -0.030) (0.115, 0.030)
+	Cell Area		= 0.01
+	Hierarchical Placements	=     2346
+	Flat Placements		=     2346
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        4
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_top       11:0        1/0   (-0.12, -0.03) (0.12, 0.03)          0.01       CEL       COA
+ via1_top         12:0        2/0   (-0.09, -0.03) (0.09, 0.03)          0.01       CEL       COA
+ metal2_top       13:0        1/0   (-0.12, -0.03) (0.12, 0.03)          0.01       CEL       COA
+
+CELL = $$VIA78SQ_120_120_2_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.115, -0.030) (0.115, 0.030)
+	Cell Area		= 0.01
+	Hierarchical Placements	=       25
+	Flat Placements		=       25
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        4
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal7_top       23:0        1/0   (-0.12, -0.03) (0.12, 0.03)          0.01       CEL       COA
+ via7_top         24:0        2/0   (-0.09, -0.03) (0.09, 0.03)          0.01       CEL       COA
+ metal8_top       25:0        1/0   (-0.12, -0.03) (0.12, 0.03)          0.01       CEL       COA
+
+CELL = $$VIA12SQ_C_120_120_2_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.115, -0.055) (0.115, 0.055)
+	Cell Area		= 0.03
+	Hierarchical Placements	=        4
+	Flat Placements		=        4
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        4
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_top       11:0        1/0   (-0.12, -0.03) (0.12, 0.03)          0.01       CEL       COA
+ via1_top         12:0        2/0   (-0.09, -0.03) (0.09, 0.03)          0.01       CEL       COA
+ metal2_top       13:0        1/0   (-0.09, -0.06) (0.09, 0.06)          0.02       CEL       COA
+
+CELL = $$VIA12SQ_C_120_120_33_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.975, -0.055) (1.975, 0.055)
+	Cell Area		= 0.43
+	Hierarchical Placements	=      500
+	Flat Placements		=      500
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_top       11:0        1/0   (-1.98, -0.03) (1.98, 0.03)          0.24       CEL       COA
+ via1_top         12:0       33/0   (-1.95, -0.03) (1.95, 0.03)          0.08       CEL       COA
+ metal2_top       13:0        1/0   (-1.95, -0.06) (1.95, 0.06)          0.43       CEL       COA
+
+CELL = $$VIA12SQ_C_120_120_16_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.955, -0.055) (0.955, 0.055)
+	Cell Area		= 0.21
+	Hierarchical Placements	=      747
+	Flat Placements		=      747
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_top       11:0        1/0   (-0.96, -0.03) (0.96, 0.03)          0.11       CEL       COA
+ via1_top         12:0       16/0   (-0.93, -0.03) (0.93, 0.03)          0.04       CEL       COA
+ metal2_top       13:0        1/0   (-0.93, -0.06) (0.93, 0.06)          0.20       CEL       COA
+
+CELL = $$VIA23SQ_C_120_120_33_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.975, -0.055) (1.975, 0.055)
+	Cell Area		= 0.43
+	Hierarchical Placements	=      500
+	Flat Placements		=      500
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal2_top       13:0        1/0   (-1.98, -0.03) (1.98, 0.03)          0.24       CEL       COA
+ via2_top         14:0       33/0   (-1.95, -0.03) (1.95, 0.03)          0.08       CEL       COA
+ metal3_top       15:0        1/0   (-1.95, -0.06) (1.95, 0.06)          0.43       CEL       COA
+
+CELL = $$VIA23SQ_C_120_120_16_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.955, -0.055) (0.955, 0.055)
+	Cell Area		= 0.21
+	Hierarchical Placements	=      747
+	Flat Placements		=      747
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal2_top       13:0        1/0   (-0.96, -0.03) (0.96, 0.03)          0.11       CEL       COA
+ via2_top         14:0       16/0   (-0.93, -0.03) (0.93, 0.03)          0.04       CEL       COA
+ metal3_top       15:0        1/0   (-0.93, -0.06) (0.93, 0.06)          0.20       CEL       COA
+
+CELL = $$VIA34SQ_C_120_120_33_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.975, -0.055) (1.975, 0.055)
+	Cell Area		= 0.43
+	Hierarchical Placements	=      498
+	Flat Placements		=      498
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal3_top       15:0        1/0   (-1.98, -0.03) (1.98, 0.03)          0.24       CEL       COA
+ metal7_top       16:0       33/0   (-1.95, -0.03) (1.95, 0.03)          0.08       CEL       COA
+ via7_top         17:0        1/0   (-1.95, -0.06) (1.95, 0.06)          0.43       CEL       COA
+
+CELL = $$VIA34SQ_C_120_120_16_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.955, -0.055) (0.955, 0.055)
+	Cell Area		= 0.21
+	Hierarchical Placements	=      744
+	Flat Placements		=      744
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal3_top       15:0        1/0   (-0.96, -0.03) (0.96, 0.03)          0.11       CEL       COA
+ metal7_top       16:0       16/0   (-0.93, -0.03) (0.93, 0.03)          0.04       CEL       COA
+ via7_top         17:0        1/0   (-0.93, -0.06) (0.93, 0.06)          0.20       CEL       COA
+
+CELL = $$VIA34BAR_C_135_185_29_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.945, -0.080) (1.945, 0.080)
+	Cell Area		= 0.62
+	Hierarchical Placements	=        2
+	Flat Placements		=        2
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       31
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal3_top       15:0        1/0   (-1.95, -0.06) (1.95, 0.06)          0.43       CEL       COA
+ metal7_top       16:0       29/0   (-1.92, -0.05) (1.92, 0.05)          0.15       CEL       COA
+ via7_top         17:0        1/0   (-1.92, -0.08) (1.92, 0.08)          0.61       CEL       COA
+
+CELL = $$VIA34BAR_C_135_185_14_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.932, -0.080) (0.932, 0.080)
+	Cell Area		= 0.30
+	Hierarchical Placements	=        3
+	Flat Placements		=        3
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       16
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal3_top       15:0        1/0   (-0.93, -0.06) (0.93, 0.06)          0.21       CEL       COA
+ metal7_top       16:0       14/0   (-0.90, -0.05) (0.90, 0.05)          0.07       CEL       COA
+ via7_top         17:0        1/0   (-0.91, -0.08) (0.91, 0.08)          0.29       CEL       COA
+
+CELL = $$VIA45BAR_C_135_185_29_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.945, -0.080) (1.945, 0.080)
+	Cell Area		= 0.62
+	Hierarchical Placements	=      498
+	Flat Placements		=      498
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       31
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ via7_top         17:0        1/0   (-1.95, -0.06) (1.95, 0.06)          0.43       CEL       COA
+ metal8_top       18:0       29/0   (-1.92, -0.05) (1.92, 0.05)          0.15       CEL       COA
+ metal5_top       19:0        1/0   (-1.92, -0.08) (1.92, 0.08)          0.61       CEL       COA
+
+CELL = $$VIA45BAR_C_135_185_14_1
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.932, -0.080) (0.932, 0.080)
+	Cell Area		= 0.30
+	Hierarchical Placements	=      744
+	Flat Placements		=      744
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       16
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ via7_top         17:0        1/0   (-0.93, -0.06) (0.93, 0.06)          0.21       CEL       COA
+ metal8_top       18:0       14/0   (-0.90, -0.05) (0.90, 0.05)          0.07       CEL       COA
+ metal5_top       19:0        1/0   (-0.91, -0.08) (0.91, 0.08)          0.29       CEL       COA
+
+CELL = $$VIA45LG_C_185_185_10_21
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.913, -1.905) (0.913, 1.905)
+	Cell Area		= 6.95
+	Hierarchical Placements	=       12
+	Flat Placements		=       12
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      212
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ via7_top         17:0        1/0   (-0.91, -1.91) (0.91, 1.91)          6.95       CEL       COA
+ metal8_top       18:0      210/0   (-0.88, -1.90) (0.88, 1.90)          2.10       CEL       COA
+ metal5_top       19:0        1/0   (-0.91, -1.91) (0.91, 1.91)          6.95       CEL       COA
+
+CELL = $$VIA45LG_C_185_185_10_11
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-0.913, -0.980) (0.913, 0.980)
+	Cell Area		= 3.58
+	Hierarchical Placements	=        6
+	Flat Placements		=        6
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      112
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ via7_top         17:0        1/0   (-0.91, -0.98) (0.91, 0.98)          3.58       CEL       COA
+ metal8_top       18:0      110/0   (-0.88, -0.98) (0.88, 0.98)          1.10       CEL       COA
+ metal5_top       19:0        1/0   (-0.91, -0.98) (0.91, 0.98)          3.58       CEL       COA
+
+CELL = $$VIA45LG_C_185_185_21_11
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.930, -0.980) (1.930, 0.980)
+	Cell Area		= 7.57
+	Hierarchical Placements	=        4
+	Flat Placements		=        4
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      233
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ via7_top         17:0        1/0   (-1.93, -0.98) (1.93, 0.98)          7.57       CEL       COA
+ metal8_top       18:0      231/0   (-1.90, -0.98) (1.90, 0.98)          2.31       CEL       COA
+ metal5_top       19:0        1/0   (-1.93, -0.98) (1.93, 0.98)          7.57       CEL       COA
+
+CELL = $$VIA45LG_C_185_185_21_21
+	Cell Status		= USED
+	MILKYWAY Library		= /home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/8x8_ctime_3.01/icc/icc_run/CHIP
+	MILKYWAY Cell Extents (LL,UR)	= (-1.930, -1.905) (1.930, 1.905)
+	Cell Area		= 14.71
+	Hierarchical Placements	=        8
+	Flat Placements		=        8
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=      443
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ via7_top         17:0        1/0   (-1.93, -1.91) (1.93, 1.91)          14.71      CEL       COA
+ metal8_top       18:0      441/0   (-1.90, -1.90) (1.90, 1.90)          4.41       CEL       COA
+ metal5_top       19:0        1/0   (-1.93, -1.91) (1.93, 1.91)          14.71      CEL       COA
+
+CELL = INVX2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.912, 1.702)
+	Cell Area		= 1.58
+	Hierarchical Placements	=      335
+	Flat Placements		=      335
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        4/0   (0.00, -0.03) (0.91, 1.70)           0.37       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (0.91, 1.67)            1.52       FRAM  5   BO
+
+CELL = NAND4X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=       33
+	Flat Placements		=       33
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       24
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       23/0   (0.00, -0.03) (1.82, 1.70)           0.75       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = NAND4X0_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=      104
+	Flat Placements		=      104
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        8
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        7/0   (0.00, -0.03) (1.22, 1.70)           0.44       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.22, 1.67)            2.03       FRAM  5   BO
+
+CELL = INVX4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=      456
+	Flat Placements		=      456
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        4/0   (0.00, -0.03) (1.22, 1.70)           0.55       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.22, 1.67)            2.03       FRAM  5   BO
+
+CELL = NBUFFX8_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=      262
+	Flat Placements		=      262
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       18/0   (0.00, -0.03) (2.28, 1.70)           1.23       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.28, 1.67)            3.81       FRAM  5   BO
+
+CELL = INVX8_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=      142
+	Flat Placements		=      142
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        4/0   (0.00, -0.03) (1.82, 1.70)           0.92       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = INVX0_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.760, 1.702)
+	Cell Area		= 1.32
+	Hierarchical Placements	=     2378
+	Flat Placements		=     2378
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        4/0   (0.00, -0.03) (0.76, 1.70)           0.24       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (0.76, 1.67)            1.27       FRAM  5   BO
+
+CELL = AND4X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=       17
+	Flat Placements		=       17
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       16
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       15/0   (0.00, -0.03) (1.52, 1.70)           0.60       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = AND2X4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=      106
+	Flat Placements		=      106
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       12
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       11/0   (0.00, -0.03) (1.67, 1.70)           0.85       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = NBUFFX4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=      599
+	Flat Placements		=      599
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       13/0   (0.00, -0.03) (1.52, 1.70)           0.74       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = INVX1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.760, 1.702)
+	Cell Area		= 1.32
+	Hierarchical Placements	=      189
+	Flat Placements		=      189
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        4/0   (0.00, -0.03) (0.76, 1.70)           0.27       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (0.76, 1.67)            1.27       FRAM  5   BO
+
+CELL = NAND3X0_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.064, 1.702)
+	Cell Area		= 1.84
+	Hierarchical Placements	=       92
+	Flat Placements		=       92
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        7
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        6/0   (0.00, -0.03) (1.06, 1.70)           0.37       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.06, 1.67)            1.78       FRAM  5   BO
+
+CELL = AND2X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=      817
+	Flat Placements		=      817
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       12
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       11/0   (0.00, -0.03) (1.22, 1.70)           0.50       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.22, 1.67)            2.03       FRAM  5   BO
+
+CELL = AND3X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=       54
+	Flat Placements		=       54
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       13/0   (0.00, -0.03) (1.37, 1.70)           0.55       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.37, 1.67)            2.29       FRAM  5   BO
+
+CELL = OA21X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=      212
+	Flat Placements		=      212
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       22/0   (0.00, -0.03) (1.52, 1.70)           0.64       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = OR2X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=       53
+	Flat Placements		=       53
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       12/0   (0.00, -0.03) (1.37, 1.70)           0.59       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.37, 1.67)            2.29       FRAM  5   BO
+
+CELL = OR2X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=     1625
+	Flat Placements		=     1625
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       12/0   (0.00, -0.03) (1.22, 1.70)           0.50       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.22, 1.67)            2.03       FRAM  5   BO
+
+CELL = NBUFFX2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.216, 1.702)
+	Cell Area		= 2.11
+	Hierarchical Placements	=     1792
+	Flat Placements		=     1792
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       12/0   (0.00, -0.03) (1.22, 1.70)           0.54       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.22, 1.67)            2.03       FRAM  5   BO
+
+CELL = NBUFFX16_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.648, 1.702)
+	Cell Area		= 6.32
+	Hierarchical Placements	=        8
+	Flat Placements		=        8
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       17
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       16/0   (0.00, -0.03) (3.65, 1.70)           2.06       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (3.65, 1.67)            6.10       FRAM  5   BO
+
+CELL = DELLN1X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.040, 1.702)
+	Cell Area		= 5.27
+	Hierarchical Placements	=       58
+	Flat Placements		=       58
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       30
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       29/0   (0.00, -0.03) (3.04, 1.70)           1.54       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (3.04, 1.67)            5.08       FRAM  5   BO
+
+CELL = AND2X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=      133
+	Flat Placements		=      133
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       12
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       11/0   (0.00, -0.03) (1.37, 1.70)           0.65       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.37, 1.67)            2.29       FRAM  5   BO
+
+CELL = NAND2X0_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (0.912, 1.702)
+	Cell Area		= 1.58
+	Hierarchical Placements	=     3981
+	Flat Placements		=     3981
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        6
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        5/0   (0.00, -0.03) (0.91, 1.70)           0.29       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (0.91, 1.67)            1.52       FRAM  5   BO
+
+CELL = DELLN3X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (5.776, 1.702)
+	Cell Area		= 10.00
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       57
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       56/0   (0.00, -0.03) (5.78, 1.70)           3.05       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (5.78, 1.67)            9.66       FRAM  5   BO
+
+CELL = INVX32_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (5.472, 1.702)
+	Cell Area		= 9.48
+	Hierarchical Placements	=       37
+	Flat Placements		=       37
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        4/0   (0.00, -0.03) (5.47, 1.70)           3.15       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (5.47, 1.67)            9.15       FRAM  5   BO
+
+CELL = OA21X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        6
+	Flat Placements		=        6
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       25
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       24/0   (0.00, -0.03) (1.67, 1.70)           0.74       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = NAND2X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=       77
+	Flat Placements		=       77
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       20/0   (0.00, -0.03) (1.67, 1.70)           0.76       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = IBUFFX4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        3
+	Flat Placements		=        3
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       22/0   (0.00, -0.03) (1.82, 1.70)           0.88       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = NAND2X4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=       37
+	Flat Placements		=       37
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       18/0   (0.00, -0.03) (1.98, 1.70)           1.00       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = NOR2X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=     1343
+	Flat Placements		=     1343
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       20/0   (0.00, -0.03) (1.52, 1.70)           0.67       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = IBUFFX8_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=        3
+	Flat Placements		=        3
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       29
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       28/0   (0.00, -0.03) (2.58, 1.70)           1.38       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.58, 1.67)            4.32       FRAM  5   BO
+
+CELL = NAND3X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=       13
+	Flat Placements		=       13
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       21/0   (0.00, -0.03) (1.82, 1.70)           0.79       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = XOR3X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.408, 1.702)
+	Cell Area		= 7.63
+	Hierarchical Placements	=       71
+	Flat Placements		=       71
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       65
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       64/0   (0.00, -0.03) (4.41, 1.70)           2.18       FRAM  4   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (4.41, 1.67)            7.37       FRAM  4   BO
+
+CELL = OR3X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.368, 1.702)
+	Cell Area		= 2.37
+	Hierarchical Placements	=      140
+	Flat Placements		=      140
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       13/0   (0.00, -0.03) (1.37, 1.70)           0.57       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.37, 1.67)            2.29       FRAM  5   BO
+
+CELL = XOR2X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=      464
+	Flat Placements		=      464
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       37
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       36/0   (0.00, -0.03) (2.58, 1.70)           1.29       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.58, 1.67)            4.32       FRAM  5   BO
+
+CELL = XOR2X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.736, 1.702)
+	Cell Area		= 4.74
+	Hierarchical Placements	=       11
+	Flat Placements		=       11
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       37
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       36/0   (0.00, -0.03) (2.74, 1.70)           1.37       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.74, 1.67)            4.57       FRAM  5   BO
+
+CELL = OAI21X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=      133
+	Flat Placements		=      133
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       36
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       35/0   (0.00, -0.03) (1.98, 1.70)           0.88       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = FADDX1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.888, 1.702)
+	Cell Area		= 5.00
+	Hierarchical Placements	=     3690
+	Flat Placements		=     3690
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       27
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       26/0   (0.00, -0.03) (2.89, 1.70)           1.23       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.89, 1.67)            4.83       FRAM  5   BO
+
+CELL = OAI21X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=      520
+	Flat Placements		=      520
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       34
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       33/0   (0.00, -0.03) (1.82, 1.70)           0.79       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = NAND3X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        8
+	Flat Placements		=        8
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       21/0   (0.00, -0.03) (1.67, 1.70)           0.70       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = XOR3X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.256, 1.702)
+	Cell Area		= 7.37
+	Hierarchical Placements	=       50
+	Flat Placements		=       50
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       72
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       71/0   (0.00, -0.03) (4.26, 1.70)           2.23       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (4.26, 1.67)            7.12       FRAM  5   BO
+
+CELL = NOR2X0_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=     3018
+	Flat Placements		=     3018
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       20/0   (0.00, -0.03) (1.52, 1.70)           0.67       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = HADDX1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=      667
+	Flat Placements		=      667
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       24
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       23/0   (0.00, -0.03) (1.98, 1.70)           0.84       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = AO21X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=      586
+	Flat Placements		=      586
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       14
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       13/0   (0.00, -0.03) (1.52, 1.70)           0.65       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = INVX16_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.040, 1.702)
+	Cell Area		= 5.27
+	Hierarchical Placements	=       51
+	Flat Placements		=       51
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=        5
+	TEXT			=        0
+	Via			=        1
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_pin       11:0        4/0   (0.00, -0.03) (3.04, 1.70)           1.67       FRAM  5   PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (3.04, 1.67)            5.08       FRAM  5   BO
+
+CELL = IBUFFX2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        3
+	Flat Placements		=        3
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       22/0   (0.00, -0.03) (1.52, 1.70)           0.68       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = NAND2X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        7
+	Flat Placements		=        7
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       21
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       20/0   (0.00, -0.03) (1.52, 1.70)           0.65       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = NOR2X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=       68
+	Flat Placements		=       68
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       21/0   (0.00, -0.03) (1.67, 1.70)           0.78       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = OAI221X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=       39
+	Flat Placements		=       39
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       36
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       35/0   (0.00, -0.03) (2.13, 1.70)           1.01       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.13, 1.67)            3.56       FRAM  5   BO
+
+CELL = OAI221X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       38
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       37/0   (0.00, -0.03) (2.28, 1.70)           1.11       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.28, 1.67)            3.81       FRAM  5   BO
+
+CELL = NBUFFX32_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (6.384, 1.702)
+	Cell Area		= 11.06
+	Hierarchical Placements	=        2
+	Flat Placements		=        2
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       18/0   (0.00, -0.03) (6.38, 1.70)           3.74       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (6.38, 1.67)            10.67      FRAM  5   BO
+
+CELL = AO222X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=        6
+	Flat Placements		=        6
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       32/0   (0.00, -0.03) (2.13, 1.70)           0.97       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.13, 1.67)            3.56       FRAM  5   BO
+
+CELL = AO222X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=       53
+	Flat Placements		=       53
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       32
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       31/0   (0.00, -0.03) (1.98, 1.70)           0.89       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = AO221X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=       18
+	Flat Placements		=       18
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       27
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       26/0   (0.00, -0.03) (1.82, 1.70)           0.81       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = AO22X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=     1074
+	Flat Placements		=     1074
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       21/0   (0.00, -0.03) (1.52, 1.70)           0.61       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = OA22X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=      569
+	Flat Placements		=      569
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       20
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       19/0   (0.00, -0.03) (1.52, 1.70)           0.69       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = DFFSSRX1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.408, 1.702)
+	Cell Area		= 7.63
+	Hierarchical Placements	=     2693
+	Flat Placements		=     2693
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       96
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       95/0   (0.00, -0.03) (4.41, 1.70)           2.46       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (4.41, 1.67)            7.37       FRAM  5   BO
+
+CELL = AOI21X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=      261
+	Flat Placements		=      261
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       19
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       18/0   (0.00, -0.03) (1.82, 1.70)           0.83       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = AO21X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=       15
+	Flat Placements		=       15
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       18
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       17/0   (0.00, -0.03) (1.67, 1.70)           0.75       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = DFFSSRX2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (4.712, 1.702)
+	Cell Area		= 8.16
+	Hierarchical Placements	=      121
+	Flat Placements		=      121
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       99
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       98/0   (0.00, -0.03) (4.71, 1.70)           2.64       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (4.71, 1.67)            7.88       FRAM  5   BO
+
+CELL = HADDX2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=       29
+	Flat Placements		=       29
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       26
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       25/0   (0.00, -0.03) (2.28, 1.70)           0.97       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.28, 1.67)            3.81       FRAM  5   BO
+
+CELL = FADDX2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.192, 1.702)
+	Cell Area		= 5.53
+	Hierarchical Placements	=       26
+	Flat Placements		=       26
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       28
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       27/0   (0.00, -0.03) (3.19, 1.70)           1.44       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (3.19, 1.67)            5.34       FRAM  5   BO
+
+CELL = OR2X4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=       46
+	Flat Placements		=       46
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       12/0   (0.00, -0.03) (1.67, 1.70)           0.79       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = AOI21X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        3
+	Flat Placements		=        3
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       26
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       25/0   (0.00, -0.03) (1.98, 1.70)           0.92       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = NOR2X4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       21/0   (0.00, -0.03) (1.98, 1.70)           0.97       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = XNOR2X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=      632
+	Flat Placements		=      632
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       40
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       39/0   (0.00, -0.03) (2.58, 1.70)           1.27       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.58, 1.67)            4.32       FRAM  5   BO
+
+CELL = XNOR2X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.736, 1.702)
+	Cell Area		= 4.74
+	Hierarchical Placements	=       11
+	Flat Placements		=       11
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       32/0   (0.00, -0.03) (2.74, 1.70)           1.36       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.74, 1.67)            4.57       FRAM  5   BO
+
+CELL = OA221X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=      108
+	Flat Placements		=      108
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       29
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       28/0   (0.00, -0.03) (1.82, 1.70)           0.85       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = MUX41X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.344, 1.702)
+	Cell Area		= 5.79
+	Hierarchical Placements	=      100
+	Flat Placements		=      100
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       62
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       61/0   (0.00, -0.03) (3.34, 1.70)           1.81       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (3.34, 1.67)            5.59       FRAM  5   BO
+
+CELL = OA222X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=       39
+	Flat Placements		=       39
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       31
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       30/0   (0.00, -0.03) (1.98, 1.70)           0.93       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = IBUFFX32_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (6.992, 1.702)
+	Cell Area		= 12.11
+	Hierarchical Placements	=        3
+	Flat Placements		=        3
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       29
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       28/0   (0.00, -0.03) (6.99, 1.70)           4.08       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (6.99, 1.67)            11.69      FRAM  5   BO
+
+CELL = MUX21X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.976, 1.702)
+	Cell Area		= 3.42
+	Hierarchical Placements	=      760
+	Flat Placements		=      760
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       26
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       25/0   (0.00, -0.03) (1.98, 1.70)           0.90       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.98, 1.67)            3.30       FRAM  5   BO
+
+CELL = OR4X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=      106
+	Flat Placements		=      106
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       34
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       33/0   (0.00, -0.03) (2.13, 1.70)           0.94       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.13, 1.67)            3.56       FRAM  5   BO
+
+CELL = OR4X4_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.584, 1.702)
+	Cell Area		= 4.48
+	Hierarchical Placements	=        4
+	Flat Placements		=        4
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       35
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       34/0   (0.00, -0.03) (2.58, 1.70)           1.19       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.58, 1.67)            4.32       FRAM  5   BO
+
+CELL = OR4X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=       58
+	Flat Placements		=       58
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       32/0   (0.00, -0.03) (2.28, 1.70)           1.04       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.28, 1.67)            3.81       FRAM  5   BO
+
+CELL = AO22X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=       21
+	Flat Placements		=       21
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       22
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       21/0   (0.00, -0.03) (1.67, 1.70)           0.71       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = AND3X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.520, 1.702)
+	Cell Area		= 2.63
+	Hierarchical Placements	=        6
+	Flat Placements		=        6
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       13
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       12/0   (0.00, -0.03) (1.52, 1.70)           0.65       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.52, 1.67)            2.54       FRAM  5   BO
+
+CELL = NOR3X0_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       23
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       22/0   (0.00, -0.03) (1.67, 1.70)           0.72       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = LATCHX1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.040, 1.702)
+	Cell Area		= 5.27
+	Hierarchical Placements	=      244
+	Flat Placements		=      244
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       38
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       37/0   (0.00, -0.03) (3.04, 1.70)           1.52       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (3.04, 1.67)            5.08       FRAM  5   BO
+
+CELL = LATCHX2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (3.344, 1.702)
+	Cell Area		= 5.79
+	Hierarchical Placements	=        3
+	Flat Placements		=        3
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       41
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       40/0   (0.00, -0.03) (3.34, 1.70)           1.67       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (3.34, 1.67)            5.59       FRAM  5   BO
+
+CELL = OAI22X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       30
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       29/0   (0.00, -0.03) (1.82, 1.70)           0.85       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = NOR4X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.824, 1.702)
+	Cell Area		= 3.16
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       25
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       24/0   (0.00, -0.03) (1.82, 1.70)           0.78       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.82, 1.67)            3.05       FRAM  5   BO
+
+CELL = OA222X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.128, 1.702)
+	Cell Area		= 3.69
+	Hierarchical Placements	=        1
+	Flat Placements		=        1
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       33
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       32/0   (0.00, -0.03) (2.13, 1.70)           1.04       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.13, 1.67)            3.56       FRAM  5   BO
+
+CELL = OAI222X1_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=       14
+	Flat Placements		=       14
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       38
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       37/0   (0.00, -0.03) (2.28, 1.70)           1.11       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.28, 1.67)            3.81       FRAM  5   BO
+
+CELL = OAI222X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.432, 1.702)
+	Cell Area		= 4.21
+	Hierarchical Placements	=        2
+	Flat Placements		=        2
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       40
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       39/0   (0.00, -0.03) (2.43, 1.70)           1.20       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.43, 1.67)            4.07       FRAM  5   BO
+
+CELL = OA22X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (1.672, 1.702)
+	Cell Area		= 2.90
+	Hierarchical Placements	=        8
+	Flat Placements		=        8
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       24
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       23/0   (0.00, -0.03) (1.67, 1.70)           0.77       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (1.67, 1.67)            2.80       FRAM  5   BO
+
+CELL = AND4X2_HVT
+	Cell Status		= USED
+	MILKYWAY Library		= /usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m
+	MILKYWAY Cell Extents (LL,UR)	= (0.000, -0.030) (2.280, 1.702)
+	Cell Area		= 3.95
+	Hierarchical Placements	=        2
+	Flat Placements		=        2
+	SREFS			=        0	
+	AREFS			=        0	
+	AREF placements		=        0
+	Exploded references	=        0
+	Exploded placements	=        0
+	DATA			=       32
+	TEXT			=        0
+	Via			=        0
+   Layer Usage of Original Cell:
+ Name          Layer:Dtype Data/Text  Layer Extents (LL,UR)              Lyr Area    VIEW Ver. OBJECT_TYPE
+ ---------------  -------  --------   ---------------------------------  --------    ---- ---  ---------
+ metal1_rbkg      11:0       31/0   (0.00, -0.03) (2.28, 1.70)           1.01       FRAM  5   RE PI
+ PR_BNDY         255:0        1/0   (0.00, 0.00) (2.28, 1.67)            3.81       FRAM  5   BO

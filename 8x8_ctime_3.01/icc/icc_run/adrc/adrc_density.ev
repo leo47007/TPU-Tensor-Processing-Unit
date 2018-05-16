@@ -1,0 +1,154 @@
+/*check density*/
+if ( windowSize > 0 && minDensity < 100 && minDensity > 0) {
+   DENSITY METAL_LAYER {
+      COMMENT = "$layer_name MinDensity: minimum density ( windowSize um X windowSize um) = minDensity %"
+      DELTA_WINDOW = [0, 0, windowSize, windowSize]
+      DELTA_X = windowSize / 2.0
+      DELTA_Y = windowSize / 2.0
+      BOUNDARY_LAYER = PR_BNDY
+      RATIO <= minDensity / 100.
+   } (OUTPUT_LAYER) 
+}
+if ( windowSize > 0 && maxDensity < 100 && maxDensity > 0) {
+   DENSITY METAL_LAYER { 
+      COMMENT = "$layer_name MaxDensity: maximum density ( windowSize um X windowSize um) = maxDensity %"
+      DELTA_WINDOW = [0, 0, windowSize, windowSize]
+      DELTA_X = windowSize / 2.0
+      DELTA_Y = windowSize / 2.0
+      BOUNDARY_LAYER = PR_BNDY
+      RATIO >= maxDensity / 100.
+   } (OUTPUT_LAYER)
+}
+/* check gradient density, need ev_engine 2004.12.4010 or later version */
+@if __VERSION__ >= "2004.12.4010"
+if (gradientWindowSize > 0 && maxGradientDensity < 100 && maxGradientDensity > 0) {
+   DENSITY METAL_LAYER { 
+      COMMENT = "$layer_name GrdDensity: density diff between any two neighboring ( gradientWindowSize um x gradientWindowSize um) <= maxGradientDensity %"     
+      DELTA_WINDOW = [0, 0, gradientWindowSize, gradientWindowSize]
+      BOUNDARY_LAYER = PR_BNDY 
+      X_EDGE_PROCESS_AMOUNT = 0
+      Y_EDGE_PROCESS_AMOUNT = 0
+      DELTA_X = gradientWindowSize 
+      DELTA_Y = gradientWindowSize 
+      GRADIENT > maxGradientDensity / 100. 
+   } (OUTPUT_LAYER) 
+}
+@endif
+/* check accumulating or multiLayer density */
+@define function(i) \
+   DENSITY CONSECUTIVE_METAL_LAYER@@i { \
+      DELTA_WINDOW = [0, 0, consecutiveWindowSize, consecutiveWindowSize] \
+      BOUNDARY_LAYER = PR_BNDY \
+      X_EDGE_PROCESS_AMOUNT = 0 \
+      Y_EDGE_PROCESS_AMOUNT = 0 \
+      DELTA_X = consecutiveWindowSize / 2.0 \
+      DELTA_Y = consecutiveWindowSize / 2.0 \
+      RATIO > maxConsecutiveDensity / 100. \
+   } TEMP = DENSITY_METAL_LAYER@@i
+if (numOfMultiLayer > 0 && consecutiveWindowSize > 0 && maxConsecutiveDensity < 100 && maxConsecutiveDensity > 0) {
+   if (numOfMultiLayer > 0) {
+      function(1)
+   }
+   if (numOfMultiLayer > 1) {
+      function(2)
+   }
+   if (numOfMultiLayer > 2) {
+      function(3)
+   }
+   if (numOfMultiLayer > 3) {
+      function(4)
+   }
+   if (numOfMultiLayer > 4) {
+      function(5)
+   }
+   if (numOfMultiLayer > 5) {
+      function(6)
+   }
+   if (numOfMultiLayer > 6) {
+      function(7)
+   }
+   if (numOfMultiLayer > 7) {
+      function(8)
+   }
+   if (numOfMultiLayer > 8) {
+      function(9)
+   }
+   if (numOfMultiLayer > 9) {
+      function(10)
+   }
+   if (numOfMultiLayer > 10) {
+      function(11)
+   }
+   if (numOfMultiLayer > 11) {
+      function(12)
+   }
+   if (numOfMultiLayer > 12) {
+      function(13)
+   }
+   if (numOfMultiLayer > 13) {
+      function(14)
+   }
+   if (numOfMultiLayer > 14) {
+      function(15)
+   }
+   if (numOfMultiLayer > 0) {
+      COPY DENSITY_METAL_LAYER1 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 1) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER2 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 2) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER3 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 3) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER4 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 4) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER5 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 5) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER6 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 6) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER7 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 7) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER8 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 8) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER9 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 9) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER10 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 10) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER11 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 11) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER12 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 12) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER13 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 13) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER14 { } TEMP=ERR_ALL
+   }
+   if (numOfMultiLayer > 14) {
+      BOOLEAN ERR_ALL AND DENSITY_METAL_LAYER15 { } TEMP=ERR_ALL
+   }
+   /* filter error window is not larger enough consecutiveWindowSize um x consecutiveWindowSize um */
+   SELECT_CONTAINS ERR_ALL { 
+      COMMENT = "$layer_name MLDensity : consecutive density of numOfMultiLayer layers to $layer2_name ( consecutiveWindowSize um X consecutiveWindowSize um) <= maxConsecutiveDensity %"
+      ROTATE_45 = TRUE
+      WIDTH = consecutiveWindowSize 
+      HEIGHT = consecutiveWindowSize 
+   } (OUTPUT_LAYER) 
+}
+SET windowSize = 0;
+SET maxDensity = 0;
+SET minDensity = 0;
+SET gradientWindowSize = 0;
+SET maxGradientDensity = 0;
+SET numOfMultiLayer = 0;
+SET consecutiveWindowSize = 0;
+SET maxConsecutiveDensity = 0;

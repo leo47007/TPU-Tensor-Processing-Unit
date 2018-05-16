@@ -1,0 +1,7 @@
+@nLint message generated warning file.
+
+*** Working Directory [/home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/16x16_ctime10/hdl] ***
+
+systolic_controll.v(44): Warning 22117: "Synchronous" reset "srstn" is detected. (Design Style)
+
+Total 1 Warning(s)

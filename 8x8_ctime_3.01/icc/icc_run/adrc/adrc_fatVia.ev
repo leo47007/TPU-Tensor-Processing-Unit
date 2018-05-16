@@ -1,0 +1,143 @@
+/*Check fat contact table*/
+if (cut_fatTblThreshold_1 > 0 && cut_fatTblThreshold_2 > 0) {
+   SIZE METAL_LAYER1    { UNDER_OVER = cut_fatTblThreshold_1 / 2.0 - TOLERANCE } TEMP = m_fat1
+   if (cut_fatTblNextThreshold_1 > TOLERANCE) {
+      SIZE m_fat1 { UNDER_OVER = cut_fatTblNextThreshold_1 / 2.0 - TOLERANCE } TEMP = m_fat1_next
+      BOOLEAN m_fat1 NOT m_fat1_next { } TEMP = m_fat1
+   } else {
+      COPY empty {} TEMP = m_fat1_next
+   }
+   BOOLEAN m_fat1 AND METAL_LAYER1 {  } TEMP = m_fat1
+ 
+   SIZE METAL_LAYER2    { UNDER_OVER = cut_fatTblThreshold_2 / 2.0 - TOLERANCE } TEMP = m_fat2
+   if (cut_fatTblNextThreshold_2 > TOLERANCE) {
+      SIZE m_fat2 { UNDER_OVER = cut_fatTblNextThreshold_2 / 2.0 - TOLERANCE } TEMP = m_fat2_next
+      BOOLEAN m_fat2 NOT m_fat2_next { } TEMP = m_fat2
+   } else {
+      COPY empty {} TEMP = m_fat2_next
+   }
+   BOOLEAN m_fat2 AND METAL_LAYER2 {  } TEMP = m_fat2
+   if (cut_fatTblMinSpacing > 0 || cut_fatTblMinCuts > 1 || 
+       cut_minEnclosure1 >=0 || cut_minEnclosure2 >=0 ||
+       cut_EOLEnclosure1 > 0 || cut_EOLEnclosure2 > 0 ||
+      (cut_ViaFarm_maxNum > 0 && cut_ViaFarm_spacing > 0)) {
+      if (cut_fatMetalAndMode) {
+        BOOLEAN m_fat1 AND m_fat2 { } TEMP = m_fat
+        SELECT CUT_LAYER INSIDE m_fat { } TEMP = v_fat
+      } else {
+        BOOLEAN m_fat1 OR m_fat2 { } TEMP = m_fat
+        SELECT CUT_LAYER INTERACT m_fat { } TEMP = v_fat
+      }
+   }
+   if (cut_ViaFarm_maxNum > 0 && cut_ViaFarm_spacing > 0 || 
+       cut_minEnclosure1 >=0 || cut_minEnclosure2 >=0 ||
+       cut_EOLEnclosure1 > 0 || cut_EOLEnclosure2 > 0) {
+      SET viaFarm_maxNum    = cut_ViaFarm_maxNum;
+      SET viaFarm_spacing   = cut_ViaFarm_spacing;
+      SET via_minEnclosure1 = cut_minEnclosure1;
+      SET via_minEnclosure2 = cut_minEnclosure2;
+      SET via_EOLEnclosure1 = cut_EOLEnclosure1;
+      SET via_EOLEnclosure2 = cut_EOLEnclosure2;
+      @define TARGET_CUT v_fat
+      @include "adrc_viaCode.ev"
+      @undef TARGET_CUT      
+      SET cut_ViaFarm_maxNum = 0;
+      SET cut_ViaFarm_spacing = 0;
+      SET cut_minEnclosure1 = 0;
+      SET cut_minEnclosure2 = 0;
+      SET cut_EOLEnclosure1 = 0;
+      SET cut_EOLEnclosure2 = 0;
+   }
+ 
+   if (cut_fatTblMinSpacing > 0) {
+      EXTERNAL v_fat CUT_LAYER {
+         COMMENT = "$layer_name FatContSpc: fat contact ( cut_fatTblThreshold_1 , cut_fatTblThreshold_2 um) minimum spacing = cut_fatTblMinSpacing um"
+          SPACING < cut_fatTblMinSpacing
+	  BOX_CORNER = CHECK_MANHATTAN_SPACING
+	  NON_PARALLEL = TRUE
+	  POINT_TOUCH = TRUE
+      } (OUTPUT_LAYER)
+      SET cut_fatTblMinSpacing = 0;
+   }
+   if (cut_fatTblMinCuts > 1) {
+      SELECT via_cluster INTERACT v_fat { } TEMP = v_fat_cluster 
+      if (cut_fatMetalAndMode == 0) { 
+         BOOLEAN METAL_LAYER1 AND METAL_LAYER2 { } TEMP = m_fat   
+      }
+      BOOLEAN v_fat_cluster AND m_fat { } TEMP = v_fat_cluster 
+      SELECT v_fat_cluster INTERACT CUT_LAYER {
+         RANGE = [1, cut_fatTblMinCuts - 1]
+      }  TEMP = v_fat_cluster
+      SELECT v_fat INTERACT v_fat_cluster {
+         COMMENT = "$layer_name MinContNum: fat contact ( cut_fatTblThreshold_1 , cut_fatTblThreshold_2 um) minimum number of contacts = cut_fatTblMinCuts "
+      } (OUTPUT_LAYER)
+      SET cut_fatTblMinCuts = 0;
+   }
+ 
+   if (cut_fatTblExtensionRange > 0) {
+      SIZE m_fat1 { OVERSIZE = cut_fatTblExtensionRange+TOLERANCE } TEMP = m_fat1_ran
+      BOOLEAN m_fat1_ran AND METAL_LAYER1 {  } TEMP = m_fat1_ext
+      BOOLEAN m_fat1_ext NOT m_fat1_next { } TEMP = m_fat1_ext
+      BOOLEAN m_fat1_ext NOT m_fat1 { } TEMP = m_fat1_ext
+      SELECT_EDGE m_fat1_ext TOUCHING m_fat1 { } TEMP = ext_filter
+      SIZE ext_filter { VSIZE_INSIDE = DBU } TEMP = ext_filter
+      SIZE ext_filter INSIDE m_fat1_ext {
+         OVERSIZE = cut_fatTblExtensionRange-DBU
+         INCREMENT = metalLayer1_minSpacing
+      } TEMP=dummy TEMP = m_fat1_ext
+      SIZE m_fat2 { OVERSIZE = cut_fatTblExtensionRange+TOLERANCE } TEMP = m_fat2_ran
+      BOOLEAN m_fat2_ran AND METAL_LAYER2 {  } TEMP = m_fat2_ext
+      BOOLEAN m_fat2_ext NOT m_fat2_next { } TEMP = m_fat2_ext
+      BOOLEAN m_fat2_ext NOT m_fat2 { } TEMP = m_fat2_ext 
+      SELECT_EDGE m_fat2_ext TOUCHING m_fat2 { } TEMP = ext_filter
+      SIZE ext_filter { VSIZE_INSIDE = DBU } TEMP = ext_filter
+      SIZE ext_filter INSIDE m_fat2_ext {
+         OVERSIZE = cut_fatTblExtensionRange-DBU
+         INCREMENT = metalLayer2_minSpacing
+      } TEMP=dummy TEMP = m_fat2_ext
+      BOOLEAN m_fat1_ext OR m_fat2_ext { } TEMP = m_fat_ext
+      SELECT CUT_LAYER INTERACT m_fat_ext {  } TEMP = v_fat_ext
+      if (cut_ExtViaFarm_maxNum > 0 && cut_ExtViaFarm_spacing > 0 || 
+          cut_ExtMinEnclosure1 >=0 || cut_ExtMinEnclosure2 >=0 ||
+          cut_ExtEOLEnclosure1 > 0 || cut_ExtEOLEnclosure2 > 0) {
+         SET viaFarm_maxNum    = cut_ExtViaFarm_maxNum;
+         SET viaFarm_spacing   = cut_ExtViaFarm_spacing;
+         SET via_minEnclosure1 = cut_ExtMinEnclosure1;
+         SET via_minEnclosure2 = cut_ExtMinEnclosure2;
+         SET via_EOLEnclosure1 = cut_ExtEOLEnclosure1;
+         SET via_EOLEnclosure2 = cut_ExtEOLEnclosure2;
+         @define TARGET_CUT v_fat_ext
+         @include "adrc_viaCode.ev"
+         @undef TARGET_CUT      
+         SET cut_ExtViaFarm_maxNum = 0;
+         SET cut_ExtViaFarm_spacing = 0;
+         SET cut_ExtMinEnclosure1 = 0;
+         SET cut_ExtMinEnclosure2 = 0;
+         SET cut_ExtEOLEnclosure1 = 0;
+         SET cut_ExtEOLEnclosure2 = 0;
+      }
+ 
+      if (cut_fatTblExtensionMinSpacing > 0) {
+         EXTERNAL v_fat_ext CUT_LAYER {
+            COMMENT = "$layer_name FatExtSpc : fat contact ( cut_fatTblThreshold_1 , cut_fatTblThreshold_2 um) extension range ( cut_fatTblExtensionRange um) minimum spacing = cut_fatTblExtensionMinSpacing um"
+            SPACING < cut_fatTblExtensionMinSpacing
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = TRUE
+         } (OUTPUT_LAYER)
+      }
+ 
+      if (cut_fatTblExtensionMinCuts > 1) {
+         BOOLEAN METAL_LAYER1 AND METAL_LAYER2 { } TEMP = m_fat_ext
+         BOOLEAN via_cluster AND m_fat_ext { } TEMP = via_cluster
+         SELECT via_cluster INTERACT v_fat_ext { } TEMP = v_fat_ext_cluster
+	 SELECT v_fat_ext_cluster INTERACT CUT_LAYER {
+            RANGE = [1, cut_fatTblExtensionMinCuts - 1]
+	 }  TEMP = v_fat_ext_cluster
+	 SELECT v_fat_ext INTERACT v_fat_ext_cluster {
+            COMMENT = "$layer_name MinContNum: fat contact ( cut_fatTblThreshold_1 , cut_fatTblThreshold_2 um) extension range ( cut_fatTblExtensionRange um)  minimum number of contacts = cut_fatTblExtensionMinCuts "
+	 } (OUTPUT_LAYER)
+      }
+      SET cut_fatTblExtensionRange=0;
+   }
+}

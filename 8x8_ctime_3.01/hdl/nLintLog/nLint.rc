@@ -1,0 +1,85 @@
+@nLint rc file Version 1.0
+[Form]
+nlRVDsgWnd.fm = 107,156,800,500
+nLintPrjDsgWnd.fm = 48,139,755,500
+[GlobalProp]
+Project_Font = Helvetica_M_R_12
+Lint_ShowOnDebussy = FALSE
+Debussy_Cmd = "Debussy"
+Debussy_Arguments = "-nologo"
+Full_Path = 0
+Find_MatchCase = TRUE
+Find_RegExp = FALSE
+ColumnNum = 9
+ColumnOrder1 = "E/D" "1"
+ColumnOrder2 = "TOFF" "1"
+ColumnOrder3 = "IndexName" "1"
+ColumnOrder4 = "Description" "1"
+ColumnOrder5 = "Severity" "1"
+ColumnOrder6 = "Argument1" "1"
+ColumnOrder7 = "Argument2" "1"
+ColumnOrder8 = "Number" "0"
+ColumnOrder9 = "Name" "0"
+ViewPort_Output_ReportTree = 784 150
+RuleOrg = 173 134 800 600
+ViewPort_Project = 44 117 755 500
+ViewPort_Editor = 335 10 600 600
+ViewPort_Report = 103 134 800 500
+File_TREE_WH = 200 272
+PrjDsgWnd_WH = 755 272
+[Language]
+Language = Verilog
+Font = COURIER12
+Background = ID_WHITE
+Comment = ID_GREEN2
+Keyword = ID_BLUE5
+UserKeyword = ID_PURPLE5
+Text = ID_BLACK
+String = ID_RED5
+Number = ID_RED5
+Operator = ID_BLACK
+SelText = ID_YELLOW5
+SelBackground = ID_BLUE2
+LineNumber = ID_BLACK
+[LintSettingDlg]
+Preview = FALSE
+[RuleOrg]
+Width0 = 24
+Width1 = 26
+Width2 = 52
+Width3 = 254
+Width4 = 65
+Width5 = 61
+Width6 = 67
+Width7 = 52
+Width8 = 254
+TreeHeightWidth = 461 300
+[SeverityColor]
+Level1 = ID_GREEN5
+Level2 = ID_YELLOW5
+Level3 = ID_RED5
+Level4 = ID_PURPLE2
+Level5 = ID_GRAY5
+Level6 = ID_GRAY5
+Level7 = ID_GRAY5
+Level8 = ID_GRAY5
+Level9 = ID_GRAY5
+Level10 = ID_GRAY5
+[SeverityString]
+Level1 = "Information"
+Level2 = "Warning"
+Level3 = "Error"
+Level4 = "Fatal Error"
+Level5 = "Level5"
+Level6 = "Level6"
+Level7 = "Level7"
+Level8 = "Level8"
+Level9 = "Level9"
+Level10 = "Level10"
+[Sort]
+SortBy = Number
+[ViolationSort]
+SortOrder = Ascendent
+SortBy = Group
+[nLintOptions]
+SaveOriginalFileLine = FALSE

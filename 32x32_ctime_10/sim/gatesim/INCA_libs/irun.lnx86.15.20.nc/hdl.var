@@ -1,0 +1,8 @@
+define NCSIMRC	( /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc, ~/.ncsimrc )
+include ./hdlrun.var
+include ./xllibs/hdl.var
+define SNAPSHOT worklib.test_lenet:v
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ($LIB_MAP, + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.test_lenet:v

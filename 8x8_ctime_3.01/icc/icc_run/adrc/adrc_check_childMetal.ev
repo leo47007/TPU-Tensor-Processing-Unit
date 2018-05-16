@@ -1,0 +1,377 @@
+/* if (fatTblDimension > 1 || fatWireThreshold > 0 || maxWidth > 0) { */
+  if (ignoreBlockage) {
+      /* Let the real blockage be treated as thin */
+      BOOLEAN METAL_LAYER_CHILD NOT METAL_REAL_BLOCKAGE {} TEMP=fat_candidate_child
+  } else {
+      COPY METAL_LAYER_CHILD {} TEMP=fat_candidate_child
+  }
+  COPY fat_candidate_child {} TEMP=fat_target_child
+/* } */
+/*check fat metal table*/
+if (fatTblThreshold > 0) {
+    if ((fatTblThreshold / 2.0) > TOLERANCE) {
+       SIZE fat_candidate_child  { UNDER_OVER = fatTblThreshold / 2.0 - TOLERANCE } TEMP = fat_candidate_child
+       if (fatTblNextThreshold > 0) {
+          SIZE fat_candidate_child { UNDER_OVER = fatTblNextThreshold / 2.0 - TOLERANCE } TEMP = fat_next
+          BOOLEAN fat_candidate_child NOT fat_next { } TEMP = fat
+          BOOLEAN fat AND fat_target_child { } TEMP = fat
+       } else {
+          BOOLEAN fat_candidate_child AND fat_target_child {  } TEMP = fat 
+       }
+    } else {
+       COPY fat_target_child {  } TEMP = fat 
+    }
+    COPY fat_target_child { } TEMP = spc_target
+    if (fatTblThreshold_Start > 0  || fatTblThreshold_End > 0) {
+       if (fatTblThreshold_Start > 0) {
+          SIZE fat_target_child { UNDER_OVER = fatTblThreshold_Start / 2.0 - TOLERANCE } TEMP = spc_target
+       }
+       if (fatTblThreshold_End > 0 && fatTblThreshold_End > fatTblThreshold_Start) {
+          SIZE spc_target { UNDER_OVER = fatTblThreshold_End / 2.0 - TOLERANCE } TEMP = fat_end
+          BOOLEAN spc_target NOT fat_end { } TEMP = spc_target
+       }
+       BOOLEAN spc_target AND fat_target_child {  } TEMP = spc_target
+       if (ignoreBlockage == 0 && fatTblThreshold_Start < fatTblThreshold_1) {
+          /* the blockages on the metal_blockage layer are treated as thin blockages */
+          BOOLEAN spc_target OR METAL_BLOCKAGE_LAYER {  } TEMP = spc_target
+       }
+    } else {
+       if (ignoreBlockage == 0) {
+          /* the blockages on the metal_blockage layer are treated as thin blockages */
+          BOOLEAN spc_target OR METAL_BLOCKAGE_LAYER {  } TEMP = spc_target
+       }
+    }
+ 
+    if (fatTblSpacing > 0) {
+       /*check fat metal*/
+       if (fatTblParallelLength > 0) {
+          if (router_parallelLengthNetMode == 1 || parallelLengthMode == 1) {
+             AREA spc_target { RANGE = [fatTblParallelLength * minWidth + TOLERANCE, MAXIMUM_NUMBER] } TEMP = spc_target1
+             COPY spc_target1 { } TEMP = spc_target2
+          } else {
+             COPY spc_target { } TEMP = spc_target2
+          }
+          if (parallelLengthMode == 1) {
+             SELECT METAL_LAYER_CHILD  INTERACT fat { } TEMP = fat_all
+             BOOLEAN fat_all OR fat { } TEMP = fat2
+             SELECT METAL_LAYER_CHILD INTERACT spc_target2 { } TEMP = spc_target_all
+             BOOLEAN spc_target_all OR spc_target2 { } TEMP = spc_target2
+          } else {
+             COPY fat { } TEMP = fat2
+          }
+          if (parallelLengthMode == 1) {
+             EXTERNAL fat2 spc_target2 {
+                SPACING <= fatTblSpacing
+                SET_CORNERS_TO_SPACING = FALSE
+                PARALLEL_POINT_PROJECTION = FALSE
+                TOUCH = FALSE
+                POINT_TOUCH = FALSE
+                NON_PARALLEL = TRUE
+             } TEMP = violation
+             EXTERNAL fat2 spc_target2 {
+                SPACING < fatTblSpacing
+                SET_CORNERS_TO_SPACING = FALSE
+                PARALLEL_POINT_PROJECTION = FALSE
+                TOUCH = FALSE
+                POINT_TOUCH = FALSE
+                NON_PARALLEL = TRUE
+                OUTPUT_EDGES = TRUE
+             } TEMP = vio_edge
+             SELECT vio_edge INTERACT fat { } TEMP = vio_edge
+             SELECT vio_edge INTERACT spc_target1 { } TEMP = vio_edge
+             SELECT violation INTERACT vio_edge { } TEMP = violation
+          } else {
+             EXTERNAL fat2 spc_target2 {
+                SPACING < fatTblSpacing
+                SET_CORNERS_TO_SPACING = FALSE
+                PARALLEL_POINT_PROJECTION = FALSE
+                TOUCH = FALSE
+                POINT_TOUCH = FALSE
+                NON_PARALLEL = TRUE
+             } TEMP = violation
+          }
+          BOOLEAN violation NOT fat_target_child { } TEMP = violation
+          if (fatTblParallelLength < fatTblSpacing) {
+             SELECT_EDGE violation TOUCHING fat2 {
+                VSIZE_INSIDE = fatTblParallelLength - DBU
+             } TEMP = vio_filter
+             SELECT_CONTAINS vio_filter {
+                WIDTH =  DBU
+                HEIGHT = fatTblParallelLength + TOLERANCE
+             } TEMP = vio_filter
+             SELECT violation INTERACT vio_filter { } TEMP = violation
+          } else {
+             SELECT_CONTAINS violation {
+                WIDTH =  DBU
+                HEIGHT = fatTblParallelLength + TOLERANCE
+             } TEMP = violation
+          }
+          if (parallelLengthMode == 1) {
+             EXTERNAL fat2 spc_target2 {
+                SPACING = [fatTblSpacing, fatTblSpacing]
+                SET_CORNERS_TO_SPACING = FALSE
+                PARALLEL_POINT_PROJECTION = FALSE
+                TOUCH = FALSE
+                POINT_TOUCH = FALSE
+             } TEMP = violation3
+             BOOLEAN violation3 NOT fat_target_child { } TEMP = violation3
+             BOOLEAN violation NOT violation3 { } TEMP= violation
+          }
+          SELECT_EDGE fat2 TOUCHING violation { } TEMP=fat_viol
+          BOOLEAN fat_viol AND violation { } TEMP=fat_viol
+          SELECT_EDGE spc_target2 TOUCHING violation { } TEMP=spc_target2
+          BOOLEAN spc_target2 AND violation { } TEMP= spc_target2
+          EXTERNAL fat_viol spc_target2 {
+             SPACING < fatTblSpacing
+             SET_CORNERS_TO_SPACING = FALSE
+             PARALLEL_POINT_PROJECTION = FALSE
+             TOUCH = FALSE
+             POINT_TOUCH = FALSE
+             NON_PARALLEL = TRUE
+          } TEMP = spc_mode0_child_out
+          if (fatTblSpacingMode == 1 && fatTblSpacing_dg > 0 && fatTblSpacing_dg != fatTblSpacing) {
+             EXTERNAL fat spc_target {
+                SPACING < fatTblSpacing_dg
+                SET_CORNERS_TO_SPACING = FALSE
+                PARALLEL_POINT_PROJECTION = FALSE
+                TOUCH = FALSE
+                POINT_TOUCH = FALSE
+                NON_PARALLEL = TRUE
+             } TEMP = spc_mode1_child_out
+          }
+       } else {
+          EXTERNAL fat spc_target {
+             SPACING < fatTblSpacing
+             BOX_CORNER = CHECK_MANHATTAN_SPACING
+             NON_PARALLEL = TRUE
+             POINT_TOUCH = FALSE
+          } TEMP = spc_child_out
+       }
+       /*check metal in the extension range*/ 
+       if (fatTblExtensionRange > 0) {
+	  if (fatWireExtensionMode == 0) {
+	     SIZE fat { OVERSIZE = fatTblExtensionRange } TEMP = fat_tmp
+             BOOLEAN fat_tmp AND METAL_LAYER_CHILD { } TEMP = fat_tmp
+  	     BOOLEAN fat_tmp NOT fat {  } TEMP = fat_tmp
+             SELECT  fat_tmp TOUCHING fat {  } TEMP = fat_ext
+             BOOLEAN fat_ext OR fat { } TEMP = fat_ext
+	     if (fatTblParallelLength > 0) {
+                if (fatTblParallelLength > fatTblExtensionRange) {
+                   SIZE fat { OVERSIZE = fatTblParallelLength } TEMP = fat_tmp
+                   BOOLEAN fat_tmp AND METAL_LAYER_CHILD { } TEMP = fat_tmp
+  	           BOOLEAN fat_tmp NOT fat {  } TEMP = fat_tmp
+                   SELECT  fat_tmp TOUCHING fat {  } TEMP = fat_parallel
+                   BOOLEAN fat_parallel OR fat { } TEMP = fat_parallel
+                } else {
+                   COPY fat_ext { } TEMP = fat_parallel
+                }
+		EXTERNAL fat_parallel spc_target {
+	           SPACING < fatTblSpacing
+		   SET_CORNERS_TO_SPACING = FALSE
+		   PARALLEL_POINT_PROJECTION = FALSE
+		   TOUCH = TRUE
+		   POINT_TOUCH = FALSE
+	           NON_PARALLEL = TRUE
+	        } TEMP = vio_filter_set
+		EXTERNAL fat_ext spc_target {
+	           SPACING < fatTblSpacing
+		   SET_CORNERS_TO_SPACING = FALSE
+		   PARALLEL_POINT_PROJECTION = FALSE
+		   TOUCH = TRUE
+		   POINT_TOUCH = FALSE
+		   NON_PARALLEL = TRUE
+	        } TEMP = vio_set
+                if (fatTblParallelLength < fatTblSpacing) {
+                   SELECT_EDGE vio_filter_set TOUCHING fat_parallel {
+                      VSIZE_INSIDE = fatTblParallelLength - DBU
+                   } TEMP = vio_filter_set_filter
+                   SELECT_CONTAINS vio_filter_set_filter { 
+                      WIDTH =  DBU
+                      HEIGHT = fatTblParallelLength + TOLERANCE
+                   } TEMP = vio_filter_set_filter
+                   SELECT vio_filter_set INTERACT vio_filter_set_filter { } TEMP = vio_filter
+                } else {
+	           SELECT_CONTAINS vio_filter_set { 
+	              WIDTH =  DBU
+	              HEIGHT = fatTblParallelLength + TOLERANCE
+	           } TEMP = vio_filter
+                }
+                SELECT vio_set INSIDE vio_filter { } TEMP = mode0_child_out1
+		if (fatTblSpacingMode == 1 && fatTblSpacing_dg > 0 && fatTblSpacing_dg != fatTblSpacing) {
+	           EXTERNAL fat_ext spc_target {
+		      SPACING < fatTblSpacing_dg
+	              SET_CORNERS_TO_SPACING = FALSE
+		      PARALLEL_POINT_PROJECTION = FALSE
+		      TOUCH = TRUE
+		      POINT_TOUCH = FALSE
+		      NON_PARALLEL = TRUE
+	           } TEMP = mode0_child_out2
+	        } 
+	     } else {
+	        EXTERNAL fat_ext spc_target {
+		   SPACING < fatTblSpacing
+		   NON_PARALLEL = TRUE
+		   SET_CORNERS_TO_SPACING = FALSE
+		   POINT_TOUCH = FALSE
+		} TEMP = mode0_child_out3
+	     }
+	  } else if (fatWireExtensionMode == 1) {
+             SIZE fat { EDGESIZE = fatTblExtensionRange } TEMP = fat_ran
+  	     BOOLEAN fat_ran AND METAL_LAYER_CHILD {  } TEMP = fat_ext
+  	     BOOLEAN fat_ext NOT fat {  } TEMP = fat_ext
+             if (fatTblParallelLength > 0) {
+                EXTERNAL fat_ext {
+	           SPACING < fatTblSpacing
+		   BOX_CORNER = CHECK_MANHATTAN_SPACING
+	           NON_PARALLEL = TRUE
+		   TOUCH = FALSE
+	           POINT_TOUCH = FALSE
+		   CHECK_SAME_POLYGON = CHECK_NOTCH
+                } TEMP = spacing
+		SELECT spacing INSIDE fat_ran {  } TEMP = spacing
+		SELECT spacing OUTSIDE fat {  } TEMP = spacing
+	        SELECT fat_ext INTERACT spacing {  } TEMP = fat_ext
+		BOOLEAN fat_ext OR spacing {  } TEMP = combined_fat_ext
+                EXTERNAL combined_fat_ext fat {
+	           SPACING < fatTblSpacing
+		   SET_CORNERS_TO_SPACING = FALSE
+		   NON_PARALLEL = TRUE
+		   TOUCH = FALSE
+	           POINT_TOUCH = FALSE
+                } TEMP = fat_spacing
+		BOOLEAN fat_spacing AND fat_ran {  } TEMP = fat_spacing
+		BOOLEAN combined_fat_ext OR fat_spacing {  } TEMP = combined_fat_ext
+                SELECT_CONTAINS combined_fat_ext { 
+                   WIDTH =  DBU
+                   HEIGHT = fatTblParallelLength + TOLERANCE
+                } TEMP = combined_fat_ext
+		SELECT spacing INTERACT combined_fat_ext { 
+		   LINE_TOUCH = TRUE
+	           POINT_TOUCH = TRUE
+                } TEMP = mode1_child_out1
+	     } else {
+               	EXTERNAL fat_ext {
+	           SPACING < fatTblSpacing
+	           BOX_CORNER = CHECK_MANHATTAN_SPACING
+	           NON_PARALLEL = TRUE
+	           CHECK_SAME_POLYGON = CHECK_NOTCH
+		   TOUCH = FALSE
+	           POINT_TOUCH = FALSE
+		   PARALLEL_POINT_PROJECTION = FALSE
+                } TEMP = spacing
+		SELECT spacing INSIDE fat_ran {  } TEMP = spacing
+		SELECT spacing OUTSIDE fat {  } TEMP = spacing
+                SELECT spacing INTERACT fat_ext {
+		   LINE_TOUCH = TRUE
+	           POINT_TOUCH = TRUE
+                } TEMP = mode1_child_out2
+	     }
+	  } else if (fatWireExtensionMode == 2) {
+	     SIZE fat { EDGESIZE = fatTblExtensionRange } TEMP = fat_ran
+             BOOLEAN fat_ran AND METAL_LAYER_CHILD {  } TEMP = fat_ext
+             BOOLEAN fat_ext NOT fat {  } TEMP = fat_ext
+             EXTERNAL fat_ext {
+	       	SPACING < fatTblSpacing
+	      	BOX_CORNER = CHECK_MANHATTAN_SPACING
+@if (CHECK_MANHATTAN_SPACING_FLAG == 1)
+                EDGE_45 < 0
+@else
+	      	PARALLEL = TRUE
+@endif
+	      	CHECK_SAME_POLYGON = CHECK_NOTCH
+		TOUCH = FALSE
+	       	POINT_TOUCH = FALSE
+		PARALLEL_POINT_PROJECTION = FALSE
+             } TEMP = spacing
+ 	     SELECT spacing INSIDE fat_ran {  } TEMP = spacing
+	     SELECT spacing OUTSIDE fat {  } TEMP = spacing
+             SELECT spacing INTERACT fat_ext {
+ 		LINE_TOUCH = TRUE
+	        POINT_TOUCH = FALSE
+             } TEMP = mode2_child_out
+	  } else if (fatWireExtensionMode == 3) {
+             SIZE fat {
+	        GROW_LEFT = fatTblExtensionRange
+	        GROW_RIGHT = fatTblExtensionRange
+             } TEMP = fat_ran
+  	     BOOLEAN fat_ran AND METAL_LAYER_CHILD {  } TEMP = fat_ext
+  	     BOOLEAN fat_ext NOT fat {  } TEMP = fat_ext
+             EXTERNAL fat_ext {
+	       	SPACING < fatTblSpacing
+	       	BOX_CORNER = CHECK_MANHATTAN_SPACING
+@if (CHECK_MANHATTAN_SPACING_FLAG == 1)
+                EDGE_45 < 0
+@else
+	       	PARALLEL = TRUE
+@endif
+	       	CHECK_SAME_POLYGON = CHECK_NOTCH
+		TOUCH = FALSE
+	       	POINT_TOUCH = FALSE
+		PARALLEL_POINT_PROJECTION = FALSE
+		HORIZONTAL_ONLY = TRUE
+             } TEMP = spacing_hor
+	     SELECT spacing_hor INSIDE fat_ran {  } TEMP = spacing_hor
+	     SELECT spacing_hor OUTSIDE fat {  } TEMP = spacing_hor
+             SIZE fat {
+	        GROW_TOP = fatTblExtensionRange
+	        GROW_BOTTOM = fatTblExtensionRange
+             } TEMP = fat_ran
+  	     BOOLEAN fat_ran AND METAL_LAYER_CHILD {  } TEMP = fat_ext
+  	     BOOLEAN fat_ext NOT fat {  } TEMP = fat_ext
+             EXTERNAL fat_ext {
+	       	SPACING < fatTblSpacing
+	       	BOX_CORNER = CHECK_MANHATTAN_SPACING
+@if (CHECK_MANHATTAN_SPACING_FLAG == 1)
+                EDGE_45 < 0
+@else
+	      	PARALLEL = TRUE
+@endif
+	      	CHECK_SAME_POLYGON = CHECK_NOTCH
+		TOUCH = FALSE
+	        POINT_TOUCH = FALSE
+		PARALLEL_POINT_PROJECTION = FALSE
+		VERTICAL_ONLY = TRUE
+             } TEMP = spacing_ver
+	     SELECT spacing_ver INSIDE fat_ran {  } TEMP = spacing_ver
+	     SELECT spacing_ver OUTSIDE fat {  } TEMP = spacing_ver
+  	     BOOLEAN spacing_hor OR spacing_ver {  } TEMP = spacing
+             SIZE fat { EDGESIZE = fatTblExtensionRange } TEMP = fat_ran
+  	     BOOLEAN fat_ran AND METAL_LAYER_CHILD {  } TEMP = fat_ext
+  	     BOOLEAN fat_ext NOT fat {  } TEMP = fat_ext
+  	     /* check overlapped projection length */
+ 	     if (fatTblParallelLength > 0) {
+                POLYGON_FEATURES fat_ext {
+                   EQUATIONS {
+                      vnum = EV_VNUM_IN;
+                      if ( vnum > 0) {
+                         bdLeft = EV_VXCOORD_IN[0];
+                         bdRight = EV_VXCOORD_IN[0];
+                         bdBottom = EV_VYCOORD_IN[0];
+                         bdTop = EV_VYCOORD_IN[0];
+                         FOR (i = 1; i < vnum; i++) {
+                            if (bdLeft > EV_VXCOORD_IN[i]) bdLeft = EV_VXCOORD_IN[i];
+                            else if (bdRight < EV_VXCOORD_IN[i]) bdRight = EV_VXCOORD_IN[i];
+                            if (bdBottom > EV_VYCOORD_IN[i]) bdBottom = EV_VYCOORD_IN[i];
+                            else if (bdTop < EV_VYCOORD_IN[i]) bdTop = EV_VYCOORD_IN[i];
+                         } /* FOR i */
+                         if ( (bdRight - bdLeft) >= fatTblParallelLength ||
+                  	      (bdTop - bdBottom) >= fatTblParallelLength) {
+                            FOR (i = 0; i < vnum; i++) {
+                               EV_VXCOORD_OUT[i] = EV_VXCOORD_IN[i];
+                               EV_VYCOORD_OUT[i] = EV_VYCOORD_IN[i];
+                            }
+                            EV_VNUM_OUT = vnum;
+                 	    EV_SAVE_POLYGON();
+                         }
+                      }
+                   }
+                } TEMP = fat_ext /* POLYGON_FEATURE */
+             }
+             SELECT spacing INTERACT fat_ext {
+ 		LINE_TOUCH = TRUE
+	        POINT_TOUCH = FALSE
+             } TEMP = mode3_child_out
+          }
+       }
+    }
+}

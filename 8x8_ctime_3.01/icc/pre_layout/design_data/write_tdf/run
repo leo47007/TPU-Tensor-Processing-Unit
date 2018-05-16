@@ -1,0 +1,4 @@
+g++ -c write_io_pin.cpp
+g++ -o write_io_pin.out write_io_pin.o
+./write_io_pin.out
+mv my_iopin.tdf ../io_pin.tdf 

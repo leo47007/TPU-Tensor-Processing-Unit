@@ -1,0 +1,6 @@
+define LIB_MAP ( $LIB_MAP \
+, ../../../../../../../../../../../../usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/verilog/saed32nm_hvt.v => saed32nm_hvt \
+)
+define LIB_MAP ( $LIB_MAP \
+, ../../../../../../../../../../../../usr/cadtool/cad/synopsys/SAED32_EDK/lib/stdcell_hvt/verilog/saed32nm_hvt.v => saed32nm_hvt \
+)

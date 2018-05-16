@@ -1,0 +1,802 @@
+/* Data Preparation */
+if (fatTblDimension > 1 || fatWireThreshold > 0 || maxWidth > 0) {
+  if (ignoreBlockage) {
+      /* Let the real blockage be treated as thin */
+      BOOLEAN METAL_LAYER NOT METAL_REAL_BLOCKAGE {} TEMP=fat_candidate
+  } else {
+      COPY METAL_LAYER {} TEMP=fat_candidate
+  }
+  COPY fat_candidate {} TEMP=fat_target
+}
+/*Check width*/
+if (minWidth > 0) {
+    INTERNAL METAL_LAYER { 
+        COMMENT = "$layer_name MinWidth  : minimum width = minWidth um" 
+        SPACING < minWidth
+        POINT_TOUCH = FALSE
+    } (OUTPUT_LAYER)
+}
+ 
+if (maxWidth > 0) {
+    SIZE  fat_candidate {
+        COMMENT = "$layer_name MaxWidth  : maximum width = maxWidth um"
+ 	UNDER_OVER = maxWidth / 2 
+    } (OUTPUT_LAYER) 
+}
+ 
+/*Check area*/
+if (minArea > 0) {
+    AREA METAL_LAYER { 
+	COMMENT = "$layer_name MinArea   : minimum area = minArea um*um"
+	RANGE = [TOLERANCE*TOLERANCE, minArea - TOLERANCE*TOLERANCE]
+    } (OUTPUT_LAYER)
+}
+/* check min length of bounding box on polygon */
+if (minLength > 0) {
+  if (minLengthMode == 1) {
+    INTERNAL METAL_LAYER {
+        SPACING < minLength
+        VERTICAL_ONLY = TRUE
+        SET_CORNERS_TO_SPACING = FALSE
+    } TEMP = ver_short
+    BOOLEAN METAL_LAYER NOT ver_short { } TEMP = ver_long
+    INTERNAL METAL_LAYER {
+        SPACING < minLength
+        HORIZONTAL_ONLY = TRUE
+        SET_CORNERS_TO_SPACING = FALSE
+    } TEMP = hor_short
+    BOOLEAN METAL_LAYER NOT hor_short { } TEMP = hor_long
+    SELECT CUT_LAYER1 INSIDE ver_long { } TEMP = good_cut
+    BOOLEAN CUT_LAYER1 NOT good_cut { } TEMP = fail_cut_1
+    SELECT fail_cut_1 INSIDE hor_long { } TEMP = good_cut
+    BOOLEAN fail_cut_1 NOT good_cut { } TEMP = fail_cut_1
+    SELECT CUT_LAYER2 INSIDE ver_long { } TEMP = good_cut
+    BOOLEAN CUT_LAYER2 NOT good_cut { } TEMP = fail_cut_2
+    SELECT fail_cut_2 INSIDE hor_long { } TEMP = good_cut
+    BOOLEAN fail_cut_2 NOT good_cut { } TEMP = fail_cut_2
+    BOOLEAN fail_cut_1 OR fail_cut_2 { } TEMP = fail_cut
+    BOOLEAN hor_short NOT ver_long { } TEMP = hor_short
+    BOOLEAN ver_short NOT hor_long { } TEMP = ver_short
+    SELECT ver_short INTERACT fail_cut { } TEMP = ver_fail
+    SELECT hor_short INTERACT fail_cut { } TEMP = hor_fail
+    BOOLEAN ver_fail OR hor_fail { } TEMP = all_fail
+    INTERNAL all_fail {
+        COMMENT = "$layer_name MinLength : minimum length = minLength um"
+        SPACING < minLength
+        VERTICAL_ONLY = TRUE
+        SET_CORNERS_TO_SPACING = FALSE
+    } (OUTPUT_LAYER)
+  } else {
+    POLYGON_FEATURES METAL_LAYER {
+      COMMENT = "$layer_name MinLength : minimum length = minLength um"
+      EQUATIONS {
+        vnum = EV_VNUM_IN;
+        if ( vnum > 0) {
+	  bdLeft = EV_VXCOORD_IN[0];
+	  bdRight = EV_VXCOORD_IN[0];
+	  bdBottom = EV_VYCOORD_IN[0];
+	  bdTop = EV_VYCOORD_IN[0];
+          FOR (i = 1; i < vnum; i++) {
+	    if (bdLeft > EV_VXCOORD_IN[i]) bdLeft = EV_VXCOORD_IN[i];
+            else if (bdRight < EV_VXCOORD_IN[i]) bdRight = EV_VXCOORD_IN[i];
+	    if (bdBottom > EV_VYCOORD_IN[i]) bdBottom = EV_VYCOORD_IN[i];
+            else if (bdTop < EV_VYCOORD_IN[i]) bdTop = EV_VYCOORD_IN[i];
+          }
+	  if ( (bdRight - bdLeft) < minLength &&
+	       (bdTop - bdBottom) < minLength) {
+	    FOR (i = 0; i < vnum; i++) {
+              EV_VXCOORD_OUT[i] = EV_VXCOORD_IN[i];
+	      EV_VYCOORD_OUT[i] = EV_VYCOORD_IN[i];
+            }
+	    EV_VNUM_OUT = vnum;
+	    EV_SAVE_POLYGON();
+          }
+        }
+      }
+    } (OUTPUT_LAYER) 
+  }
+  SET minLength = 0;
+}
+/* check max length of bounding box on polygon */
+if (maxLength > 0) {
+  POLYGON_FEATURES METAL_LAYER {
+    COMMENT = "$layer_name MaxLength : maximum length = maxLength um"
+    EQUATIONS {
+      vnum = EV_VNUM_IN;
+      if ( vnum > 0) {
+	bdLeft = EV_VXCOORD_IN[0];
+	bdRight = EV_VXCOORD_IN[0];
+	bdBottom = EV_VYCOORD_IN[0];
+	bdTop = EV_VYCOORD_IN[0];
+        FOR (i = 1; i < vnum; i++) {
+	  if (bdLeft > EV_VXCOORD_IN[i]) bdLeft = EV_VXCOORD_IN[i];
+          else if (bdRight < EV_VXCOORD_IN[i]) bdRight = EV_VXCOORD_IN[i];
+	  if (bdBottom > EV_VYCOORD_IN[i]) bdBottom = EV_VYCOORD_IN[i];
+          else if (bdTop < EV_VYCOORD_IN[i]) bdTop = EV_VYCOORD_IN[i];
+        }
+	if ( (bdRight - bdLeft + bdTop - bdBottom) > maxLength ) {
+          EV_VXCOORD_OUT[0] = bdLeft;
+	  EV_VYCOORD_OUT[0] = bdBottom;
+          EV_VXCOORD_OUT[1] = bdLeft;
+	  EV_VYCOORD_OUT[1] = bdTop;
+          EV_VXCOORD_OUT[2] = bdRight;
+	  EV_VYCOORD_OUT[2] = bdTop;
+          EV_VXCOORD_OUT[3] = bdRight;
+	  EV_VYCOORD_OUT[3] = bdBottom;
+          EV_VXCOORD_OUT[4] = bdLeft;
+	  EV_VYCOORD_OUT[4] = bdBottom;
+	  EV_VNUM_OUT = 5;
+	  EV_SAVE_POLYGON();
+        }
+      }
+    }
+  } (OUTPUT_LAYER) 
+  SET maxLength = 0;
+}
+ 
+/*Check enclosed area*/
+if (minEnclosedArea > 0) {
+    SELECT METAL_LAYER INSIDE_HOLE {
+        INNER_HOLE_ONLY
+    } TEMP = holes
+    BOOLEAN holes NOT METAL_LAYER { } TEMP = holes
+ 
+    AREA holes {
+        COMMENT = "$layer_name EnclsArea : minimum enclosed area = minEnclosedArea um*um"
+        RANGE = [TOLERANCE*TOLERANCE, minEnclosedArea - TOLERANCE*TOLERANCE]
+    } (OUTPUT_LAYER)
+    /* check min length of bounding box on polygon */
+    if (minEnclosedWidth > 0) {
+      POLYGON_FEATURES holes {
+        COMMENT = "$layer_name EnclsWidth: minimum enclosed Width = minEnclosedWidth um"
+        EQUATIONS {
+          vnum = EV_VNUM_IN;
+          if ( vnum > 0) {
+            bdLeft = EV_VXCOORD_IN[0];
+            bdRight = EV_VXCOORD_IN[0];
+            bdBottom = EV_VYCOORD_IN[0];
+            bdTop = EV_VYCOORD_IN[0];
+            FOR (i = 1; i < vnum; i++) {
+              if (bdLeft > EV_VXCOORD_IN[i]) bdLeft = EV_VXCOORD_IN[i];
+              else if (bdRight < EV_VXCOORD_IN[i]) bdRight = EV_VXCOORD_IN[i];
+              if (bdBottom > EV_VYCOORD_IN[i]) bdBottom = EV_VYCOORD_IN[i];
+              else if (bdTop < EV_VYCOORD_IN[i]) bdTop = EV_VYCOORD_IN[i];
+            }
+            if ( (bdRight - bdLeft) < minEnclosedWidth &&
+                 (bdTop - bdBottom) < minEnclosedWidth) {
+              FOR (i = 0; i < vnum; i++) {
+                EV_VXCOORD_OUT[i] = EV_VXCOORD_IN[i];
+                EV_VYCOORD_OUT[i] = EV_VYCOORD_IN[i];
+              }
+              EV_VNUM_OUT = vnum;
+              EV_SAVE_POLYGON();
+            }
+          }
+        }
+      } (OUTPUT_LAYER) 
+    }
+}
+ 
+/*check special notch rule*/
+if ((minEdgeLength2 > TOLERANCE && minEdgeLength3 > TOLERANCE) || minEdgeMode==2) {
+  if (minEdgeMode==2) {
+    SET minEdgeLength3 = minEdgeLength ;
+  }
+  NOTCH METAL_LAYER {
+     SPACING < minEdgeLength3
+     SET_CORNERS_TO_SPACING=FALSE
+     PARALLEL = TRUE
+     OUTPUT_EDGES = TRUE
+  } TEMP = notch_vectors
+  SELECT_VECTOR notch_vectors {
+     LENGTH_RANGE = [TOLERANCE, minEdgeLength2 - TOLERANCE]
+  } TEMP = short_edges
+  EXTERNAL short_edges METAL_LAYER {
+     SPACING < minEdgeLength3
+     SET_CORNERS_TO_SPACING=FALSE
+     PARALLEL = TRUE
+  } TEMP = notch_err
+  /* Choose the real U-shaped notch */
+  SIZE notch_err { OVERSIZE = DBU*10 } TEMP = neighbors 
+  BOOLEAN neighbors AND METAL_LAYER { } TEMP = neighbors
+  VERTEX neighbors { 
+     CONCAVE = TRUE
+     CONVEX = TRUE
+     SIZE = DBU
+  } TEMP = corners
+  SELECT_EDGE neighbors INTERACT notch_err { } TEMP = target_edges
+  BOOLEAN target_edges NOT corners { } TEMP = target_edges
+  VERTEX neighbors { 
+     CONCAVE = TRUE
+     SIZE = 2*DBU
+  } TEMP = corners
+  SELECT target_edges INTERACT corners { RANGE = [2, 2] } TEMP=target_edges
+  SELECT notch_err INTERACT target_edges {
+     COMMENT = "$layer_name SpeclNotch: sameNetSp = minEdgeLength3 um (sideLen minEdgeLength2 um)" 
+  } (OUTPUT_LAYER)
+}
+/*check consecutive short edges*/
+if (minEdgeLength > TOLERANCE && minEdgeMode != 2) { 
+  INTERNAL METAL_TOP_DATA {
+     SEGMENT < minEdgeLength
+     FLAG_ACUTE_ANGLE = FALSE
+     FLAG_ACUTE_EDGE = FALSE
+     OUTPUT_EDGES = TRUE
+  } TEMP = short_edges
+  if ((minEdgeMode == 0 && maxTotalMinEdgeLength>0) || maxNumMinEdge > 0) {
+    SET temporary_1 = DBU*2;
+    SET temporary_2 = 2*temporary_1+TOLERANCE;
+    SELECT METAL_TOP_DATA INTERACT short_edges { } TEMP = target_top
+    CLASSIFY_EDGES target_top {
+       LENGTH = temporary_1
+       DMIN   = temporary_2
+       INSIDE_CORNER  TEMP = inside_corner_edges
+       OUTSIDE_CORNER TEMP = outside_corner_edges
+       REMAINDER      TEMP = remainder_edges
+    }
+    if (minEdgeMode == 0 && (maxNumMinEdge>0 || maxTotalMinEdgeLength > 0)) {
+       SELECT short_edges ENCLOSING inside_corner_edges { } TEMP = short_edges
+    }
+  }
+  if (maxTotalMinEdgeLength > 0) {
+    LENGTH short_edges {
+       RANGE = [maxTotalMinEdgeLength + TOLERANCE, MAXIMUM_NUMBER]
+    } TEMP = max_length_err
+    /* Work around: translate polygons into dimensional check output */
+    SIZE max_length_err { OVERSIZE = 2*DBU } TEMP = max_length_err
+    INTERNAL max_length_err {
+       SPACING < 3*DBU
+       SET_CORNERS_TO_SPACING=FALSE
+       COMMENT = "$layer_name MinEdgeLen: maximum total length ( minEdgeLength um)= maxTotalMinEdgeLength um"
+    } (OUTPUT_LAYER)
+  }
+  if (maxTotalMinEdgeLength == 0 || maxNumMinEdge > 0) {
+    if (maxNumMinEdge==0)  {
+       COPY short_edges {} TEMP=max_edge_err
+    } else {
+       SIZE short_edges {
+         VSIZE_HEAD = -DBU
+        VSIZE_TAIL = -DBU
+       } TEMP = short_edges
+       SIZE short_edges {
+          OVERSIZE = 5*DBU
+          SIZE_ENDPOINTS = FALSE
+       } TEMP = short_contours
+       SELECT short_contours ENCLOSING remainder_edges {
+          RANGE = [maxNumMinEdge + 1, MAXIMUM_NUMBER]
+       } TEMP = short_contours
+       SELECT short_edges INSIDE short_contours { } TEMP=max_edge_err
+    }
+    /* Work around: translate polygons into dimensional check output */
+    SIZE max_edge_err { OVERSIZE = 2*DBU } TEMP = max_edge_error
+    INTERNAL max_edge_error {
+       SPACING < 3*DBU
+       SET_CORNERS_TO_SPACING=FALSE
+       COMMENT = "$layer_name MinEdgeLen: maximum number of consecutive short edges ( minEdgeLength um)= maxNumMinEdge"
+    } (OUTPUT_LAYER) 
+  }
+}
+ 
+/*check basic spacing*/
+if (sameNetMinSpacing > 0 && sameNetMinSpacing != minSpacing) {
+  if (sameNetMinSpacing > minSpacing) {
+    /* Special condition for U-shaped Metal spacing rule */
+    NOTCH METAL_PIN {
+        SPACING < sameNetMinSpacing
+        BOX_CORNER = CHECK_MANHATTAN_SPACING
+        SET_CORNERS_TO_SPACING=FALSE
+        NON_PARALLEL = TRUE
+        OUTPUT_EDGES = TRUE
+    } TEMP = errs_to_be_waived
+    NOTCH METAL_TOP_DATA {
+	SPACING < sameNetMinSpacing
+	BOX_CORNER = CHECK_MANHATTAN_SPACING
+        SET_CORNERS_TO_SPACING=FALSE
+	NON_PARALLEL = TRUE
+        OUTPUT_EDGES = TRUE
+    } TEMP = all_errs
+    BOOLEAN all_errs NOT errs_to_be_waived { } TEMP=err_edge
+    EXTERNAL err_edge METAL_TOP_DATA {
+	SPACING < sameNetMinSpacing
+	BOX_CORNER = CHECK_MANHATTAN_SPACING
+        SET_CORNERS_TO_SPACING=FALSE
+	NON_PARALLEL = TRUE
+    } TEMP = notch_err
+    SIZE notch_err { OVERSIZE = DBU*10 } TEMP = neighbors
+    BOOLEAN neighbors AND METAL_TOP_DATA { } TEMP = neighbors
+    VERTEX neighbors { 
+       CONCAVE = TRUE
+       CONVEX = TRUE
+       SIZE = DBU
+    } TEMP = corners
+    SELECT_EDGE neighbors INTERACT notch_err { } TEMP = target_edges
+    BOOLEAN target_edges AND notch_err { } TEMP = target_edges
+    BOOLEAN target_edges NOT corners { } TEMP = target_edges
+    VERTEX neighbors {
+       CONCAVE = TRUE
+       SIZE = 2*DBU
+    } TEMP = corners
+    SELECT target_edges INTERACT corners { RANGE = [2, 2] } TEMP = target_edges
+    SELECT notch_err TOUCHING target_edges {
+      COMMENT = "$layer_name U-ShpNotch: U-shape notch minimum spacing = sameNetMinSpacing um" 
+    } (OUTPUT_LAYER)
+  } else {
+    NOTCH METAL_LAYER {
+        COMMENT = "$layer_name SameNetSpc: same-net minimum spacing = sameNetMinSpacing um" 
+	SPACING < sameNetMinSpacing
+	BOX_CORNER = CHECK_MANHATTAN_SPACING
+	NON_PARALLEL = TRUE
+    } (OUTPUT_LAYER)
+  }
+  if (minSpacing > 0) {
+    if (stubMode == 0 && stubSpacing > 0 && stubSpacing < minSpacing) {
+	EXTERNAL METAL_LAYER {
+	    COMMENT = "$layer_name Spacing   : minimum spacing = minSpacing um"
+            LONGEDGE > stubThreshold + TOLERANCE
+	    LONGEDGE_TO_EDGE < minSpacing
+	    SPACING <= 0
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+            POINT_TOUCH = TRUE
+            CHECK_SAME_POLYGON = CHECK_NOTCH
+	} (OUTPUT_LAYER)
+    } else {
+        EXTERNAL METAL_LAYER {
+	    COMMENT = "$layer_name Spacing   : minimum spacing = minSpacing um" 
+	    SPACING < minSpacing
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+            POINT_TOUCH = TRUE
+	    CHECK_SAME_POLYGON = FALSE
+        } (OUTPUT_LAYER)
+    }
+  }
+} else {
+  if (minSpacing > 0) {
+    if (stubMode == 0 && stubSpacing > 0 && stubSpacing < minSpacing) {
+        EXTERNAL METAL_LAYER {
+            COMMENT = "$layer_name Spacing   : minimum spacing = minSpacing um"
+            LONGEDGE > stubThreshold + TOLERANCE 
+            LONGEDGE_TO_EDGE < minSpacing
+            SPACING <= 0 
+            BOX_CORNER = CHECK_MANHATTAN_SPACING
+            NON_PARALLEL = TRUE
+            POINT_TOUCH = TRUE
+            CHECK_SAME_POLYGON = CHECK_NOTCH
+        } (OUTPUT_LAYER)
+    } else {
+        EXTERNAL METAL_LAYER {
+	    COMMENT = "$layer_name Spacing   : minimum spacing = minSpacing um" 
+            SPACING < minSpacing
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = TRUE
+	    CHECK_SAME_POLYGON = CHECK_NOTCH
+        } (OUTPUT_LAYER)
+    }
+  }
+}
+ 
+/*check dogbone */
+if (sameNetMinSpacing > 0 && sameNetWidthThreshold) {
+  NOTCH METAL_LAYER {
+    SPACING < sameNetMinSpacing
+    BOX_CORNER = CHECK_MANHATTAN_SPACING
+    NON_PARALLEL = TRUE
+  } TEMP = dog_bone
+ 
+  if (!layer_empty(dog_bone)) {
+    SIZE dog_bone {EDGESIZE = sameNetWidthThreshold} TEMP = dog_ext
+    BOOLEAN dog_ext NOT dog_bone {} TEMP = dog_ext
+    BOOLEAN dog_ext AND METAL_LAYER {} TEMP = dog_ext
+    if (!layer_empty(dog_ext)) {
+      SELECT dog_ext EDGE_TOUCH dog_bone { OUTSIDE RANGE = [1, MAXIMUM_NUMBER] } TEMP = dog_ext
+      NOTCH METAL_LAYER {
+        SPACING < sameNetMinSpacing
+        BOX_CORNER = CHECK_MANHATTAN_SPACING
+        NON_PARALLEL = TRUE
+	OUTPUT_EDGES = TRUE
+      } TEMP = dog_bone
+      SELECT dog_ext OUTSIDE dog_bone {} TEMP = dog_ext
+      INTERNAL dog_ext {
+	COMMENT = "$layer_name dogBone   : notch spacing = sameNetMinSpacing um width sameNetWidthThreshold um" 
+	SPACING < sameNetWidthThreshold
+      } (OUTPUT_LAYER)
+    }
+  }
+}
+/*check basic fat spacing*/
+if (fatWireThreshold > 0 && fatTblDimension == 0) {
+    SIZE fat_candidate { UNDER_OVER = fatWireThreshold / 2.0 - TOLERANCE } TEMP = m_fat
+    BOOLEAN m_fat AND METAL_LAYER {  } TEMP = m_fat
+    BOOLEAN METAL_LAYER NOT m_fat {  } TEMP = m_thin
+    if (ignoreBlockage == 0) {
+        /* the blockages on the metal_blockage layer are treated as thin blockages */
+        BOOLEAN m_thin OR METAL_BLOCKAGE_LAYER {  } TEMP = m_thin
+    }
+ 
+    if (fatFatMinSpacing > 0) {
+	EXTERNAL m_fat {
+	    COMMENT = "$layer_name FatWireSpc: fat & fat ( fatWireThreshold um) minimum spacing = fatFatMinSpacing um"
+	    SPACING < fatFatMinSpacing
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = FALSE
+	    CHECK_SAME_POLYGON = CHECK_NOTCH
+       } (OUTPUT_LAYER)
+    }
+ 
+    if (fatThinMinSpacing > 0) {
+	EXTERNAL m_fat m_thin {
+	    COMMENT = "$layer_name FatWireSpc: fat & thin ( fatWireThreshold um) minimum spacing fatThinMinSpacing um"
+	    SPACING < fatThinMinSpacing
+ 	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = FALSE
+        } (OUTPUT_LAYER)
+    }
+}
+ 
+/*check thin blockage spacing*/
+if (minSpacing > 0 && ignoreBlockage == 0) {
+    if (!layer_empty (METAL_BLOCKAGE_LAYER)) {
+	EXTERNAL METAL_BLOCKAGE_LAYER METAL_LAYER {
+	    COMMENT = "$layer_name Spacing   : metal & thin blockage minimum spacing = minSpacing um"
+	    SPACING < minSpacing
+	    BOX_CORNER = CHECK_MANHATTAN_SPACING
+	    NON_PARALLEL = TRUE
+	    POINT_TOUCH = TRUE
+            TOUCH = TRUE
+        } (OUTPUT_LAYER)
+    }
+}
+/*check blockage overlap*/
+/*check shorts between top_level routing and fram_blockages*/
+if (minSpacing>0 || checkCrossHierShort>0) {
+   if (ignoreBlockage == 0) {
+      BOOLEAN METAL_BLOCKAGE_LAYER or METAL_REAL_BLOCKAGE {} TEMP=all_blockage
+   } else {
+      COPY METAL_REAL_BLOCKAGE {} TEMP=all_blockage
+   }
+   BOOLEAN all_blockage AND METAL_TOP_DATA {} TEMP = overlap_shape1
+   EXTERNAL all_blockage METAL_TOP_DATA {
+      SPACING <= 0
+      TOUCH = TRUE
+   } TEMP = overlap_shape2
+   if (checkCrossHierShort>0) {
+      BOOLEAN overlap_shape1 OR overlap_shape2 {
+         COMMENT = "$layer_name Short Cross Hierarchy"
+      } (OUTPUT_LAYER)
+   } else {
+      BOOLEAN overlap_shape1 OR overlap_shape2 {
+         COMMENT = "$layer_name Overlap   : metal & blockage overlap"
+      } (OUTPUT_LAYER)
+   }
+}
+ 
+if (fatPolyContactRule > 0) {
+  /* Fat Poly Contact Rule: not new fat wire formed */
+  if (readCellView > 0) {
+     SIZE metal1 { UNDER_OVER = fatPolyContactRule / 2.0 - TOLERANCE } TEMP = fat
+     BOOLEAN fat AND metal1 {  } TEMP = fat 
+  } else {
+     SIZE metal1_top { UNDER_OVER = fatPolyContactRule / 2.0 - TOLERANCE } TEMP = fat
+     BOOLEAN fat AND metal1_top {  } TEMP = fat 
+  }
+  SIZE metal1_pin { UNDER_OVER = fatPolyContactRule / 2.0 - TOLERANCE } TEMP = fat_pin
+  BOOLEAN fat_pin AND metal1_pin {  } TEMP = fat_pin
+  BOOLEAN fat NOT fat_pin {
+    COMMENT = "$layer_name FatPolyContactRule: fatPolyContactRule um" 
+  } (OUTPUT_LAYER)
+}
+/* Special End-of-Line Spacing Rule */
+if (stubMode == 0 && stubSpacing > 0 && stubSpacing < minSpacing) {
+  EXTERNAL METAL_LAYER {
+     COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing um (mode = 0)"
+     LONGEDGE > stubThreshold + TOLERANCE
+     LONGEDGE_TO_EDGE <= 0 
+     SPACING < stubSpacing 
+     SET_CORNERS_TO_SPACING = FALSE
+     PARALLEL_POINT_PROJECTION = FALSE
+  } (OUTPUT_LAYER)
+} else if (stubMode > 0 && stubSpacing > minSpacing) {
+  if (stubMode == 4) {
+     INTERNAL METAL_LAYER {
+        SEGMENT[90,90] < stubThreshold
+        OUTPUT_EDGES = TRUE
+     } TEMP = end_of_line
+  } else {
+     INTERNAL METAL_LAYER {
+        SEGMENT[90,90] <= stubThreshold
+        OUTPUT_EDGES = TRUE
+     } TEMP = end_of_line
+  }
+  /* Quick filter to reduce the size of possible end of line */
+  if (sideStubExt > 0) {
+    SIZE end_of_line {
+       VSIZE_HEAD = sideStubExt
+       VSIZE_TAIL = sideStubExt
+       OUTPUT_EDGES = TRUE
+    } TEMP = eol_ext
+  } else {
+    COPY end_of_line { } TEMP=eol_ext
+  }
+  if (stub2StubSpacing > stubSpacing) {
+     SET temporary_1 = stub2StubSpacing;
+  } else {
+     SET temporary_1 = stubSpacing; 
+  }
+  EXTERNAL eol_ext METAL_LAYER {
+     SPACING < temporary_1
+     TOUCH = TRUE
+     OVERLAP = TRUE 
+     SET_CORNERS_TO_SPACING = FALSE
+     PARALLEL_POINT_PROJECTION = FALSE
+     OUTPUT_EDGES = TRUE
+  } TEMP=err_edge
+  SELECT eol_ext INTERACT err_edge { } TEMP=eol_ext
+  SELECT end_of_line INTERACT eol_ext { } TEMP=end_of_line 
+  /* Reduce the size of METAL_LAYER */
+  if (stubMode==3) {
+     SIZE end_of_line {
+        VSIZE_HEAD = stubSpacing 
+        VSIZE_TAIL = stubSpacing 
+        VSIZE_INSIDE = sideStubThreshold
+        VSIZE_OUTSIDE = stubSpacing
+     } TEMP = eol_filter 
+  } else {
+     if (stubMode == 1 && stubRange > 0) {
+        SIZE end_of_line {
+           VSIZE_HEAD = stubSpacing-TOLERANCE
+           VSIZE_TAIL = stubSpacing-TOLERANCE
+           VSIZE_OUTSIDE = stubSpacing-TOLERANCE
+        } TEMP = eol_filter
+     } else {
+        SIZE end_of_line {
+           VSIZE_HEAD = stubSpacing-TOLERANCE
+           VSIZE_TAIL = stubSpacing-TOLERANCE
+           VSIZE_INSIDE = sideStubThreshold-TOLERANCE
+           VSIZE_OUTSIDE = stubSpacing-TOLERANCE
+        } TEMP = eol_filter
+     }
+  }
+  SELECT METAL_LAYER INTERACT eol_filter { } TEMP=target_top
+  /* Get the side edges and the whole eol of line set */
+  SELECT_EDGE target_top INTERACT end_of_line { 
+    POINT_TOUCH = TRUE
+  } TEMP = eol_set
+  VERTEX target_top { 
+     CONCAVE = TRUE 
+     CONVEX = TRUE
+     SIZE = DBU
+  } TEMP = corners
+  SELECT corners OUTSIDE end_of_line {} TEMP =corners 
+  BOOLEAN eol_set NOT corners { } TEMP=eol_set
+  BOOLEAN eol_set NOT end_of_line { } TEMP=side_edge
+  /* find out the real end of line */
+  if (stubRange > 0) {
+     if (stubMode == 1) {
+         COPY side_edge { } TEMP = all_side_edge
+         LENGTH side_edge { SPACING <= stubRange-TOLERANCE } TEMP=side_edge
+     } else {
+         LENGTH side_edge { SPACING < stubRange-DBU } TEMP=eol_filter
+         BOOLEAN side_edge NOT eol_filter { } TEMP=side_edge
+     }
+     SELECT end_of_line INTERACT side_edge { RANGE = [1,2] } TEMP = end_of_line
+  } 
+  if (stubMode == 1) {
+    if (stub2StubSpacing > 0) {
+       if (sideStubExt < 0) {
+          SIZE end_of_line {
+            VSIZE_HEAD = sideStubExt / 2
+            VSIZE_TAIL = sideStubExt / 2
+            OUTPUT_EDGES = TRUE
+          } TEMP = eol_ext_tip
+	 
+          EXTERNAL eol_ext_tip {
+            COMMENT = "$layer_name specEoLSpc: stub2Stubspacing= stub2StubSpacing um (mode = 1)"
+            SPACING < stub2StubSpacing
+            SET_CORNERS_TO_SPACING = FALSE
+            PARALLEL_POINT_PROJECTION = TRUE
+          } (OUTPUT_LAYER)
+       } else {
+          EXTERNAL end_of_line {
+            COMMENT = "$layer_name specEoLSpc: stub2Stubspacing= stub2StubSpacing um (mode = 1)"
+            SPACING < stub2StubSpacing
+            SET_CORNERS_TO_SPACING = FALSE
+            PARALLEL_POINT_PROJECTION = FALSE
+          } (OUTPUT_LAYER)
+       }
+    }
+    if (stubRange > 0) {
+       SIZE end_of_line {
+         VSIZE_INSIDE = DBU
+       } TEMP = eol_poly
+       SELECT_EDGE eol_poly TOUCHING target_top { } TEMP=eol_edge
+       EXTERNAL eol_edge target_top {
+         COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing um (mode = 1)"
+         CONVEX_TO_CONVEX < stubSpacing
+         CONVEX_TO_CONVEX [POINT_PROJECTION] < stubSpacing
+         CONVEX_TO_EDGE < stubSpacing
+         CONCAVE_TO_CONVEX < stubSpacing
+         LONGEDGE > DBU
+         LONGEDGE_TO_EDGE < stubSpacing
+         SPACING <= 0
+         SET_CORNERS_TO_SPACING = TRUE
+         PARALLEL_POINT_PROJECTION = TRUE
+       } (OUTPUT_LAYER)
+       SELECT all_side_edge INTERACT end_of_line { } TEMP = side_edge
+       SIZE side_edge {
+         VSIZE_HEAD = DBU
+         VSIZE_TAIL = DBU
+       } TEMP = side_edge_ext
+       BOOLEAN side_edge_ext NOT side_edge { } TEMP = side_edge_ext
+       SELECT side_edge_ext INTERACT end_of_line { } TEMP = side_edge_ext
+       EXTERNAL side_edge_ext target_top {
+         COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing um (mode = 1)"
+         SPACING < stubSpacing
+         SET_CORNERS_TO_SPACING = FALSE
+         PARALLEL_POINT_PROJECTION = FALSE
+       } (OUTPUT_LAYER)
+    } else {
+       if (stub2StubSpacing > 0) {
+         VECTORIZE target_top {
+            DIRECTED=TRUE
+         } TEMP=target_edges
+         BOOLEAN target_edges NOT end_of_line { } TEMP = target_edges
+         EXTERNAL end_of_line target_edges {
+            COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing um (mode = 1)"
+            SPACING < stubSpacing
+            TOUCH=TRUE
+            OVERLAP=TRUE
+            SET_CORNERS_TO_SPACING=FALSE
+            PARALLEL_POINT_PROJECTION=FALSE
+         } (OUTPUT_LAYER)
+       } else {
+         if (sideStubExt > 0) {
+            SIZE end_of_line {
+               VSIZE_HEAD = sideStubExt
+               VSIZE_TAIL = sideStubExt
+               OUTPUT_EDGES = TRUE
+            } TEMP = end_of_line
+            EXTERNAL end_of_line target_top {
+               COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing ,crnKeepOut= sideStubExt um (mode = 1)"
+               SPACING < stubSpacing
+               TOUCH=TRUE
+               OVERLAP=TRUE
+               SET_CORNERS_TO_SPACING=FALSE
+               PARALLEL_POINT_PROJECTION=FALSE
+            } (OUTPUT_LAYER)
+         } else {
+            EXTERNAL end_of_line target_top {
+               COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing um (mode = 1)"
+               SPACING < stubSpacing
+               TOUCH=TRUE
+               OVERLAP=TRUE
+               SET_CORNERS_TO_SPACING=FALSE
+               PARALLEL_POINT_PROJECTION=FALSE
+            } (OUTPUT_LAYER)
+         }
+       }
+    }
+  } else { /* stubMode == 2,3,4 */
+    /* stubMode 2 eol classify and reduction */
+    if (stubMode !=3 && sideStubExt > 0) {
+      if (stubMode == 4) {
+        SIZE end_of_line {
+           VSIZE_HEAD = sideStubExt
+           VSIZE_TAIL = sideStubExt
+           OUTPUT_EDGES = TRUE
+        } TEMP = eol_ext
+        EXTERNAL eol_ext target_top {
+           SPACING < stubSpacing
+           SET_CORNERS_TO_SPACING=FALSE
+           PARALLEL_POINT_PROJECTION=FALSE
+           OUTPUT_EDGES = TRUE
+        } TEMP=err_edge
+        SELECT eol_ext INTERACT err_edge { } TEMP=eol_ext
+      } else {
+        EXTERNAL end_of_line target_top {
+           SPACING < stubSpacing
+           SET_CORNERS_TO_SPACING=FALSE
+           PARALLEL_POINT_PROJECTION=FALSE
+           OUTPUT_EDGES = TRUE
+        } TEMP=err_edge
+        SELECT end_of_line INTERACT err_edge { } TEMP=eol_body
+        SIZE end_of_line {
+           VSIZE_HEAD = sideStubExt
+           VSIZE_TAIL = sideStubExt
+           OUTPUT_EDGES = TRUE
+        } TEMP = eol_ext
+        BOOLEAN eol_ext NOT end_of_line {} TEMP=eol_ext
+        EXTERNAL eol_ext target_top {
+           SPACING < stubSpacing
+           SET_CORNERS_TO_SPACING=FALSE
+           PARALLEL_POINT_PROJECTION=FALSE
+           OUTPUT_EDGES = TRUE
+        } TEMP=err_edge
+        SELECT eol_ext INTERACT err_edge { } TEMP=eol_ext
+        BOOLEAN eol_body OR eol_ext { } TEMP=eol_ext
+      } 
+    } else {
+      COPY end_of_line { } TEMP=eol_ext
+    }
+    SELECT side_edge INTERACT eol_ext { } TEMP=side_edge
+    SIZE eol_ext {
+       VSIZE_INSIDE = sideStubThreshold 
+       VSIZE_OUTSIDE = sideStubExt
+    } TEMP = eol_range
+    if (sideStubExt > 0) {
+       SIZE side_edge {
+          VSIZE_HEAD = sideStubExt
+          VSIZE_TAIL = sideStubExt
+          OUTPUT_EDGES = TRUE
+       } TEMP = check_edge
+    } else {
+       COPY side_edge { } TEMP = check_edge
+    }
+    BOOLEAN check_edge AND eol_range { } TEMP=check_edge
+    EXTERNAL check_edge target_top {
+       SPACING < temporary_1
+       SET_CORNERS_TO_SPACING = FALSE
+       SHADOW_OTHER_LAYER = TRUE
+       PARALLEL_POINT_PROJECTION = FALSE
+       OUTPUT_EDGES = TRUE
+    } TEMP=err_edge
+    if (0 && stubMode!=4) { /* Temporarily do not check mode 2,3 side edge length */
+       LENGTH side_edge { SPACING < stubSpacing-TOLERANCE*2 } TEMP=err_edge_1
+       BOOLEAN err_edge OR err_edge_1 { } TEMP=err_edge
+    }
+    SELECT check_edge INTERACT err_edge { } TEMP=side_edge
+    if (stubMode!=3) {
+       SELECT eol_ext INTERACT side_edge {} TEMP=err_eol
+       EXTERNAL err_eol target_top {
+          COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing ,crnKeepOut= sideStubExt um (mode = stubMode )"
+          SPACING < temporary_1
+          PARALLEL_POINT_PROJECTION=FALSE
+          SET_CORNERS_TO_SPACING=FALSE
+       } (OUTPUT_LAYER)
+    } else { /* stubMode == 3 */
+       SELECT eol_ext INTERACT side_edge { RANGE = [2, 2] } TEMP=err_eol
+       EXTERNAL err_eol target_top {
+          COMMENT = "$layer_name specEoLSpc: spacing= stubSpacing um (mode = 3)"
+          SPACING < temporary_1
+          PARALLEL_POINT_PROJECTION=FALSE
+          SET_CORNERS_TO_SPACING=FALSE
+       } (OUTPUT_LAYER)
+    }
+  }
+} /* stubMode > 0, not aligned */
+/* Avoid empty optimization result parsing error */
+if (addEmptyMetalCheck) {
+   BOOLEAN empty OR empty {
+      COMMENT = "$layer_name Empty: Dummy Output"
+   } (OUTPUT_LAYER)
+   SET addEmptyMetalCheck=0;
+}
+/* reset variables */
+@undef METAL_PIN
+@undef METAL_TOP_DATA
+ 
+SET minWidth = 0;
+SET maxWidth = 0;
+SET minArea = 0;
+SET minEnclosedArea = 0;
+SET minSpacing = 0;
+SET sameNetMinSpacing = 0;
+SET maxNumMinEdge = 0;
+SET maxTotalMinEdgeLength = 0;
+SET minEdgeLength = 0;
+SET minEdgeLength2 = 0;
+SET minEdgeLength3 = 0;
+SET stubRange = 0;
+SET stubSpacing = 0;
+SET stub2StubSpacing = 0;
+SET sideStubExt = 0;
+SET sideStubThreshold = 0;
+SET stubThreshold = 0;
+SET fatPolyContactRule = 0;
+SET fatWireThreshold = 0;
+SET fatThinMinSpacing = 0;
+SET fatFatMinSpacing = 0;
+SET fatTblDimension = 0;

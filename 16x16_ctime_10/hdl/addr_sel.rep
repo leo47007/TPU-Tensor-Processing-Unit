@@ -1,0 +1,7 @@
+@nLint message generated warning file.
+
+*** Working Directory [/home/m106/m106061556/ICLAB/final_pj/ICLAB_final_pj/16x16_ctime10/hdl] ***
+
+addr_sel.v(7): Warning 25009: the fan-out number of signal "addr_serial_num" is 22 whereas the limitation is 10. (Design Style)
+
+Total 1 Warning(s)

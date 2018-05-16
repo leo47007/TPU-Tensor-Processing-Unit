@@ -1,0 +1,541 @@
+ 
+****************************************
+Report : area
+Design : tpu_top
+Version: G-2012.06-SP5
+Date   : Sat Jan  6 12:34:31 2018
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_ss0p95v125c (File: /usr/cadtool/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db)
+
+Number of ports:                          577
+Number of nets:                           901
+Number of cells:                            7
+Number of combinational cells:              2
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          2
+Number of references:                       6
+
+Combinational area:       65859.384011
+Buf/Inv area:             4096.801291
+Noncombinational area:    21995.146174
+Net Interconnect area:    28638.657111 
+
+Total cell area:          87854.530185
+Total area:               116493.187296
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------------------------------------------------------------------
+tpu_top                           87854.5302    100.0      2.5414      0.0000  0.0000  tpu_top
+addr_sel                            179.9340      0.2     76.7515    103.1825  0.0000  addr_sel
+quantize                            416.7962      0.5    416.7962      0.0000  0.0000  quantize_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_OUTPUT_DATA_WIDTH16
+systolic                          80373.0392     91.5  60857.3217  17452.5764  0.0000  systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8
+systolic/clk_gate_data_queue_reg_0__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_0
+systolic/clk_gate_data_queue_reg_0__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_294
+systolic/clk_gate_data_queue_reg_0__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_293
+systolic/clk_gate_data_queue_reg_0__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_292
+systolic/clk_gate_data_queue_reg_0__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_291
+systolic/clk_gate_data_queue_reg_0__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_290
+systolic/clk_gate_data_queue_reg_0__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_289
+systolic/clk_gate_data_queue_reg_1__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_288
+systolic/clk_gate_data_queue_reg_1__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_287
+systolic/clk_gate_data_queue_reg_1__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_286
+systolic/clk_gate_data_queue_reg_1__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_285
+systolic/clk_gate_data_queue_reg_1__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_284
+systolic/clk_gate_data_queue_reg_1__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_283
+systolic/clk_gate_data_queue_reg_2__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_282
+systolic/clk_gate_data_queue_reg_2__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_281
+systolic/clk_gate_data_queue_reg_2__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_280
+systolic/clk_gate_data_queue_reg_2__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_279
+systolic/clk_gate_data_queue_reg_2__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_278
+systolic/clk_gate_data_queue_reg_2__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_277
+systolic/clk_gate_data_queue_reg_2__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_276
+systolic/clk_gate_data_queue_reg_3__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_275
+systolic/clk_gate_data_queue_reg_3__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_274
+systolic/clk_gate_data_queue_reg_3__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_273
+systolic/clk_gate_data_queue_reg_3__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_272
+systolic/clk_gate_data_queue_reg_3__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_271
+systolic/clk_gate_data_queue_reg_3__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_270
+systolic/clk_gate_data_queue_reg_4__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_269
+systolic/clk_gate_data_queue_reg_4__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_268
+systolic/clk_gate_data_queue_reg_4__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_267
+systolic/clk_gate_data_queue_reg_4__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_266
+systolic/clk_gate_data_queue_reg_4__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_265
+systolic/clk_gate_data_queue_reg_4__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_264
+systolic/clk_gate_data_queue_reg_5__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_263
+systolic/clk_gate_data_queue_reg_5__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_262
+systolic/clk_gate_data_queue_reg_5__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_261
+systolic/clk_gate_data_queue_reg_5__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_260
+systolic/clk_gate_data_queue_reg_5__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_259
+systolic/clk_gate_data_queue_reg_5__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_258
+systolic/clk_gate_data_queue_reg_5__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_257
+systolic/clk_gate_data_queue_reg_6__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_256
+systolic/clk_gate_data_queue_reg_6__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_255
+systolic/clk_gate_data_queue_reg_6__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_254
+systolic/clk_gate_data_queue_reg_6__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_253
+systolic/clk_gate_data_queue_reg_6__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_252
+systolic/clk_gate_data_queue_reg_6__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_251
+systolic/clk_gate_data_queue_reg_7__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_250
+systolic/clk_gate_data_queue_reg_7__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_249
+systolic/clk_gate_data_queue_reg_7__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_248
+systolic/clk_gate_data_queue_reg_7__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_247
+systolic/clk_gate_data_queue_reg_7__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_246
+systolic/clk_gate_data_queue_reg_7__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_245
+systolic/clk_gate_data_queue_reg_7__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_244
+systolic/clk_gate_matrix_mul_2D_reg_0__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_192
+systolic/clk_gate_matrix_mul_2D_reg_0__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_191
+systolic/clk_gate_matrix_mul_2D_reg_0__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_190
+systolic/clk_gate_matrix_mul_2D_reg_0__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_188
+systolic/clk_gate_matrix_mul_2D_reg_0__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_187
+systolic/clk_gate_matrix_mul_2D_reg_0__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_184
+systolic/clk_gate_matrix_mul_2D_reg_1__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_168
+systolic/clk_gate_matrix_mul_2D_reg_1__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_167
+systolic/clk_gate_matrix_mul_2D_reg_1__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_166
+systolic/clk_gate_matrix_mul_2D_reg_1__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_165
+systolic/clk_gate_matrix_mul_2D_reg_1__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_164
+systolic/clk_gate_matrix_mul_2D_reg_1__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_163
+systolic/clk_gate_matrix_mul_2D_reg_1__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_162
+systolic/clk_gate_matrix_mul_2D_reg_1__2__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_161
+systolic/clk_gate_matrix_mul_2D_reg_1__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_160
+systolic/clk_gate_matrix_mul_2D_reg_1__3__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_158
+systolic/clk_gate_matrix_mul_2D_reg_1__3__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_157
+systolic/clk_gate_matrix_mul_2D_reg_1__4__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_154
+systolic/clk_gate_matrix_mul_2D_reg_2__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_144
+systolic/clk_gate_matrix_mul_2D_reg_2__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_143
+systolic/clk_gate_matrix_mul_2D_reg_2__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_142
+systolic/clk_gate_matrix_mul_2D_reg_2__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_141
+systolic/clk_gate_matrix_mul_2D_reg_2__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_140
+systolic/clk_gate_matrix_mul_2D_reg_2__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_139
+systolic/clk_gate_matrix_mul_2D_reg_2__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_138
+systolic/clk_gate_matrix_mul_2D_reg_2__2__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_137
+systolic/clk_gate_matrix_mul_2D_reg_2__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_136
+systolic/clk_gate_matrix_mul_2D_reg_2__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_135
+systolic/clk_gate_matrix_mul_2D_reg_2__3__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_134
+systolic/clk_gate_matrix_mul_2D_reg_2__3__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_133
+systolic/clk_gate_matrix_mul_2D_reg_2__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_132
+systolic/clk_gate_matrix_mul_2D_reg_2__4__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_131
+systolic/clk_gate_matrix_mul_2D_reg_2__4__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_130
+systolic/clk_gate_matrix_mul_2D_reg_2__5__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_128
+systolic/clk_gate_matrix_mul_2D_reg_2__5__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_127
+systolic/clk_gate_matrix_mul_2D_reg_3__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_120
+systolic/clk_gate_matrix_mul_2D_reg_3__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_119
+systolic/clk_gate_matrix_mul_2D_reg_3__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_118
+systolic/clk_gate_matrix_mul_2D_reg_3__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_117
+systolic/clk_gate_matrix_mul_2D_reg_3__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_116
+systolic/clk_gate_matrix_mul_2D_reg_3__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_115
+systolic/clk_gate_matrix_mul_2D_reg_3__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_114
+systolic/clk_gate_matrix_mul_2D_reg_3__2__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_113
+systolic/clk_gate_matrix_mul_2D_reg_3__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_112
+systolic/clk_gate_matrix_mul_2D_reg_3__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_111
+systolic/clk_gate_matrix_mul_2D_reg_3__3__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_110
+systolic/clk_gate_matrix_mul_2D_reg_3__3__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_109
+systolic/clk_gate_matrix_mul_2D_reg_3__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_108
+systolic/clk_gate_matrix_mul_2D_reg_3__4__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_107
+systolic/clk_gate_matrix_mul_2D_reg_3__4__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_106
+systolic/clk_gate_matrix_mul_2D_reg_3__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_105
+systolic/clk_gate_matrix_mul_2D_reg_3__5__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_104
+systolic/clk_gate_matrix_mul_2D_reg_3__5__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_103
+systolic/clk_gate_matrix_mul_2D_reg_3__6__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_100
+systolic/clk_gate_matrix_mul_2D_reg_4__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_96
+systolic/clk_gate_matrix_mul_2D_reg_4__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_95
+systolic/clk_gate_matrix_mul_2D_reg_4__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_94
+systolic/clk_gate_matrix_mul_2D_reg_4__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_93
+systolic/clk_gate_matrix_mul_2D_reg_4__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_92
+systolic/clk_gate_matrix_mul_2D_reg_4__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_91
+systolic/clk_gate_matrix_mul_2D_reg_4__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_90
+systolic/clk_gate_matrix_mul_2D_reg_4__2__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_89
+systolic/clk_gate_matrix_mul_2D_reg_4__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_88
+systolic/clk_gate_matrix_mul_2D_reg_4__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_87
+systolic/clk_gate_matrix_mul_2D_reg_4__3__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_86
+systolic/clk_gate_matrix_mul_2D_reg_4__3__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_85
+systolic/clk_gate_matrix_mul_2D_reg_4__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_84
+systolic/clk_gate_matrix_mul_2D_reg_4__4__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_83
+systolic/clk_gate_matrix_mul_2D_reg_4__4__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_82
+systolic/clk_gate_matrix_mul_2D_reg_4__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_81
+systolic/clk_gate_matrix_mul_2D_reg_4__5__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_80
+systolic/clk_gate_matrix_mul_2D_reg_4__5__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_79
+systolic/clk_gate_matrix_mul_2D_reg_4__6__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_77
+systolic/clk_gate_matrix_mul_2D_reg_4__6__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_76
+systolic/clk_gate_matrix_mul_2D_reg_5__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_72
+systolic/clk_gate_matrix_mul_2D_reg_5__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_71
+systolic/clk_gate_matrix_mul_2D_reg_5__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_70
+systolic/clk_gate_matrix_mul_2D_reg_5__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_69
+systolic/clk_gate_matrix_mul_2D_reg_5__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_68
+systolic/clk_gate_matrix_mul_2D_reg_5__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_67
+systolic/clk_gate_matrix_mul_2D_reg_5__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_66
+systolic/clk_gate_matrix_mul_2D_reg_5__2__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_65
+systolic/clk_gate_matrix_mul_2D_reg_5__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_64
+systolic/clk_gate_matrix_mul_2D_reg_5__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_63
+systolic/clk_gate_matrix_mul_2D_reg_5__3__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_62
+systolic/clk_gate_matrix_mul_2D_reg_5__3__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_61
+systolic/clk_gate_matrix_mul_2D_reg_5__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_60
+systolic/clk_gate_matrix_mul_2D_reg_5__4__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_59
+systolic/clk_gate_matrix_mul_2D_reg_5__4__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_58
+systolic/clk_gate_matrix_mul_2D_reg_5__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_57
+systolic/clk_gate_matrix_mul_2D_reg_5__5__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_56
+systolic/clk_gate_matrix_mul_2D_reg_5__5__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_55
+systolic/clk_gate_matrix_mul_2D_reg_5__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_54
+systolic/clk_gate_matrix_mul_2D_reg_5__6__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_53
+systolic/clk_gate_matrix_mul_2D_reg_5__6__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_52
+systolic/clk_gate_matrix_mul_2D_reg_5__7__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_49
+systolic/clk_gate_matrix_mul_2D_reg_6__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_48
+systolic/clk_gate_matrix_mul_2D_reg_6__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_47
+systolic/clk_gate_matrix_mul_2D_reg_6__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_46
+systolic/clk_gate_matrix_mul_2D_reg_6__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_45
+systolic/clk_gate_matrix_mul_2D_reg_6__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_44
+systolic/clk_gate_matrix_mul_2D_reg_6__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_43
+systolic/clk_gate_matrix_mul_2D_reg_6__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_42
+systolic/clk_gate_matrix_mul_2D_reg_6__2__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_41
+systolic/clk_gate_matrix_mul_2D_reg_6__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_40
+systolic/clk_gate_matrix_mul_2D_reg_6__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_39
+systolic/clk_gate_matrix_mul_2D_reg_6__3__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_38
+systolic/clk_gate_matrix_mul_2D_reg_6__3__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_37
+systolic/clk_gate_matrix_mul_2D_reg_6__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_36
+systolic/clk_gate_matrix_mul_2D_reg_6__4__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_35
+systolic/clk_gate_matrix_mul_2D_reg_6__4__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_34
+systolic/clk_gate_matrix_mul_2D_reg_6__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_33
+systolic/clk_gate_matrix_mul_2D_reg_6__5__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_32
+systolic/clk_gate_matrix_mul_2D_reg_6__5__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_31
+systolic/clk_gate_matrix_mul_2D_reg_6__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_30
+systolic/clk_gate_matrix_mul_2D_reg_6__6__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_29
+systolic/clk_gate_matrix_mul_2D_reg_6__6__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_28
+systolic/clk_gate_matrix_mul_2D_reg_6__7__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_26
+systolic/clk_gate_matrix_mul_2D_reg_6__7__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_25
+systolic/clk_gate_matrix_mul_2D_reg_7__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_24
+systolic/clk_gate_matrix_mul_2D_reg_7__0__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_23
+systolic/clk_gate_matrix_mul_2D_reg_7__0__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_22
+systolic/clk_gate_matrix_mul_2D_reg_7__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_21
+systolic/clk_gate_matrix_mul_2D_reg_7__1__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_20
+systolic/clk_gate_matrix_mul_2D_reg_7__1__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_19
+systolic/clk_gate_matrix_mul_2D_reg_7__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_18
+systolic/clk_gate_matrix_mul_2D_reg_7__2__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_17
+systolic/clk_gate_matrix_mul_2D_reg_7__2__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_16
+systolic/clk_gate_matrix_mul_2D_reg_7__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_15
+systolic/clk_gate_matrix_mul_2D_reg_7__3__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_14
+systolic/clk_gate_matrix_mul_2D_reg_7__3__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_13
+systolic/clk_gate_matrix_mul_2D_reg_7__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_12
+systolic/clk_gate_matrix_mul_2D_reg_7__4__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_11
+systolic/clk_gate_matrix_mul_2D_reg_7__4__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_10
+systolic/clk_gate_matrix_mul_2D_reg_7__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_9
+systolic/clk_gate_matrix_mul_2D_reg_7__5__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_8
+systolic/clk_gate_matrix_mul_2D_reg_7__5__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_7
+systolic/clk_gate_matrix_mul_2D_reg_7__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_6
+systolic/clk_gate_matrix_mul_2D_reg_7__6__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_5
+systolic/clk_gate_matrix_mul_2D_reg_7__6__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_4
+systolic/clk_gate_matrix_mul_2D_reg_7__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_3
+systolic/clk_gate_matrix_mul_2D_reg_7__7__0
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_2
+systolic/clk_gate_matrix_mul_2D_reg_7__7__1
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_1
+systolic/clk_gate_weight_queue_reg_0__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_243
+systolic/clk_gate_weight_queue_reg_0__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_242
+systolic/clk_gate_weight_queue_reg_0__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_241
+systolic/clk_gate_weight_queue_reg_0__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_240
+systolic/clk_gate_weight_queue_reg_0__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_239
+systolic/clk_gate_weight_queue_reg_0__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_238
+systolic/clk_gate_weight_queue_reg_1__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_237
+systolic/clk_gate_weight_queue_reg_1__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_236
+systolic/clk_gate_weight_queue_reg_1__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_235
+systolic/clk_gate_weight_queue_reg_1__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_234
+systolic/clk_gate_weight_queue_reg_1__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_233
+systolic/clk_gate_weight_queue_reg_1__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_232
+systolic/clk_gate_weight_queue_reg_2__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_231
+systolic/clk_gate_weight_queue_reg_2__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_230
+systolic/clk_gate_weight_queue_reg_2__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_229
+systolic/clk_gate_weight_queue_reg_2__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_228
+systolic/clk_gate_weight_queue_reg_2__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_227
+systolic/clk_gate_weight_queue_reg_2__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_226
+systolic/clk_gate_weight_queue_reg_2__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_225
+systolic/clk_gate_weight_queue_reg_3__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_224
+systolic/clk_gate_weight_queue_reg_3__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_223
+systolic/clk_gate_weight_queue_reg_3__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_222
+systolic/clk_gate_weight_queue_reg_3__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_221
+systolic/clk_gate_weight_queue_reg_3__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_220
+systolic/clk_gate_weight_queue_reg_3__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_219
+systolic/clk_gate_weight_queue_reg_4__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_218
+systolic/clk_gate_weight_queue_reg_4__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_217
+systolic/clk_gate_weight_queue_reg_4__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_216
+systolic/clk_gate_weight_queue_reg_4__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_215
+systolic/clk_gate_weight_queue_reg_4__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_214
+systolic/clk_gate_weight_queue_reg_4__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_213
+systolic/clk_gate_weight_queue_reg_4__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_212
+systolic/clk_gate_weight_queue_reg_5__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_211
+systolic/clk_gate_weight_queue_reg_5__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_210
+systolic/clk_gate_weight_queue_reg_5__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_209
+systolic/clk_gate_weight_queue_reg_5__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_208
+systolic/clk_gate_weight_queue_reg_5__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_207
+systolic/clk_gate_weight_queue_reg_5__7_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_206
+systolic/clk_gate_weight_queue_reg_6__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_205
+systolic/clk_gate_weight_queue_reg_6__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_204
+systolic/clk_gate_weight_queue_reg_6__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_203
+systolic/clk_gate_weight_queue_reg_6__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_202
+systolic/clk_gate_weight_queue_reg_6__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_201
+systolic/clk_gate_weight_queue_reg_6__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_200
+systolic/clk_gate_weight_queue_reg_7__0_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_199
+systolic/clk_gate_weight_queue_reg_7__1_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_198
+systolic/clk_gate_weight_queue_reg_7__2_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_197
+systolic/clk_gate_weight_queue_reg_7__3_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_196
+systolic/clk_gate_weight_queue_reg_7__4_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_195
+systolic/clk_gate_weight_queue_reg_7__5_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_194
+systolic/clk_gate_weight_queue_reg_7__6_
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE8_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_193
+systolic_controll                   377.1497      0.4    169.7682    198.9947  0.0000  systolic_controll_ARRAY_SIZE8
+systolic_controll/clk_gate_addr_serial_num_reg
+                                      8.3868      0.0      3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_systolic_controll_ARRAY_SIZE8
+write_out                          6505.0698      7.4   3520.1486   2984.9212  0.0000  write_out_ARRAY_SIZE8_OUTPUT_DATA_WIDTH16
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------------------------------------------------------------------
+Total                                                  65859.3840  21995.1462  0.0000
+
+1

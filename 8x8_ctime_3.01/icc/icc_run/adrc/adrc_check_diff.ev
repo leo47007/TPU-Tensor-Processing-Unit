@@ -1,0 +1,332 @@
+/*check spacing*/
+if (diff_minSpacing > 0 && diff_netMinSpacing > 0) {
+    if (diff_cornerMinSpacing > 0) {
+        if (cornerSpacingMode == 1) {
+            /* Work around: CONVEX_TO_CONVEX [POINT_PROJECTION] has a bug */
+            EXTERNAL LAYER1 LAYER2 {
+                SPACING <= 0
+                CONVEX_TO_CONVEX [POINT_PROJECTION] < diff_cornerMinSpacing
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                BOX_CORNER = FALSE
+                NODAL = TRUE
+            } TEMP = diffNet_corner_err1
+            EXTERNAL LAYER1 LAYER2 {
+                SPACING <= 0
+                CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                BOX_CORNER = TRUE
+                NODAL = TRUE
+            } TEMP = diffNet_corner_err2
+            BOOLEAN diffNet_corner_err1 OR diffNet_corner_err2 {
+                COMMENT = "$layer_name Spacing   : corner to corner spacing = diff_cornerMinSpacing um "
+            } (OUTPUT_LAYER)
+            EXTERNAL LAYER1 LAYER2 {
+                COMMENT = "$layer_name Spacing   : minimum spacing = diff_netMinSpacing um"
+                SPACING < diff_netMinSpacing
+                SET_CORNERS_TO_SPACING = FALSE
+                PARALLEL_POINT_PROJECTION = FALSE
+                NON_PARALLEL = TRUE
+                TOUCH = FALSE
+                POINT_TOUCH = FALSE
+                NODAL = TRUE
+            } (OUTPUT_LAYER)
+        } else {
+            EXTERNAL LAYER1 LAYER2 {
+                COMMENT = "$layer_name Spacing  : minimum spacing = diff_netMinSpacing um (corner to corner spacing = diff_cornerMinSpacing um)"
+                SPACING < diff_netMinSpacing
+                CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                TOUCH = TRUE
+                NODAL = TRUE
+            } (OUTPUT_LAYER)
+        }
+    } else {
+        EXTERNAL LAYER1 LAYER2 {
+            COMMENT = "$layer_name Spacing  : minimum spacing = diff_netMinSpacing um"
+            SPACING < diff_netMinSpacing
+            NON_PARALLEL = TRUE
+            POINT_TOUCH = TRUE
+            TOUCH = TRUE
+            NODAL = TRUE
+        } (OUTPUT_LAYER)
+    }
+    if (diff_cornerMinSpacing > 0) {
+        if (cornerSpacingMode == 1) {
+            /* Work around: CONVEX_TO_CONVEX [POINT_PROJECTION] has a bug */
+            EXTERNAL LAYER1 LAYER2 {
+                SPACING <= 0
+                CONVEX_TO_CONVEX [POINT_PROJECTION] < diff_cornerMinSpacing
+                FLAG_DISCONNECTED = FALSE
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                BOX_CORNER = FALSE
+            } TEMP = sameNet_corner_err1
+            EXTERNAL LAYER1 LAYER2 {
+                SPACING <= 0
+                CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                FLAG_DISCONNECTED = FALSE
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                BOX_CORNER = TRUE
+            } TEMP = sameNet_corner_err2
+            BOOLEAN sameNet_corner_err1 OR sameNet_corner_err2 {
+                COMMENT = "$layer_name Spacing   : corner to corner spacing = diff_cornerMinSpacing um "
+            } (OUTPUT_LAYER)
+            EXTERNAL LAYER1 LAYER2 {
+                COMMENT = "$layer_name Spacing   : minimum spacing = diff_minSpacing um"
+                SPACING < diff_minSpacing
+                FLAG_DISCONNECTED = FALSE
+                SET_CORNERS_TO_SPACING = FALSE
+                PARALLEL_POINT_PROJECTION = FALSE
+                NON_PARALLEL = TRUE
+                TOUCH = FALSE
+                POINT_TOUCH = FALSE
+            } (OUTPUT_LAYER)
+        } else {
+            EXTERNAL LAYER1 LAYER2 {
+                COMMENT = "$layer_name Spacing  : minimum spacing = diff_minSpacing um (corner to corner spacing = diff_cornerMinSpacing um)"
+                SPACING < diff_minSpacing
+                CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                FLAG_DISCONNECTED = FALSE
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                TOUCH = TRUE
+            } (OUTPUT_LAYER)
+        }
+    } else {
+        EXTERNAL LAYER1 LAYER2 {
+            COMMENT = "$layer_name Spacing  : minimum spacing = diff_minSpacing um"
+            SPACING < diff_minSpacing
+            FLAG_DISCONNECTED = FALSE
+            NON_PARALLEL = TRUE
+            POINT_TOUCH = TRUE
+            TOUCH = TRUE
+        } (OUTPUT_LAYER)
+    }
+} else {
+    if (diff_netMinSpacing > 0) {
+        if (diff_cornerMinSpacing > 0) {
+            if (cornerSpacingMode == 1) {
+                /* Work around: CONVEX_TO_CONVEX [POINT_PROJECTION] has a bug */
+                EXTERNAL LAYER1 LAYER2 {
+                    SPACING <= 0
+                    CONVEX_TO_CONVEX [POINT_PROJECTION] < diff_cornerMinSpacing
+                    NON_PARALLEL = TRUE
+                    POINT_TOUCH = TRUE
+                    BOX_CORNER = FALSE
+                    NODAL = TRUE
+                } TEMP = corner_err1
+                EXTERNAL LAYER1 LAYER2 {
+                    SPACING <= 0
+                    CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                    NON_PARALLEL = TRUE
+                    POINT_TOUCH = TRUE
+                    BOX_CORNER = TRUE
+                    NODAL = TRUE
+                } TEMP = corner_err2
+                BOOLEAN corner_err1 OR corner_err2 {
+                    COMMENT = "$layer_name Spacing   : corner to corner spacing = diff_cornerMinSpacing um "
+                } (OUTPUT_LAYER)
+                EXTERNAL LAYER1 LAYER2 {
+                    COMMENT = "$layer_name Spacing   : minimum spacing = diff_netMinSpacing um"
+                    SPACING < diff_netMinSpacing
+                    SET_CORNERS_TO_SPACING = FALSE
+                    PARALLEL_POINT_PROJECTION = FALSE
+                    NON_PARALLEL = TRUE
+                    TOUCH = FALSE
+                    POINT_TOUCH = FALSE
+                    NODAL = TRUE
+                } (OUTPUT_LAYER)
+            } else {
+                EXTERNAL LAYER1 LAYER2 {
+                    COMMENT = "$layer_name Spacing  : minimum spacing = diff_netMinSpacing um (corner to corner spacing = diff_cornerMinSpacing um)"
+                    SPACING < diff_netMinSpacing
+                    CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                    NON_PARALLEL = TRUE
+                    POINT_TOUCH = TRUE
+                    TOUCH = TRUE
+                    NODAL = TRUE
+                } (OUTPUT_LAYER)
+            }
+        } else {
+            EXTERNAL LAYER1 LAYER2 {
+                COMMENT = "$layer_name Spacing  : minimum spacing = diff_netMinSpacing um"
+                SPACING < diff_netMinSpacing
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                TOUCH = TRUE
+                NODAL = TRUE
+            } (OUTPUT_LAYER)
+        }
+    } else if (diff_minSpacing > 0) {
+        if (diff_cornerMinSpacing > 0) {
+            if (cornerSpacingMode == 1) {
+                /* Work around: CONVEX_TO_CONVEX [POINT_PROJECTION] has a bug */
+                EXTERNAL LAYER1 LAYER2 {
+                    SPACING <= 0
+                    CONVEX_TO_CONVEX [POINT_PROJECTION] < diff_cornerMinSpacing
+                    NON_PARALLEL = TRUE
+                    POINT_TOUCH = TRUE
+                    BOX_CORNER = FALSE
+                } TEMP = corner_err1
+                EXTERNAL LAYER1 LAYER2 {
+                    SPACING <= 0
+                    CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                    NON_PARALLEL = TRUE
+                    POINT_TOUCH = TRUE
+                    BOX_CORNER = TRUE
+                } TEMP = corner_err2
+                BOOLEAN corner_err1 OR corner_err2 {
+                    COMMENT = "$layer_name Spacing   : corner to corner spacing = diff_cornerMinSpacing um "
+                } (OUTPUT_LAYER)
+                EXTERNAL LAYER1 LAYER2 {
+                    COMMENT = "$layer_name Spacing   : minimum spacing = diff_minSpacing um"
+                    SPACING < diff_minSpacing
+                    SET_CORNERS_TO_SPACING = FALSE
+                    PARALLEL_POINT_PROJECTION = FALSE
+                    NON_PARALLEL = TRUE
+                    TOUCH = FALSE
+                    POINT_TOUCH = FALSE
+                } (OUTPUT_LAYER)
+            } else {
+                EXTERNAL LAYER1 LAYER2 {
+                    COMMENT = "$layer_name Spacing  : minimum spacing = diff_minSpacing um (corner to corner spacing = diff_cornerMinSpacing um)"
+                    SPACING < diff_minSpacing
+                    CONVEX_TO_CONVEX < diff_cornerMinSpacing
+                    NON_PARALLEL = TRUE
+                    POINT_TOUCH = TRUE
+                    TOUCH = TRUE
+                } (OUTPUT_LAYER)
+            }
+        } else {
+            EXTERNAL LAYER1 LAYER2 {
+                COMMENT = "$layer_name Spacing  : minimum spacing = diff_minSpacing um"
+                SPACING < diff_minSpacing
+                NON_PARALLEL = TRUE
+                POINT_TOUCH = TRUE
+                TOUCH = TRUE
+            } (OUTPUT_LAYER)
+        }
+    }
+}
+ 
+/*check enclosure*/
+if (diff_minEnclosure > 0) {
+    ENCLOSE LAYER1 BY LAYER2 {
+        COMMENT = "$layer_name Enclosure: minimum enclosure ( diff_minEnclosure )"
+        SPACING < diff_minEnclosure
+	NON_PARALLEL = TRUE
+	POINT_TOUCH = TRUE
+	TOUCH = TRUE
+    } (OUTPUT_LAYER)
+    BOOLEAN LAYER1 NOT LAYER2 {
+        COMMENT = "$layer_name Enclosure: minimum enclosure ( diff_minEnclosure )"
+    } (OUTPUT_LAYER)
+}
+ 
+/*check end_of_line enclosure*/
+if (diff_endOfLineEnclosure > 0) {
+    if (diff_minEnclosure  == 0) {
+       BOOLEAN LAYER1 NOT LAYER2 {
+           COMMENT = "$layer_name EndOfLine: end-of-line minimum enclosure ( diff_endOfLineEnclosure )"
+       } (OUTPUT_LAYER)
+    }
+    if (diff_endOfLineMode == 0) {
+        ENCLOSE LAYER1 BY LAYER2 {
+	    SPACING < diff_endOfLineEnclosure
+	    SET_CORNERS_TO_SPACING = FALSE
+	    PARALLEL_POINT_PROJECTION = FALSE
+	    SHADOW_OTHER_LAYER = TRUE  
+	    TOUCH = TRUE
+	    POINT_TOUCH = FALSE
+	    NON_PARALLEL = TRUE
+            OUTPUT_EDGES = TRUE
+        } TEMP = violation
+ 
+        SELECT_EDGE LAYER1 TOUCHING violation {  } TEMP = edges
+        SELECT_VECTOR edges { ANGLE_RANGE = [0, 0] } TEMP = h_edges
+        SELECT_VECTOR edges { ANGLE_RANGE = [90, 90] } TEMP = v_edges
+        SELECT h_edges INTERACT v_edges { POINT_TOUCH = TRUE } TEMP = h_edges
+ 
+        SELECT LAYER1 ENCLOSING h_edges {
+            COMMENT = "$layer_name EndOfLine: end-of-line minimum enclosure ( diff_endOfLineEnclosure )"
+        } (OUTPUT_LAYER)
+    }
+    else {
+    }
+}
+ 
+/*check stackable*/
+if (diff_not_stackable > 0) {
+     BOOLEAN LAYER1 AND LAYER2 {
+        COMMENT = "$layer_name Stackable: not stackable"
+    } (OUTPUT_LAYER)
+}
+/*check fat metal via keep-out area*/
+if (diff_fatTblViaKeepoutThreshold > 0 && diff_fatTblViaKeepoutMinSize > 0 && diff_fatTblViaKeepoutEnclosure > 0) {
+    if (diff_fatTblViaKeepoutThreshold > 0) {
+        if ((diff_fatTblViaKeepoutThreshold / 2.0) > TOLERANCE) {
+           SIZE LAYER2 { UNDER_OVER = diff_fatTblViaKeepoutThreshold / 2.0 - TOLERANCE } TEMP = fat_candidate
+           if (diff_fatTblViaKeepoutNextThreshold > 0) {
+              SIZE fat_candidate { UNDER_OVER = diff_fatTblViaKeepoutNextThreshold / 2.0 - TOLERANCE } TEMP = fat_next
+              BOOLEAN fat_candidate NOT fat_next { } TEMP = fat
+              BOOLEAN fat AND LAYER2 { } TEMP = fat
+              SET diff_fatTblViaKeepoutNextThreshold = 0;
+           } else {
+              BOOLEAN fat_candidate AND LAYER2 {  } TEMP = fat
+           }
+        } else {
+           COPY LAYER2 { } TEMP = fat
+           COPY LAYER2 { } TEMP = fat_candidate 
+        }
+    }
+    VERTEX fat_candidate {
+       CONVEX = TRUE
+       SIZE = DBU
+    } TEMP = fat_corners
+    VERTEX fat {
+       CONVEX = TRUE
+       SIZE = DBU
+    } TEMP = wire_corners
+    SELECT wire_corners INTERACT fat_corners { } TEMP = wire_corners
+    SELECT_EDGE fat INTERACT wire_corners { } TEMP = edge_corners
+    SELECT_VECTOR edge_corners {
+       LENGTH_RANGE = [0, diff_fatTblViaKeepoutMinSize-TOLERANCE]
+    } TEMP = edge_tmp1
+    BOOLEAN edge_corners NOT edge_tmp1 { } TEMP = edge_tmp2
+    SELECT wire_corners OUTSIDE edge_tmp1 {  } TEMP = real_corners
+    BOOLEAN edge_tmp2 AND real_corners { } TEMP = real_edge
+    SIZE real_edge {
+       VSIZE_HEAD = diff_fatTblViaKeepoutMinSize-2*DBU
+       VSIZE_TAIL = diff_fatTblViaKeepoutMinSize-2*DBU
+       VSIZE_INSIDE = diff_fatTblViaKeepoutEnclosure-DBU
+    } TEMP = forb_corners
+    SELECT LAYER1 INSIDE fat { } TEMP = v_fat
+    /* Work around: need an accurate via_cluster */
+    SELECT via_cluster INSIDE fat { } TEMP = v_fat_cluster
+    SELECT v_fat INTERACT forb_corners { } TEMP = bad_vias
+    BOOLEAN v_fat NOT bad_vias { } TEMP = good_vias
+    SELECT v_fat_cluster OUTSIDE good_vias { } TEMP = bad_v_fat_cluster
+    SELECT v_fat INTERACT bad_v_fat_cluster {
+       COMMENT = "$layer_name ViaKepOut: fat metal ( diff_fatTblViaKeepoutThreshold um) contact keep-out area ( diff_fatTblViaKeepoutMinSize um, diff_fatTblViaKeepoutEnclosure um) "
+    } (OUTPUT_LAYER)
+}
+ 
+/* reset variables */
+@undef OUTPUT_LAYER
+@undef LAYER1
+@undef LAYER2
+ 
+SET diff_minSpacing = 0;
+SET diff_netMinSpacing = 0;
+SET diff_cornerMinSpacing = 0;
+SET diff_minEnclosure = 0;
+SET diff_endOfLineEnclosure = 0;
+SET diff_not_stackable = 0;
+SET diff_fatTblViaKeepoutThreshold = 0;
+SET diff_fatTblViaKeepoutNextThreshold = 0;
+SET diff_fatTblViaKeepoutMinSize = 0;
+SET diff_fatTblViaKeepoutEnclosure = 0;

@@ -1,0 +1,72 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : tpu_top
+Version: G-2012.06-SP5
+Date   : Fri Jan  5 00:29:49 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: srstn (input port clocked by clk)
+  Endpoint: systolic/clk_gate_matrix_mul_2D_reg_5__10_/latch
+            (positive level-sensitive latch clocked by clk')
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  tpu_top            1000000               saed32hvt_ss0p95v125c
+  systolic_ARRAY_SIZE32_SRAM_DATA_WIDTH32_DATA_WIDTH8
+                     1000000               saed32hvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  5.0000     5.0000 f
+  srstn (in)                                            0.0000     5.0000 f
+  systolic/srstn (systolic_ARRAY_SIZE32_SRAM_DATA_WIDTH32_DATA_WIDTH8)
+                                                        0.0000     5.0000 f
+  systolic/U8606/Y (INVX1_HVT)                          0.0164     5.0164 r
+  systolic/U8651/Y (INVX0_HVT)                          0.0770     5.0933 f
+  systolic/U8983/Y (NBUFFX8_HVT)                        0.1506     5.2439 f
+  systolic/U8981/Y (NBUFFX8_HVT)                        0.1114     5.3553 f
+  systolic/U8982/Y (INVX32_HVT)                         0.2319 #   5.5872 r
+  systolic/U10553/Y (AO221X2_HVT)                       0.2217 #   5.8089 r
+  systolic/U25010/Y (AO21X2_HVT)                        0.1488     5.9576 r
+  systolic/clk_gate_matrix_mul_2D_reg_5__10_/EN (SNPS_CLOCK_GATE_HIGH_systolic_ARRAY_SIZE32_SRAM_DATA_WIDTH32_DATA_WIDTH8_mydesign_2562)
+                                                        0.0000     5.9576 r
+  systolic/clk_gate_matrix_mul_2D_reg_5__10_/latch/D (LATCHX1_HVT)
+                                                        0.0000     5.9576 r
+  data arrival time                                                5.9576
+
+  clock clk' (rise edge)                                5.0000     5.0000
+  clock network delay (ideal)                           0.0000     5.0000
+  systolic/clk_gate_matrix_mul_2D_reg_5__10_/latch/CLK (LATCHX1_HVT)
+                                                        0.0000     5.0000 r
+  time borrowed from endpoint                           0.9576     5.9576
+  data required time                                               5.9576
+  --------------------------------------------------------------------------
+  data required time                                               5.9576
+  data arrival time                                               -5.9576
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0000
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk' pulse width                                      5.0000   
+  library setup time                                   -0.1357   
+  --------------------------------------------------------------
+  max time borrow                                       4.8643   
+  actual time borrow                                    0.9576   
+  --------------------------------------------------------------
+
+
+1
