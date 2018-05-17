@@ -2,7 +2,7 @@
 
 TPU: Tensor-Processing-Unit-
 -------------------------------------------------------------------------------------------------------
-## Developer: Yu-Shun Hsiao, Yu-Chun Kuo
+### Developer: Yu-Shun Hsiao, Yu-Chun Kuo
 
 ## Introduction: 
 For our TPU, we design a 32x32 systolic array. As presented by picture below, under the scenario that there are two matrices need to do matrix multiplication, matrix A (named weight matrix) multiply matrix B(named data matrix), each of the matrix is 32x32. Once they start to do matrix multiplication, these coefficients of two matrices will first transform into TPU order, and then fed into each specific queue. Then these queues will output at most 32 datams to its connected cell, the cell will do the multiplication and addition according to what weight and what data it receives. And in the next cycle, each cell will forward its weight and data to next cell. (For weight, will forward in row order; For data, will forward in column order). 
@@ -14,8 +14,9 @@ Based on the data flow of systolic array, the data will flow in right-down order
 ![alt text](https://i.imgur.com/aW8mmk6.png)
 2. After knowing the TPU order of data, what is the data flow in systolic array?
 
-After transform WEIGHT matrix and DATA matrix into diamond shape, we have to further consider how data flow in systolic array. Like the following comics below.
-![Imgur](https://i.imgur.com/Alq22ul.png)
+After transform WEIGHT matrix and DATA matrix into diamond shape, we have to further consider how data flow in systolic array. Detail shows in the following link.
+
+[Data Flow](https://i.imgur.com/xFMkP2C.png)
 
 3. How to keep all the ALU(32x32) work (in steady state)?
 Since we reorder matrix to diamond shape, we find that once the diamond enters half of the systolic array, which means at this moment, the top-left entry has done all 32 multiplications, it can just output and write to the storage, meaning that this entry can be loaded another set of matrix, and start to do its matrix multiplication. Like the two pictures below. We can speculate that start from some point, all the systolic array is occupied by two different set of matrices, and all the cell is working, which means that hardware utilization can be 100% through parallelism of data. And to the last set, the hardware utilization starts to degrade, finally, last set leaves systolic array.
@@ -34,7 +35,7 @@ Total area  |  1749468.03 |   434890.39 |   116493.18
 
 
 ## P&R:
-Here shows the 8*8 systolic simulation. We initially face the problem that post-layout gate-level simulation has timing violation. Even if we use loose timing constrain in test top and design constrain file, we still face the same problem. Thus, we try to re-synthesize and enlarge our cycle time to cycle time 20. The result shows that no more timing violation exists, and all the test-bench data passed, meaning that our functionality of layout works fine.
+We initially face the problem that post-layout gate-level simulation has timing violation. Even if we use loose timing constrain in test top and design constrain file, we still face the same problem. Thus, we try to re-synthesize and enlarge our cycle time to cycle time 20. The result shows that no more timing violation exists, and all the test-bench data passed, meaning that our functionality of layout works fine.
 
 
 
