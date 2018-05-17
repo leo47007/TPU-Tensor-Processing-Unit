@@ -1,8 +1,8 @@
 
 
-TPU: Matrix Multiply Accelerator
-Developer: Yu-Shun Hsiao, Yu-Chun Kuo
+TPU: Tensor-Processing-Unit-
 -------------------------------------------------------------------------------------------------------
+## Developer: Yu-Shun Hsiao, Yu-Chun Kuo
 
 ## Introduction: 
 For our TPU, we design a 32x32 systolic array. As presented by picture below, under the scenario that there are two matrices need to do matrix multiplication, matrix A (named weight matrix) multiply matrix B(named data matrix), each of the matrix is 32x32. Once they start to do matrix multiplication, these coefficients of two matrices will first transform into TPU order, and then fed into each specific queue. Then these queues will output at most 32 datams to its connected cell, the cell will do the multiplication and addition according to what weight and what data it receives. And in the next cycle, each cell will forward its weight and data to next cell. (For weight, will forward in row order; For data, will forward in column order). 
@@ -24,8 +24,8 @@ For each cell in systolic array, we have three registers: 1 ALU to record the cu
 Originally, we have 32*32 systolic array; however, the total area is extremely high as following shows, so it is nearly impossible to do the P&R. Therefore, to pass P&R, we decide to use the smaller size, 8*8 systolic array.
 (The computation is almost the same as 32x32, the only difference is the different data width)
 
-32*32 systolic array |   16*16 systolic array |   8*8 systolic array
------------------------|-------------------------|--------------------
+|| 32*32 systolic array |   16*16 systolic array |   8*8 systolic array
+---|-----------------------|-------------------------|--------------------
 Cycle time  |  6(ns)  |  6(ns) |   3.01(ns)
 Total area  |  1749468.03 |   434890.39 |   116493.18
 
