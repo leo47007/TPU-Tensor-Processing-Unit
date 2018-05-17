@@ -9,11 +9,14 @@ For our TPU, we design a 32x32 systolic array. As presented by picture below, un
 
 ## Mechanism:
 1. What is TPU order of data and why do we need TPU order of data?
+
 Based on the data flow of systolic array, the data will flow in right-down order. At the first cycle, only 1 data will flow in cell, in the second cycle, 2 data will flow in, total 3 cells doing operation, to the 32th cycle, 32 data will flow in, more than half of the cells in systolic arrays are doing operations (1+2+3+…+32). Then 31 data will flow in, doing (2+3+4+…+32+31) operations. And so on, to the end. Basically our matrix is 32x32, so transformed into TPU order, the data will transform into like a diamond shape, like the picture below.
 ![alt text](https://i.imgur.com/aW8mmk6.png)
 2. After knowing the TPU order of data, what is the data flow in systolic array?
+
 After transform WEIGHT matrix and DATA matrix into diamond shape, we have to further consider how data flow in systolic array. Like the following comics below.
-![Imgur](https://i.imgur.com/bxXnb1k.png)
+![Imgur](https://i.imgur.com/Alq22ul.png)
+
 3. How to keep all the ALU(32x32) work (in steady state)?
 Since we reorder matrix to diamond shape, we find that once the diamond enters half of the systolic array, which means at this moment, the top-left entry has done all 32 multiplications, it can just output and write to the storage, meaning that this entry can be loaded another set of matrix, and start to do its matrix multiplication. Like the two pictures below. We can speculate that start from some point, all the systolic array is occupied by two different set of matrices, and all the cell is working, which means that hardware utilization can be 100% through parallelism of data. And to the last set, the hardware utilization starts to degrade, finally, last set leaves systolic array.
 ![Imgur](https://i.imgur.com/fDv4Hs4.png)
