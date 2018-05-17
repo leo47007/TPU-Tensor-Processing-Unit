@@ -3,3 +3,4 @@
 *.sdf
 *.log
 *.pak
+.DS_Store
