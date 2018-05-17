@@ -6,7 +6,9 @@ TPU: Tensor-Processing-Unit-
 
 ## Introduction: 
 For our TPU, we design a 32x32 systolic array. As presented by picture below, under the scenario that there are two matrices need to do matrix multiplication, matrix A (named weight matrix) multiply with matrix B(named data matrix), each of the matrix is 32x32. Once they start to do matrix multiplication, these coefficients of two matrices will first transform into an order to feed into TPU, and then fed into each specific queue. Then these queues will output at most 32 datams to its connected cell, these cells will do multiplication and addition according to the weight and data it receives. And in the next cycle, each cell will forward its weight and data to next cell. Weight will foward from up to down, and data will forward from left to right.
+
 ![Imgur](https://i.imgur.com/lfWEjwv.png)Reference:https://zhuanlan.zhihu.com/p/26522315
+
 ## Mechanism:
 ### Scheduling input data and weights
 
