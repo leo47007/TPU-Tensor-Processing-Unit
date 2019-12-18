@@ -5,7 +5,7 @@ TPU: Tensor-Processing-Unit-
 ### Developer: Yu-Shun Hsiao, Yu-Chun Kuo
 
 ## Introduction: 
-For our TPU, we design a 32x32 systolic array. As presented by picture below, under the scenario that there are two matrices need to do matrix multiplication, matrix A (named weight matrix) multiply with matrix B(named data matrix), each of the matrix is 32x32. Once they start to do matrix multiplication, these coefficients of two matrices will first transform into an order to feed into TPU, and then fed into each specific queue. Then these queues will output at most 32 datams to its connected cell, these cells will do multiplication and addition according to the weight and data it receives. And in the next cycle, each cell will forward its weight and data to next cell. Weight will foward from up to down, and data will forward from left to right.
+For our TPU, we designed a 32x32 systolic array. As presented by picture below, under the scenario that there are two matrices need to do matrix multiplication, matrix A (named weight matrix) multiply with matrix B(named data matrix), each of the matrix is 32x32. Once they start to do matrix multiplication, these coefficients of two matrices will first transform into an order to feed into TPU, and then fed into each specific queue. Then these queues will output at most 32 datams to its connected cell, these cells will do multiplication and addition according to the weight and data it receives. And in the next cycle, each cell will forward its weight and data to next cell. Weight will foward from up to down, and data will forward from left to right.
 
 ![Imgur](https://i.imgur.com/lfWEjwv.png)Reference:https://zhuanlan.zhihu.com/p/26522315
 
@@ -27,7 +27,7 @@ Since we reorder matrix to diamond shape, we find that once the diamond enters h
 For each cell in systolic array, we have three registers: 1 ALU to record the cumulative result, 1 weight-register for storing matrix A’s data and forwarding to next row, 1 data-register for storing matrix B’s data and forwarding to next column. And total we have 32x32=1024 cells. For 32x32 matrix multiplications, each element in matrix is 8 bit signed number, 4 bit represents integer part, 4bit represents precision part. And final answer of matrix multiplication, we use 16 bit signed number to represent, 8 bit represents integer part, 8 bit represents precision part. For testbench part, we create three sets of matrix multiplications to emulate three kinds of situation: the output of first set represents the initial entering of systolic array, the output of second set represents the steady state of systolic array, when the total systolic array hardware utilization is 100%, and the output of final set represents the leaving the systolic array. The outcome shows that these three situations can really be implemented.
 
 ## Synthesize:
-Originally, we have 32*32 systolic array; however, the total area is extremely high as following shows, so it is nearly impossible to do the P&R. Therefore, to pass P&R, we decide to use the smaller size, 8*8 systolic array.
+Originally, we have 32x32 systolic array; however, the total area is extremely high as following shows, so it is nearly impossible to do the P&R. Therefore, to pass P&R, we decide to use the smaller size, 8x8 systolic array.
 (The computation is almost the same as 32x32, the only difference is the different data width)
 
 || 32*32 systolic array |   16*16 systolic array |   8*8 systolic array
